@@ -36,4 +36,4 @@ jobs:
       run: sfdx auth:sfdxurl:store -f SFDX_QA -s -a production
       
     - name: 'Run checkonly deploy'
-      run: sfdx force:source:deploy -p force-app --testlevel RunLocalTests --json --checkonly
+      run: sfdx force:source:deploy --testlevel RunLocalTests --json --checkonly
