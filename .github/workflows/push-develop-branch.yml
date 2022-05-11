@@ -23,16 +23,17 @@ jobs:
    
     - name: Install Salesforce CLI
       run: |
-        npm install sfdx-cli
-        node_modules/sfdx-cli/bin/run --version
-        node_modules/sfdx-cli/bin/run plugins --core
+        wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+        mkdir sfdx-cli
+        tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
+        ./sfdx-cli/install
             
     - name: 'Populate auth file with SFDX_URL secret'
       shell: bash
       run: 'echo ${{ secrets.SFDX_URL}} > SFDX_QA'
       
-    - name: 'Authenticate against dev hub'
-      run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a LRQA
+    - name: 'Authenticate to Production Org'
+      run: sfdx auth:sfdxurl:store -f SFDX_QA -s -a production
       
     - name: 'Run checkonly deploy'
-      run: sfdx force:source:deploy -p force-app --testlevel RunLocalTests --json --checkonly
+      run: sfdx force:source:deploy -x manifest/package.xml --testlevel RunLocalTests --json --checkonly
