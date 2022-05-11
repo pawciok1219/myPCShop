@@ -35,5 +35,5 @@ jobs:
     - name: 'Authenticate to Production Org'
       run: sfdx auth:sfdxurl:store -f SFDX_QA -s -a production
       
-    - name: 'Run checkonly deploy'
+    - name: 'Run deploy'
       run: sfdx force:source:deploy -x manifest/package.xml --testlevel RunLocalTests --json 
