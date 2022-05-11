@@ -7,11 +7,4 @@ public class WebToLeadControllerTest {
         WebToLeadController test = new WebToLeadController();
         System.assertEquals(WebToLeadController.successValue, true);
     }
-    
-    @IsTest
-    public static void shouldNotSuccess() {
-        WebToLeadController test = new WebToLeadController();
-        System.assertEquals(WebToLeadController.successValue, false);
-    }
-
 }
