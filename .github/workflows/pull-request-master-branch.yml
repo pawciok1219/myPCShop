@@ -1,9 +1,9 @@
 # Unique name for this workflow
-name: Push to master branch.
+name: Pull request deploy to master branch.
 
 # Definition when the workflow should run
 on:
-    push:
+    pull_request:
       branches: [ master ]
       paths:
         - 'force-app/**'
@@ -15,7 +15,7 @@ jobs:
       with:
         ref: ${{ github.ref }}
         fetch-depth: 0
-      if: github.event.action == 'opened' || github.event.action == 'synchronize' || github.event_name == 'push'
+      if: github.event.action == 'opened' || github.event.action == 'synchronize' || github.event_name == 'pull_request'
     - uses: actions/setup-node@v1
       with:
         node-version: '>=14'
@@ -34,5 +34,5 @@ jobs:
     - name: 'Authenticate against dev hub'
       run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a LRQA
       
-    - name: 'Run checkonly deploy'
+    - name: 'Run deploy'
       run: sfdx force:source:deploy -p force-app --testlevel RunLocalTests --json
