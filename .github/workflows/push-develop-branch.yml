@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Push to development branch.
+name: Pull request to development branch.
 
 # Definition when the workflow should run
 on:
