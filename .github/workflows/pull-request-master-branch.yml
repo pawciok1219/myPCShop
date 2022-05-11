@@ -37,3 +37,4 @@ jobs:
       
     - name: 'Run deploy'
       run: sfdx force:source:deploy -x manifest/package.xml --testlevel RunLocalTests --json
+
