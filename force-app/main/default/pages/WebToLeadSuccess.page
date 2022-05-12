@@ -1,0 +1,46 @@
+<apex:page id="WebToLeadSuccess" sidebar="false"
+           showHeader="false"
+           standardStylesheets="false">
+
+        <div class="center">
+            <h1>Correctly completed form !</h1>
+            <p style="color:white">Thank you for sending this form. One of our employees will get in touch to you soon.</p>
+        </div>
+
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://wallpaperaccess.com/full/431759.jpg");;
+  font-family: "Sansita Swashed", cursive;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.center {
+  position: relative;
+  padding: 30px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+.center h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  padding: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  padding-left: 1px;
+}
+
+</style>
+
+</apex:page>
