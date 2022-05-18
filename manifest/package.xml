@@ -3,6 +3,8 @@
 	<types>
 		<members>WebToLeadController</members>
 		<members>WebToLeadControllerTest</members>
+		<members>customSearchProduct</members>
+		<members>customSearchProductTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
