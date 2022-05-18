@@ -1,10 +1,9 @@
 public with sharing class customSearchProduct {
-    
+
     @AuraEnabled(cacheable = true)
     public static List<Product2> getProducts(String productName, String model, String productCode, String producer, String family){
         List<String> conditions = new List<String>();
         String query = 'SELECT Id, Name, Model__c, Producer__c, ProductCode, Available__c, Family FROM Product2 ';
-        try {
         if (String.isNotBlank(productName)) {
             conditions.add('Name LIKE ' + '\'' + String.escapeSingleQuotes(productName) + '%\'');
         }
@@ -27,10 +26,6 @@ public with sharing class customSearchProduct {
                 query += ' AND ' + conditions[i];
             }
         }
-        
-            return Database.query(query);
-        } catch (Exception e) {
-            throw new AuraHandledException(e.getMessage());
-        }
+        return Database.query(query);
     }
 }
