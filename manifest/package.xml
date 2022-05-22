@@ -5,6 +5,8 @@
 		<members>WebToLeadControllerTest</members>
 		<members>customSearchProduct</members>
 		<members>customSearchProductTest</members>
+		<members>filePreviewAndDownloadController</members>
+		<members>filePreviewAndDownloadControllerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>

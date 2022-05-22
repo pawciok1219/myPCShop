@@ -1,0 +1,66 @@
+<template>
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Upload product images</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+                    <lightning-file-upload
+                    name="fileUploader"
+                    accept={acceptedFormats}
+                    record-id={recordId}
+                    onuploadfinished={handleUploadFinished}
+                    multiple></lightning-file-upload>
+            
+                <lightning-card title="File Preview">
+                     <template for:each={filesList} for:item="file">
+                         <div key={file.value} class="slds-box">
+                             <div class="slds-grid slds-wrap">
+                                 <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12" style="margin-right:-15px;">
+                                   <p><strong>FileName - </strong>{file.label}.{file.fileextension}</p>
+                                 </div>
+                                 <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
+                                    <lightning-input style="margin-right: 15px;" class="slds-p-left_xx-small" checked={file.isProfileImage} onchange={handleCheckBoxChange} type="checkbox" value={file.imageurl} label="Profile Image" ></lightning-input>
+                                     &nbsp;&nbsp;&nbsp;
+                                    <a style="margin-left:115px; position:absolute;margin-top:-19px;" href={file.url} download>Download</a>
+                                 </div>
+                                 <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
+                                    <lightning-button label="Preview" 
+                                    variant="brand"
+                                    data-id={file.imageurl}
+                                    onclick={previewImage}
+                                    style="margin-left:20px; margin-right: 6px; margin-top:5px;"></lightning-button>
+                                    &nbsp;&nbsp;&nbsp;
+                                   <lightning-button label="Delete" 
+                                   style="margin-top:5px;"
+                                   variant="destructive"
+                                   data-id={file.value}
+                                   value={file.imageurl}
+                                   onclick={handleDeleteFiles}
+                                   ></lightning-button>
+                                 </div>
+                               </div>
+                         </div>
+                     </template>
+                </lightning-card> 
+
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={cancelAction} title="Cancel">Cancel</button>
+                    <button class="slds-button slds-button_neutral" onclick={saveAndNewAction}>Save & New</button>
+                    <button class="slds-button slds-button_brand" onclick={saveAction}>Save</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+ </template>
