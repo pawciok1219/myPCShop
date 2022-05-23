@@ -1,10 +1,9 @@
 <template>
-    <lightning-button variant="brand"
-    label="What is Modal/PopUp in LWC?"
-    title="What is Modal/PopUp in LWC?"
+    <!-- <lightning-button variant="brand"
+    label="Edit"
     onclick={openModal}
     class="slds-m-left_x-small">
-    </lightning-button>
+    </lightning-button> -->
     <template if:true={isModalOpen}>
         <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
             <div class="slds-modal__container">
@@ -23,6 +22,7 @@
                 record-id={Id}
                 onsubmit={handleSubmit} 
                 onsuccess={handleSuccess}>
+                <div class="slds-scrollable_y" style="height: 62vh;">
                 <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
                         <div class="slds-grid">
                             <div class="slds-col slds-size_1-of-2">
@@ -72,6 +72,47 @@
                         </div>
                     </div>
                     <lightning-input-field data-id field-name="Description"></lightning-input-field>
+
+                    <lightning-file-upload
+                    name="fileUploader"
+                    accept={acceptedFormats}
+                    record-id={Id}
+                    onuploadfinished={handleUploadFinished}
+                    multiple></lightning-file-upload>
+            
+                <lightning-card title="File Preview">
+                     <template for:each={filesList} for:item="file">
+                         <div key={file.value} class="slds-box">
+                             <div class="slds-grid slds-wrap">
+                                 <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12" style="margin-right:-15px;">
+                                   <p><strong>FileName - </strong>{file.label}.{file.fileextension}</p>
+                                 </div>
+                                 <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
+                                    <lightning-input style="margin-right: 15px;" class="slds-p-left_xx-small" checked={file.isProfileImage} onchange={handleCheckBoxChange} type="checkbox" value={file.imageurl} label="Profile Image" ></lightning-input>
+                                     &nbsp;&nbsp;&nbsp;
+                                    <a style="margin-left:115px; position:absolute;margin-top:-19px;" href={file.url} download>Download</a>
+                                 </div>
+                                 <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
+                                    <lightning-button label="Preview" 
+                                    variant="brand"
+                                    data-id={file.imageurl}
+                                    onclick={previewImage}
+                                    style="margin-left:20px; margin-right: 6px; margin-top:5px;"></lightning-button>
+                                    &nbsp;&nbsp;&nbsp;
+                                   <lightning-button label="Delete" 
+                                    style="margin-top:5px;"
+                                    variant="destructive"
+                                    data-id={file.value}
+                                    value={file.imageurl}
+                                    onclick={handleDeleteFiles}
+                                   ></lightning-button>
+                                 </div>
+                               </div>
+                         </div>
+                     </template>
+                </lightning-card> 
+
+                </div>
                 </div>
                 <footer class="slds-modal__footer">
                     <lightning-button class="slds-m-top_small" variant="neutral" onclick={closeModal} label="Cancel"></lightning-button>&nbsp;
