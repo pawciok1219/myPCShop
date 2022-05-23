@@ -4,7 +4,7 @@ public with sharing class editRecordControllerTest {
     public static void testSetup(){
         Pricebook2 standartPricebook = new Pricebook2(Id=Test.getStandardPricebookId(), IsActive=true);
         update  standartPricebook;
-        Product2 product = new Product2(Name='Test', IsActive=true);
+        Product2 product = new Product2(Name='Test', IsActive=true,Producer__c='Intel');
         insert product;
         PricebookEntry standartPrice = new PricebookEntry(UnitPrice=1000,Product2Id=product.Id, Pricebook2Id=standartPricebook.Id,  IsActive=true);
         insert standartPrice;
