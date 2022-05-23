@@ -1,0 +1,3 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId,lightning:isUrlAddressable,flexipage:availableForAllPageTypes" access="global">
+    <c:editProductRecord Id="{!v.recordId}"/>
+</aura:component>	
