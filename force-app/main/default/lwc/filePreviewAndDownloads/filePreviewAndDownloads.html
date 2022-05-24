@@ -31,7 +31,6 @@
                                  <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
                                     <lightning-input style="margin-right: 15px;" class="slds-p-left_xx-small" checked={file.isProfileImage} onchange={handleCheckBoxChange} type="checkbox" value={file.imageurl} label="Profile Image" ></lightning-input>
                                      &nbsp;&nbsp;&nbsp;
-                                    <a style="margin-left:115px; position:absolute;margin-top:-19px;" href={file.url} download>Download</a>
                                  </div>
                                  <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
                                     <lightning-button label="Preview" 
@@ -41,12 +40,12 @@
                                     style="margin-left:20px; margin-right: 6px; margin-top:5px;"></lightning-button>
                                     &nbsp;&nbsp;&nbsp;
                                    <lightning-button label="Delete" 
-                                   style="margin-top:5px;"
-                                   variant="destructive"
-                                   data-id={file.value}
-                                   value={file.imageurl}
-                                   onclick={handleDeleteFiles}
-                                   ></lightning-button>
+                                    style="margin-top:5px;"
+                                    variant="destructive"
+                                    data-id={file.value}
+                                    value={file.imageurl}
+                                    onclick={handleDeleteFiles}
+                                    ></lightning-button>
                                  </div>
                                </div>
                          </div>
