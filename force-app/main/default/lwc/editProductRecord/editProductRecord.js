@@ -6,8 +6,8 @@ import getRelatedFilesByRecordId from '@salesforce/apex/filePreviewAndDownloadCo
 import deleteContentDocument from '@salesforce/apex/filePreviewAndDownloadController.deleteContentDocument';
 import updateDisplayURL from '@salesforce/apex/filePreviewAndDownloadController.updateDisplayURL';
 import { refreshApex } from "@salesforce/apex";
-import { getRecord, getFieldValue} from 'lightning/uiRecordApi';
-import {NavigationMixin} from 'lightning/navigation';
+import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
+import { NavigationMixin } from 'lightning/navigation';
 import DISPLAYURL_FIELD from '@salesforce/schema/Product2.DisplayUrl';
 
 const fields = [DISPLAYURL_FIELD];
@@ -20,11 +20,13 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
     @api Id;
     @track filesList = [];
     wiredActivities;
+    wiredActive;
     acceptedFormats = '.png,.jpg,.jpeg';
 
     @wire(getStandardPriceProduct, {productId: '$Id'})
     wiredResulted(result){ 
         const {data, error} = result;
+        this.wiredActive = result;
         if(data){
             this.productPrice = data.UnitPrice;
             this.pricebookentry = data;
@@ -32,7 +34,7 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
         if(error){ 
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error loading the price of this record',
+                    title: 'Error loading the price of this record!',
                     message: error.body.message,
                     variant: 'error',
                 }),
@@ -42,13 +44,11 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
 
     @wire(getRelatedFilesByRecordId, {recordId: '$Id'})
     wiredResult(result){ 
-        console.log(this.Id);
         const { data, error } = result;
         this.wiredActivities = result;
         if(data){
             this.filesList = Object.keys(data).map(item=>({"label":data[item].Title,
              "value": data[item].ContentDocumentId,
-             "url":`/sfc/servlet.shepherd/document/download/${data[item].ContentDocumentId}`,
              "imageurl":`/sfc/servlet.shepherd/version/renditionDownload?rendition=THUMB720BY480&versionId=${data[item].Id}&operationContext=CHATTER&contentId=${data[item].ContentDocumentId}`,
              "fileextension": data[item].FileExtension,
              "isProfileImage": this.isProfileImageCheck(`/sfc/servlet.shepherd/version/renditionDownload?rendition=THUMB720BY480&versionId=${data[item].Id}&operationContext=CHATTER&contentId=${data[item].ContentDocumentId}`)
@@ -57,7 +57,7 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
         if(error){ 
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error loading record files',
+                    title: 'Error loading record files!',
                     message: error.body.message,
                     variant: 'error',
                 }),
@@ -94,7 +94,7 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
     }
 
     previewImage(event){
-        var url = event.target.dataset.id
+        let url = event.target.dataset.id
         window.open(url, "_blank");
     }
 
@@ -136,17 +136,17 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
 
     handleCheckBoxChange(event){
         if(event.target.checked){
-            var url = event.target.value;
+            let url = event.target.value;
             updateDisplayURL({ recordId: this.Id, url: event.target.value})
             .then(result => {
-                var selected = [...this.template.querySelectorAll('lightning-input')].filter(input => input.value != url);
+                let selected = [...this.template.querySelectorAll('lightning-input')].filter(input => input.value != url);
                 selected.forEach(element => element.checked=false)
                 refreshApex(this.displayurl);
             })
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error in selecting profile image',
+                        title: 'Error in selecting profile image!',
                         message: error.body.message,
                         variant: 'error'
                     })
@@ -160,7 +160,7 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error',
+                        title: 'Error!',
                         message: error.body.message,
                         variant: 'error'
                     })
@@ -177,14 +177,28 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
         this.isModalOpen = false;
     }
 
+    cancelAction(){
+        this.isModalOpen = false;
+        this[NavigationMixin.Navigate]({
+            type: 'standard__recordPage',
+            attributes: {
+                recordId: this.Id,
+                objectApiName: 'Product2',
+                actionName: 'view'
+            },
+        });
+        eval("$A.get('e.force:refreshView').fire();");
+    }
+
     handlePriceChange(event){
         this.productPrice = event.target.value;
     }
-
+    
     handleSubmit(event){
         event.preventDefault();
         this.template.querySelector('lightning-record-edit-form').submit(this.fields);
         refreshApex(this.wiredActivities);
+        refreshApex(this.wiredActive);
         this.closeModal();
     }
 
@@ -209,6 +223,9 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
             );
         });
         refreshApex(this.wiredActivities);
+        refreshApex(this.wiredActive);
+        eval("$A.get('e.force:refreshView').fire();");
+
         this[NavigationMixin.Navigate]({
             type: 'standard__recordPage',
             attributes: {
@@ -217,7 +234,6 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
                 actionName: 'view'
             },
         });
-        eval("$A.get('e.force:refreshView').fire();");
     }
 
 }
