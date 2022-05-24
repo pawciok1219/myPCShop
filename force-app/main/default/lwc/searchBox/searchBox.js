@@ -9,9 +9,6 @@ import FamilyOfProduct from '@salesforce/schema/Product2.Family';
 import { getObjectInfo } from 'lightning/uiObjectInfoApi';
 import Product2_object from '@salesforce/schema/Product2';
 
-const actions = [
-    { label: 'View', name: 'view' }
-];
 
 export default class SearchBox extends NavigationMixin(LightningElement) {
     @wire(getObjectInfo, { objectApiName: Product2_object })
@@ -86,7 +83,14 @@ export default class SearchBox extends NavigationMixin(LightningElement) {
                 family: this.productFamily
                 })
                 .then(result => {
-                    this.productList = result;
+                    this.productList = [];
+                    result.forEach(r=> {
+                        let record =  Object.assign({}, r);
+                        record.Url = `/lightning/r/Product2/${r.Id}/view`;
+                        record.UrlName = r.Name;
+                        record.Name = r.Name;
+                        this.productList.push(record);
+                    });
                     if(this.productList.length === 0) {
                         this.isNotEmpty = false;
                         this.isLoading = false;
@@ -150,16 +154,12 @@ export default class SearchBox extends NavigationMixin(LightningElement) {
     }
 
     cols = [
-        { label:'Product name', fieldName:'Name', type: 'text'},
+        { label:'Product name', fieldName:'Url', type: 'url',  typeAttributes: {label: { fieldName: 'UrlName' }, target: '_blank'}},
         { label:'Producer', fieldName:'Producer__c', type: 'text'},
         { label:'Model', fieldName:'Model__c', type: 'text'},
         { label:'Product Family', fieldName:'Family', type: 'text'},
         { label:'Product Code', fieldName:'ProductCode', type: 'text'},
-        { label:'Available', fieldName:'Available__c', type: 'boolean'},
-        {
-            type: 'action',
-            typeAttributes: { rowActions: actions },
-        }
+        { label:'Available', fieldName:'Available__c', type: 'boolean'}
     ]
 
 }
