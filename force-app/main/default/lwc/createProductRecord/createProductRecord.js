@@ -36,13 +36,18 @@ export default class CreateProductRecord extends LightningElement {
         this.dispatchEvent(toastEvent);
 
         this.Id = recordId;
-        var fields = {'Pricebook2Id' : '01s7Q000006w2QqQAI', 'Product2Id' : recordId, 'UnitPrice' : this.productPrice};
-        var objRecordInput = {'apiName' : 'PricebookEntry', fields};
+        let fields = {'Pricebook2Id' : '01s7Q000006w2QqQAI', 'Product2Id' : recordId, 'UnitPrice' : this.productPrice};
+        let objRecordInput = {'apiName' : 'PricebookEntry', fields};
         createRecord(objRecordInput).then(response => {
         }).catch(error => {
-            alert('Error: ' +JSON.stringify(error));
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: 'Error in adding the price!',
+                    message: error.body.message,
+                    variant: 'error',
+                }),
+            );
         });
-
         this.isModalImageOpen = true;
     }
 

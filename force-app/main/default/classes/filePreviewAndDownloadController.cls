@@ -14,23 +14,18 @@ public with sharing class filePreviewAndDownloadController {
      }
 
     @AuraEnabled
-      public static void deleteContentDocument(String recordId) {
-            Database.delete(recordId);
-     }
+      public static void deleteContentDocument(String recordId) {Database.delete(recordId);}
 
     @AuraEnabled
       public static void updateDisplayURL(String recordId, String url){
          try {
-
             Product2 product = [SELECT Id, DisplayUrl  
                 FROM Product2 
                 WHERE Id= :recordId
                 LIMIT 1];
 
             product.DisplayUrl = url;
-            
-            update product;
-             
+            update product; 
          } catch (Exception e) {
              throw new AuraHandledException(e.getMessage());
          }
