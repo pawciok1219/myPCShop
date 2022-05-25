@@ -234,6 +234,15 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
                 actionName: 'view'
             },
         });
+
+        setTimeout(()=>{
+            window.location.reload();
+        }, 1000);
+
+        setTimeout(()=>{
+                eval("$A.get('e.force:refreshView').fire();"); 
+                this.closeQuickAction();
+        },1000);
     }
 
 }
