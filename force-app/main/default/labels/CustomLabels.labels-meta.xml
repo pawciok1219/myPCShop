@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Birth_date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Birth date</shortDescription>
+        <value>Birth date</value>
+    </labels>
+    <labels>
+        <fullName>DA_Username</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_username</shortDescription>
+        <value>Username</value>
+    </labels>
+    <labels>
+        <fullName>DA_Users</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_Users</shortDescription>
+        <value>Users</value>
+    </labels>
+    <labels>
+        <fullName>DA_action</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_action</shortDescription>
+        <value>Action</value>
+    </labels>
+    <labels>
+        <fullName>DA_activate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_activate</shortDescription>
+        <value>Activate</value>
+    </labels>
+    <labels>
+        <fullName>DA_active</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_active</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>DA_add_new_doctor</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_add_new_doctor</shortDescription>
+        <value>Add new doctor</value>
+    </labels>
+    <labels>
+        <fullName>DA_add_new_hospital</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_add_new_hospital</shortDescription>
+        <value>Add new hospital</value>
+    </labels>
+    <labels>
+        <fullName>DA_ambulances</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_ambulances</shortDescription>
+        <value>No. Ambulances</value>
+    </labels>
+    <labels>
+        <fullName>DA_city</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_city</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>DA_currently_logged_users</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_currently_logged_users</shortDescription>
+        <value>Currently logged users</value>
+    </labels>
+    <labels>
+        <fullName>DA_deactivate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_deactivate</shortDescription>
+        <value>Deactivate</value>
+    </labels>
+    <labels>
+        <fullName>DA_develop_info</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_develop_info</shortDescription>
+        <value>Develop Info</value>
+    </labels>
+    <labels>
+        <fullName>DA_doctor_created</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_doctor_created</shortDescription>
+        <value>Success! Doctor was created.</value>
+    </labels>
+    <labels>
+        <fullName>DA_edit_doctor</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_edit_doctor</shortDescription>
+        <value>Edit doctor</value>
+    </labels>
+    <labels>
+        <fullName>DA_edit_hospital</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_edit_hospital</shortDescription>
+        <value>Edit Hospital</value>
+    </labels>
+    <labels>
+        <fullName>DA_fax_number</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_fax_number</shortDescription>
+        <value>Fax Number</value>
+    </labels>
+    <labels>
+        <fullName>DA_free_licenses</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_free_licenses</shortDescription>
+        <value>Free Licenses</value>
+    </labels>
+    <labels>
+        <fullName>DA_general</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_general</shortDescription>
+        <value>General</value>
+    </labels>
+    <labels>
+        <fullName>DA_hospital_created</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_hospital_created</shortDescription>
+        <value>Success! Hospital was created.</value>
+    </labels>
+    <labels>
+        <fullName>DA_hospital_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_hospital_name</shortDescription>
+        <value>Hospital Name</value>
+    </labels>
+    <labels>
+        <fullName>DA_last_login</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_last_login</shortDescription>
+        <value>Last Login</value>
+    </labels>
+    <labels>
+        <fullName>DA_licensenumber</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_licensenumber</shortDescription>
+        <value>License Number</value>
+    </labels>
+    <labels>
+        <fullName>DA_licenses_info</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_licenses_info</shortDescription>
+        <value>Licenses Info</value>
+    </labels>
+    <labels>
+        <fullName>DA_number_of_classes</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_number_of_classes</shortDescription>
+        <value>Number of Classes</value>
+    </labels>
+    <labels>
+        <fullName>DA_number_of_pages</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_number_of_pages</shortDescription>
+        <value>Number of Pages</value>
+    </labels>
+    <labels>
+        <fullName>DA_number_of_triggers</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_number_of_triggers</shortDescription>
+        <value>Number of Triggers</value>
+    </labels>
+    <labels>
+        <fullName>DA_records_not_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_records_not_found</shortDescription>
+        <value>Records were not found.</value>
+    </labels>
+    <labels>
+        <fullName>DA_searchhospitals</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_searchhospitals</shortDescription>
+        <value>Search Hospitals</value>
+    </labels>
+    <labels>
+        <fullName>DA_source_ip</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_source_ip</shortDescription>
+        <value>Source Ip</value>
+    </labels>
+    <labels>
+        <fullName>DA_speciality</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_speciality</shortDescription>
+        <value>Speciality</value>
+    </labels>
+    <labels>
+        <fullName>DA_startcareer</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_startcareer</shortDescription>
+        <value>Start career</value>
+    </labels>
+    <labels>
+        <fullName>DA_timezone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_timezone</shortDescription>
+        <value>Timezone</value>
+    </labels>
+    <labels>
+        <fullName>DA_total_licenses</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_total_licenses</shortDescription>
+        <value>Total Licenses</value>
+    </labels>
+    <labels>
+        <fullName>DA_used_licenses</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_used_licenses</shortDescription>
+        <value>Used Licenses</value>
+    </labels>
+    <labels>
+        <fullName>DA_user_activated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_user_activated</shortDescription>
+        <value>User successfully activated.</value>
+    </labels>
+    <labels>
+        <fullName>DA_user_deactivated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_user_deactivated</shortDescription>
+        <value>User successfully deactivated.</value>
+    </labels>
+    <labels>
+        <fullName>DA_user_id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_user_id</shortDescription>
+        <value>User Id</value>
+    </labels>
+    <labels>
+        <fullName>DA_user_not_activated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_user_not_activated</shortDescription>
+        <value>This user cannot be activated.</value>
+    </labels>
+    <labels>
+        <fullName>DA_user_not_deactivated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_user_not_deactivated</shortDescription>
+        <value>This user cannot be deactivated.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_city</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_city</shortDescription>
+        <value>City field contains characters that are not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_country</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_country</shortDescription>
+        <value>Country field contains characters that are not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_nationality</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_nationality</shortDescription>
+        <value>Nationality field contains characters that are not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_phone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_phone</shortDescription>
+        <value>Phone number can only contain numbers.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_postalcode</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_postalcode</shortDescription>
+        <value>Postal code field contains characters that are not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_requiredfields</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_requiredfields</shortDescription>
+        <value>Please fill in the required field!</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_speciality</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_speciality</shortDescription>
+        <value>Speciality field contains characters that are not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_street</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_street</shortDescription>
+        <value>Street field contains characters that are not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>DA_validate_successful</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_validate_successful</shortDescription>
+        <value>Successful</value>
+    </labels>
+    <labels>
+        <fullName>DA_wrapper_verify_fields</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_wrapper_verify_fields</shortDescription>
+        <value>Verify the required fields.</value>
+    </labels>
+    <labels>
+        <fullName>DAapi_wrapper_error_catch</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAapi_wrapper_error_catch</shortDescription>
+        <value>Error:</value>
+    </labels>
+    <labels>
+        <fullName>DAapi_wrapper_no_results</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAapi_wrapper_no_results</shortDescription>
+        <value>There were no results in response.</value>
+    </labels>
+    <labels>
+        <fullName>DAapi_wrapper_rec_deleted</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAapi_wrapper_rec_deleted</shortDescription>
+        <value>Records deleted.</value>
+    </labels>
+    <labels>
+        <fullName>DAapi_wrapper_rec_inserted</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAapi_wrapper_rec_inserted</shortDescription>
+        <value>Records inserted.</value>
+    </labels>
+    <labels>
+        <fullName>DAapi_wrapper_rec_updated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAapi_wrapper_rec_updated</shortDescription>
+        <value>Records updated.</value>
+    </labels>
+    <labels>
+        <fullName>DAapi_wrapper_req_not_processed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAapi_wrapper_req_not_processed</shortDescription>
+        <value>Request not processed.</value>
+    </labels>
+    <labels>
+        <fullName>DAapi_wrapper_req_processed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAapi_wrapper_req_processed</shortDescription>
+        <value>Request processed successfully.</value>
+    </labels>
+    <labels>
+        <fullName>DAdoctorvalidcontract</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DA_doctorvalidcontract</shortDescription>
+        <value>The doctor at that time already had a valid contract with this hospital.</value>
+    </labels>
+    <labels>
+        <fullName>Import_Doctors</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Import Doctors</shortDescription>
+        <value>Import Doctors</value>
+    </labels>
+    <labels>
+        <fullName>KW_actor_details</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_actor_details</shortDescription>
+        <value>Actor Details</value>
+    </labels>
+    <labels>
+        <fullName>KW_actors</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_actors</shortDescription>
+        <value>Actors</value>
+    </labels>
+    <labels>
+        <fullName>KW_actors_not_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_actors_not_found</shortDescription>
+        <value>0 actors found.</value>
+    </labels>
+    <labels>
+        <fullName>KW_biography</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_biography</shortDescription>
+        <value>Biography</value>
+    </labels>
+    <labels>
+        <fullName>KW_biography_not_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_biography_not_found</shortDescription>
+        <value>Biography has not been found.</value>
+    </labels>
+    <labels>
+        <fullName>KW_born</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_born</shortDescription>
+        <value>Born:</value>
+    </labels>
+    <labels>
+        <fullName>KW_cast</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_cast</shortDescription>
+        <value>Cast</value>
+    </labels>
+    <labels>
+        <fullName>KW_clear</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_clear</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>KW_created</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_created</shortDescription>
+        <value>Created:</value>
+    </labels>
+    <labels>
+        <fullName>KW_created_by</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_created_by</shortDescription>
+        <value>Created by:</value>
+    </labels>
+    <labels>
+        <fullName>KW_details</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_details</shortDescription>
+        <value>Details</value>
+    </labels>
+    <labels>
+        <fullName>KW_died</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_died</shortDescription>
+        <value>Died:</value>
+    </labels>
+    <labels>
+        <fullName>KW_favorite_movies</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_favorite_movies</shortDescription>
+        <value>Favorite Movies</value>
+    </labels>
+    <labels>
+        <fullName>KW_information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_information</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>KW_known_for</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_known_for</shortDescription>
+        <value>Known for</value>
+    </labels>
+    <labels>
+        <fullName>KW_latest_ratings</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_latest_ratings</shortDescription>
+        <value>Latest ratings</value>
+    </labels>
+    <labels>
+        <fullName>KW_movie_details</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_movie_details</shortDescription>
+        <value>Movie Details</value>
+    </labels>
+    <labels>
+        <fullName>KW_movies</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_movies</shortDescription>
+        <value>Movies</value>
+    </labels>
+    <labels>
+        <fullName>KW_movies_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_movies_found</shortDescription>
+        <value>movies found.</value>
+    </labels>
+    <labels>
+        <fullName>KW_next</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>KW_no_ratings_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_no_ratings_found</shortDescription>
+        <value>No ratings found.</value>
+    </labels>
+    <labels>
+        <fullName>KW_not_found_movies</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_not_found_movies</shortDescription>
+        <value>0 movies found.</value>
+    </labels>
+    <labels>
+        <fullName>KW_overview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_overview</shortDescription>
+        <value>Overview</value>
+    </labels>
+    <labels>
+        <fullName>KW_overview_not_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_overview_not_found</shortDescription>
+        <value>Overview has not been found.</value>
+    </labels>
+    <labels>
+        <fullName>KW_place_of_birth</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_place_of_birth</shortDescription>
+        <value>Place of Birth:</value>
+    </labels>
+    <labels>
+        <fullName>KW_previous</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>KW_rating</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_rating</shortDescription>
+        <value>Rating</value>
+    </labels>
+    <labels>
+        <fullName>KW_removed_favorite</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_removed_favorite</shortDescription>
+        <value>Successfully removed a movie from favorites.</value>
+    </labels>
+    <labels>
+        <fullName>KW_run_time</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_run_time</shortDescription>
+        <value>Run Time:</value>
+    </labels>
+    <labels>
+        <fullName>KW_save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>KW_search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>KW_search_actors</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_search_actors</shortDescription>
+        <value>Search Actors</value>
+    </labels>
+    <labels>
+        <fullName>KW_search_field_empty</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_search_field_empty</shortDescription>
+        <value>The search field is empty. Enter the character sequence!</value>
+    </labels>
+    <labels>
+        <fullName>KW_search_movies</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_search_movies</shortDescription>
+        <value>Search Movies</value>
+    </labels>
+    <labels>
+        <fullName>KW_succes_rating</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_succes_rating</shortDescription>
+        <value>Rating successfully added.</value>
+    </labels>
+    <labels>
+        <fullName>KW_success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_success</shortDescription>
+        <value>Success!</value>
+    </labels>
+    <labels>
+        <fullName>KW_your_opinion</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>KW_your_opinion</shortDescription>
+        <value>Your opinion</value>
+    </labels>
+    <labels>
+        <fullName>MS_available</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_available</shortDescription>
+        <value>Available</value>
+    </labels>
+    <labels>
+        <fullName>MS_cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>MS_clear</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_clear</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>MS_close</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>MS_delete</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>MS_edit_product</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_edit_product</shortDescription>
+        <value>Edit product</value>
+    </labels>
+    <labels>
+        <fullName>MS_error</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error</shortDescription>
+        <value>Error!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_adding_price</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_adding_price</shortDescription>
+        <value>Error in adding the price!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_deleting_file</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_deleting_file</shortDescription>
+        <value>Error deleting file!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_loading_files</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_loading_files</shortDescription>
+        <value>Error loading files!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_loading_price_record</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_loading_price_record</shortDescription>
+        <value>Error loading the price of this record!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_selecting_profile</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_selecting_profile</shortDescription>
+        <value>Error in selecting profile image!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_updating_price</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_updating_price</shortDescription>
+        <value>Error updating product price!</value>
+    </labels>
+    <labels>
+        <fullName>MS_file_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_file_name</shortDescription>
+        <value>FileName -</value>
+    </labels>
+    <labels>
+        <fullName>MS_file_preview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_file_preview</shortDescription>
+        <value>File preview</value>
+    </labels>
+    <labels>
+        <fullName>MS_file_preview_big</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_file_preview_big</shortDescription>
+        <value>File Preview</value>
+    </labels>
+    <labels>
+        <fullName>MS_files_uploaded</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_files_uploaded</shortDescription>
+        <value>Files Uploaded Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>MS_model</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_model</shortDescription>
+        <value>Product Model</value>
+    </labels>
+    <labels>
+        <fullName>MS_new_product</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_new_product</shortDescription>
+        <value>New product</value>
+    </labels>
+    <labels>
+        <fullName>MS_preview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_preview</shortDescription>
+        <value>Preview</value>
+    </labels>
+    <labels>
+        <fullName>MS_price</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_price</shortDescription>
+        <value>Price (EUR)</value>
+    </labels>
+    <labels>
+        <fullName>MS_price_underflow</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_price_underflow</shortDescription>
+        <value>Price must be greater than 0.</value>
+    </labels>
+    <labels>
+        <fullName>MS_producer</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_producer</shortDescription>
+        <value>Producer</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_code</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_code</shortDescription>
+        <value>Product Code</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_created</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_created</shortDescription>
+        <value>Product has been created successfully!</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_created_id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_created_id</shortDescription>
+        <value>Product created :</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_family</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_family</shortDescription>
+        <value>Product Family</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_name</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_search</shortDescription>
+        <value>Product Search</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_updated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_updated</shortDescription>
+        <value>Product updated.</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_updated_success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_updated_success</shortDescription>
+        <value>Product has been updated successfully!</value>
+    </labels>
+    <labels>
+        <fullName>MS_profile_image</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_profile_image</shortDescription>
+        <value>Profile Image</value>
+    </labels>
+    <labels>
+        <fullName>MS_records_not_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_records_not_found</shortDescription>
+        <value>Records were not found.</value>
+    </labels>
+    <labels>
+        <fullName>MS_save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>MS_save_and_new</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_save_and_new</shortDescription>
+        <value>Save &amp; New</value>
+    </labels>
+    <labels>
+        <fullName>MS_save_and_next</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_save_and_next</shortDescription>
+        <value>Save &amp; Next</value>
+    </labels>
+    <labels>
+        <fullName>MS_search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>MS_search_empty</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_search_empty</shortDescription>
+        <value>All of the search fields are empty.</value>
+    </labels>
+    <labels>
+        <fullName>MS_select_family</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_select_family</shortDescription>
+        <value>Select a product family</value>
+    </labels>
+    <labels>
+        <fullName>MS_select_producer</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_select_producer</shortDescription>
+        <value>Select a producer</value>
+    </labels>
+    <labels>
+        <fullName>MS_success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_success</shortDescription>
+        <value>Success!</value>
+    </labels>
+    <labels>
+        <fullName>MS_upload_product_images</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_upload_product_images</shortDescription>
+        <value>Upload product images</value>
+    </labels>
+    <labels>
+        <fullName>Read_File</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Read File</shortDescription>
+        <value>Read File</value>
+    </labels>
+    <labels>
+        <fullName>Select_All</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select All</shortDescription>
+        <value>Select All</value>
+    </labels>
+    <labels>
+        <fullName>cancel_button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>cancel_button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>city</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>city</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>clear</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>clear</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>countryy</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>countryy</shortDescription>
+        <value>Country</value>
+    </labels>
+    <labels>
+        <fullName>del_button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>del_button</shortDescription>
+        <value>Del</value>
+    </labels>
+    <labels>
+        <fullName>deselect</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>deselect</shortDescription>
+        <value>Deselect</value>
+    </labels>
+    <labels>
+        <fullName>doctor_valid_contract</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>doctor_valid_contract</shortDescription>
+        <value>The doctor at that time already had a valid contract with this hospital.</value>
+    </labels>
+    <labels>
+        <fullName>doctors_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>doctors_found</shortDescription>
+        <value>Doctors found</value>
+    </labels>
+    <labels>
+        <fullName>edit_button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>edit_button</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>email</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>enddatelessstartdate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>enddatelessstartdate</shortDescription>
+        <value>The end date cannot be less than the start date.</value>
+    </labels>
+    <labels>
+        <fullName>error_csv</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>error csv</shortDescription>
+        <value>Error.Please make sure input csv file is correct!</value>
+    </labels>
+    <labels>
+        <fullName>first_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>first name</shortDescription>
+        <value>First Name</value>
+    </labels>
+    <labels>
+        <fullName>first_page</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>first page</shortDescription>
+        <value>First Page</value>
+    </labels>
+    <labels>
+        <fullName>full_address</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>full address</shortDescription>
+        <value>Full Address</value>
+    </labels>
+    <labels>
+        <fullName>full_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>full name</shortDescription>
+        <value>Full Name</value>
+    </labels>
+    <labels>
+        <fullName>hospitals_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>hospitals found</shortDescription>
+        <value>hospitals found</value>
+    </labels>
+    <labels>
+        <fullName>import</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>import</shortDescription>
+        <value>Import</value>
+    </labels>
+    <labels>
+        <fullName>invert</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>invert</shortDescription>
+        <value>Invert</value>
+    </labels>
+    <labels>
+        <fullName>last_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>last name</shortDescription>
+        <value>Last Name</value>
+    </labels>
+    <labels>
+        <fullName>last_page</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>last page</shortDescription>
+        <value>Last Page</value>
+    </labels>
+    <labels>
+        <fullName>license_number</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>license number</shortDescription>
+        <value>License Number</value>
+    </labels>
+    <labels>
+        <fullName>nationality</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>nationality</shortDescription>
+        <value>Nationality</value>
+    </labels>
+    <labels>
+        <fullName>new_button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>new_button</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>next</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>notselectedforimport</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>notselectedforimport</shortDescription>
+        <value>Not selected for import</value>
+    </labels>
+    <labels>
+        <fullName>phone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>phone</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>postal_code</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>postal code</shortDescription>
+        <value>Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>previous</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>records_of</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>records_of</shortDescription>
+        <value>records of</value>
+    </labels>
+    <labels>
+        <fullName>recordsnotfound</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>recordsnotfound</shortDescription>
+        <value>Records were not found.</value>
+    </labels>
+    <labels>
+        <fullName>recordsperpage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>recordsperpage</shortDescription>
+        <value>Records per page</value>
+    </labels>
+    <labels>
+        <fullName>save_button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>save_button</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>search_doctors</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>search doctors</shortDescription>
+        <value>Search Doctors</value>
+    </labels>
+    <labels>
+        <fullName>search_results</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>search results</shortDescription>
+        <value>Search Results</value>
+    </labels>
+    <labels>
+        <fullName>select</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>select</shortDescription>
+        <value>Select</value>
+    </labels>
+    <labels>
+        <fullName>showing</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>showing</shortDescription>
+        <value>Showing</value>
+    </labels>
+    <labels>
+        <fullName>startdategreaterenddate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>startdategreaterenddate</shortDescription>
+        <value>The start date cannot be greater than the end date.</value>
+    </labels>
+    <labels>
+        <fullName>status</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>street</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>street</shortDescription>
+        <value>Street</value>
+    </labels>
+    <labels>
+        <fullName>success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>view</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>view</shortDescription>
+        <value>View</value>
+    </labels>
+</CustomLabels>
