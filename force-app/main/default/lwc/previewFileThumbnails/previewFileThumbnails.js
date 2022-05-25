@@ -42,7 +42,7 @@ export default class PreviewFileThumbnails extends LightningElement {
     } else if (error) {
       this.dispatchEvent(
         new ShowToastEvent({
-          title: "Error loading Files",
+          title: "Error loading files!",
           message: error.body.message,
           variant: "error"
         })

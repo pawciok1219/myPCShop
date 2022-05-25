@@ -56,12 +56,11 @@ export default class PreviewFileThumbnailCard extends LightningElement {
     haveDisplayUrl({recordId: this.recordId, url: this.thumbnail})
     .then(result=> {
         this.isMain = result;
-        console.log(this.isMain);
     })
     .catch(error => {
       this.dispatchEvent(
           new ShowToastEvent({
-              title: 'Error in selecting profile image',
+              title: 'Error in selecting profile image!',
               message: error.body.message,
               variant: 'error'
           })
