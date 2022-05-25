@@ -8,11 +8,37 @@ import { refreshApex } from "@salesforce/apex";
 import {NavigationMixin} from 'lightning/navigation';
 import { getRecord, getFieldValue} from 'lightning/uiRecordApi';
 import DISPLAYURL_FIELD from '@salesforce/schema/Product2.DisplayUrl';
+import MS_error_selecting_profile from '@salesforce/label/c.MS_error_selecting_profile';
+import MS_error_deleting_file from '@salesforce/label/c.MS_error_deleting_file';
+import MS_files_uploaded from '@salesforce/label/c.MS_files_uploaded';
+import MS_upload_product_images from '@salesforce/label/c.MS_upload_product_images';
+import MS_close from '@salesforce/label/c.MS_close';
+import MS_file_preview_big from '@salesforce/label/c.MS_file_preview_big';
+import MS_file_name from '@salesforce/label/c.MS_file_name';
+import MS_profile_image from '@salesforce/label/c.MS_profile_image';
+import MS_preview from '@salesforce/label/c.MS_preview';
+import MS_delete from '@salesforce/label/c.MS_delete';
+import MS_cancel from '@salesforce/label/c.MS_cancel';
+import MS_save_and_new from '@salesforce/label/c.MS_save_and_new';
+import MS_save from '@salesforce/label/c.MS_save';
 
 const fields = [DISPLAYURL_FIELD];
 
 
 export default class FilePreviewAndDownloads extends NavigationMixin(LightningElement) {
+
+    label = {
+        MS_upload_product_images,
+        MS_close,
+        MS_file_preview_big,
+        MS_file_name,
+        MS_profile_image,
+        MS_preview,
+        MS_delete,
+        MS_cancel,
+        MS_save_and_new,
+        MS_save
+    };
 
     @api recordId;
     @track isModalOpen = true;
@@ -69,7 +95,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error in selecting profile image!',
+                        title: MS_error_selecting_profile,
                         message: error.body.message,
                         variant: 'error'
                     })
@@ -120,7 +146,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
         .catch(error => {
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error deleting file!',
+                    title: MS_error_deleting_file,
                     message: error.body.message,
                     variant: 'error'
                 })
@@ -142,7 +168,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
         this.dispatchEvent(
           new ShowToastEvent({
             title: "Success!",
-            message: uploadedFiles.length + " Files Uploaded Successfully.",
+            message: uploadedFiles.length +" "+MS_files_uploaded,
             variant: "success"
           })
         );

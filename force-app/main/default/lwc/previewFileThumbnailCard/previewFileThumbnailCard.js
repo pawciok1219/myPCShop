@@ -1,6 +1,7 @@
 import { LightningElement, api } from "lwc";
 import haveDisplayUrl from "@salesforce/apex/fileController.haveDisplayUrl";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
+import MS_error_selecting_profile from '@salesforce/label/c.MS_error_selecting_profile';
 
 
 export default class PreviewFileThumbnailCard extends LightningElement {
@@ -60,7 +61,7 @@ export default class PreviewFileThumbnailCard extends LightningElement {
     .catch(error => {
       this.dispatchEvent(
           new ShowToastEvent({
-              title: 'Error in selecting profile image!',
+              title: MS_error_selecting_profile,
               message: error.body.message,
               variant: 'error'
           })

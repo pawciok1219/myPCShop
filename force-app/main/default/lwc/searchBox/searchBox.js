@@ -8,9 +8,32 @@ import Producer from '@salesforce/schema/Product2.Producer__c';
 import FamilyOfProduct from '@salesforce/schema/Product2.Family';
 import { getObjectInfo } from 'lightning/uiObjectInfoApi';
 import Product2_object from '@salesforce/schema/Product2';
-
+import MS_product_search from '@salesforce/label/c.MS_product_search';
+import MS_select_producer from '@salesforce/label/c.MS_select_producer';
+import MS_producer from '@salesforce/label/c.MS_producer';
+import MS_select_family from '@salesforce/label/c.MS_select_family';
+import MS_product_family from '@salesforce/label/c.MS_product_family';
+import MS_search from '@salesforce/label/c.MS_search';
+import MS_clear from '@salesforce/label/c.MS_clear';
+import MS_records_not_found from '@salesforce/label/c.MS_records_not_found';
+import MS_search_empty from '@salesforce/label/c.MS_search_empty';
+import MS_product_name from '@salesforce/label/c.MS_product_name';
+import MS_model from '@salesforce/label/c.MS_model';
+import MS_product_code from '@salesforce/label/c.MS_product_code';
+import MS_available from '@salesforce/label/c.MS_available';
 
 export default class SearchBox extends NavigationMixin(LightningElement) {
+
+    label = {
+        MS_product_search,
+        MS_select_producer,
+        MS_producer,
+        MS_select_family,
+        MS_product_family,
+        MS_search,
+        MS_clear
+    };
+
     @wire(getObjectInfo, { objectApiName: Product2_object })
     productInfo;
 
@@ -95,7 +118,7 @@ export default class SearchBox extends NavigationMixin(LightningElement) {
                         this.isNotEmpty = false;
                         this.isLoading = false;
                         const event = new ShowToastEvent({
-                            message: 'Records were not found.'
+                            message: MS_records_not_found
                         });
                         this.dispatchEvent(event); 
                     } else {
@@ -117,7 +140,7 @@ export default class SearchBox extends NavigationMixin(LightningElement) {
         } else {
             this.isNotEmpty = false;
             const event = new ShowToastEvent({
-                message: 'All of the search fields are empty.'
+                message: MS_search_empty
             });
             this.dispatchEvent(event);   
             this.isLoading = false;
@@ -154,12 +177,12 @@ export default class SearchBox extends NavigationMixin(LightningElement) {
     }
 
     cols = [
-        { label:'Product name', fieldName:'Url', type: 'url',  typeAttributes: {label: { fieldName: 'UrlName' }}},
-        { label:'Producer', fieldName:'Producer__c', type: 'text'},
-        { label:'Model', fieldName:'Model__c', type: 'text'},
-        { label:'Product Family', fieldName:'Family', type: 'text'},
-        { label:'Product Code', fieldName:'ProductCode', type: 'text'},
-        { label:'Available', fieldName:'Available__c', type: 'boolean'}
+        { label: MS_product_name, fieldName:'Url', type: 'url',  typeAttributes: {label: { fieldName: 'UrlName' }}},
+        { label: MS_producer, fieldName:'Producer__c', type: 'text'},
+        { label: MS_model, fieldName:'Model__c', type: 'text'},
+        { label: MS_product_family, fieldName:'Family', type: 'text'},
+        { label: MS_product_code, fieldName:'ProductCode', type: 'text'},
+        { label: MS_available, fieldName:'Available__c', type: 'boolean'}
     ]
 
 }

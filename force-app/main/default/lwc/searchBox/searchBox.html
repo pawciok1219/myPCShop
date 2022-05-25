@@ -7,23 +7,23 @@
         </template>
     </div>
 
-   <lightning-card title="Product Search" icon-name="standard:product">
+   <lightning-card title={label.MS_product_search} icon-name="standard:product">
    <div class="search-box">
          <c-product-name-input ongetproductname={handleNameChange}></c-product-name-input>
          <c-product-code-input ongetproductcode={handleCodeChange}></c-product-code-input>
          <c-product-model-input ongetproductmodel={handleModelChange}></c-product-model-input>
          <div class="slds-grid">
             <template if:true={producerSourceValues.data}>
-            <div class="slds-col"><lightning-combobox style="margin-right:20%; margin-top:-10px;" onchange={handleProducerChange} value={producer} placeholder="Select a producer" name="progress" label="Producer" options={producerSourceValues.data.values}></lightning-combobox></div>
+            <div class="slds-col"><lightning-combobox style="margin-right:20%; margin-top:-10px;" onchange={handleProducerChange} value={producer} placeholder={label.MS_select_producer} name="progress" label={label.MS_producer} options={producerSourceValues.data.values}></lightning-combobox></div>
             </template>
             <template if:true={familySourceValues.data}>
-            <div style="margin-right:75%;" class="slds-col"><lightning-combobox style="margin-top:-10px; margin-right:20%;" onchange={handleFamilyChange} value={productFamily} placeholder="Select a product family" name="progress" label="Product Family" options={familySourceValues.data.values}></lightning-combobox></div>
+            <div style="margin-right:75%;" class="slds-col"><lightning-combobox style="margin-top:-10px; margin-right:20%;" onchange={handleFamilyChange} value={productFamily} placeholder={label.MS_select_family} name="progress" label={label.MS_product_family} options={familySourceValues.data.values}></lightning-combobox></div>
             </template>
         </div>
    </div>
    <div class="slds-grid">
-    <div class="slds-col"> <lightning-button style="margin-left:10px; margin-top:10px; margin-right:8px;" label="Search" variant="brand" onclick={handleSearchKeyword} ></lightning-button> </div>
-    <div class="slds-col" style="margin-right:92%;"> <lightning-button style="margin-top:10px;" label="Clear" variant="brand" onclick={handleClearKeyword}></lightning-button> </div>
+    <div class="slds-col"> <lightning-button style="margin-left:10px; margin-top:10px; margin-right:8px;" label={label.MS_search} variant="brand" onclick={handleSearchKeyword} ></lightning-button> </div>
+    <div class="slds-col" style="margin-right:92%;"> <lightning-button style="margin-top:10px;" label={label.MS_clear} variant="brand" onclick={handleClearKeyword}></lightning-button> </div>
    </div>
       <div if:true={isNotEmpty}>
         <div style="margin-top:10px; margin-left:10px; margin-right:10px;">

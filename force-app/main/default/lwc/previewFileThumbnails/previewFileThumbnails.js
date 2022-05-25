@@ -1,6 +1,7 @@
 import { LightningElement, wire, api, track } from "lwc";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import getFileVersions from "@salesforce/apex/fileController.getVersionFiles";
+import MS_error_loading_files from '@salesforce/label/c.MS_error_loading_files';
 
 export default class PreviewFileThumbnails extends LightningElement {
   loaded = false;
@@ -42,7 +43,7 @@ export default class PreviewFileThumbnails extends LightningElement {
     } else if (error) {
       this.dispatchEvent(
         new ShowToastEvent({
-          title: "Error loading files!",
+          title: MS_error_loading_files,
           message: error.body.message,
           variant: "error"
         })

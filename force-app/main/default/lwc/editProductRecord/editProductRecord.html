@@ -8,9 +8,9 @@
                             alternative-text="close"
                             variant="inverse"
                             size="small" ></lightning-icon>
-                        <span class="slds-assistive-text">Close</span>
+                        <span class="slds-assistive-text">{label.MS_close}</span>
                     </button>
-                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Edit product</h2>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{label.MS_edit_product}</h2>
                 </header>
                 <lightning-record-edit-form 
                 object-api-name="Product2"
@@ -56,10 +56,10 @@
                             data-id
                             type="number"
                             name="price"
-                            label="Price (EUR)"
+                            label={label.MS_price}
                             formatter="currency"
                             onchange={handlePriceChange}
-                            message-when-range-underflow='Price must be greater than 0.'
+                            message-when-range-underflow={label.MS_price_underflow}
                             min=".01"
                             step=".01"
                             value={productPrice}
@@ -75,25 +75,26 @@
                     onuploadfinished={handleUploadFinished}
                     multiple></lightning-file-upload>
             
-                <lightning-card title="File Preview">
+                <lightning-card title={label.MS_file_preview_big}>
                      <template for:each={filesList} for:item="file">
                          <div key={file.value} class="slds-box">
                              <div class="slds-grid slds-wrap">
                                  <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12" style="margin-right:-15px;">
-                                   <p><strong>FileName - </strong>{file.label}.{file.fileextension}</p>
+                                   <p><strong>{label.MS_file_name} </strong>{file.label}.{file.fileextension}</p>
                                  </div>
                                  <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
-                                    <lightning-input style="margin-right: 15px;" class="slds-p-left_xx-small" checked={file.isProfileImage} onchange={handleCheckBoxChange} type="checkbox" value={file.imageurl} label="Profile Image" ></lightning-input>
+                                    <lightning-input style="margin-right: 15px;" class="slds-p-left_xx-small" checked={file.isProfileImage} 
+                                    onchange={handleCheckBoxChange} type="checkbox" value={file.imageurl} label={label.MS_profile_image}></lightning-input>
                                      &nbsp;&nbsp;&nbsp;
                                  </div>
                                  <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
-                                    <lightning-button label="Preview" 
+                                    <lightning-button label={label.MS_preview}
                                     variant="brand"
                                     data-id={file.imageurl}
                                     onclick={previewImage}
                                     style="margin-left:20px; margin-right: 6px; margin-top:5px;"></lightning-button>
                                     &nbsp;&nbsp;&nbsp;
-                                   <lightning-button label="Delete" 
+                                   <lightning-button label={label.MS_delete}
                                     style="margin-top:5px;"
                                     variant="destructive"
                                     data-id={file.value}
@@ -109,8 +110,8 @@
                 </div>
                 </div>
                 <footer class="slds-modal__footer">
-                    <lightning-button class="slds-m-top_small" variant="neutral" onclick={cancelAction} label="Cancel"></lightning-button>&nbsp;
-                    <lightning-button class="slds-m-top_small" variant="brand" type="submit" label="Save"></lightning-button>
+                    <lightning-button class="slds-m-top_small" variant="neutral" onclick={cancelAction} label={label.MS_cancel}></lightning-button>&nbsp;
+                    <lightning-button class="slds-m-top_small" variant="brand" type="submit" label={label.MS_save}></lightning-button>
                 </footer>  
             </lightning-record-edit-form>
             </div>

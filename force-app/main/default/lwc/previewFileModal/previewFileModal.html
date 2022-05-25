@@ -18,7 +18,7 @@
                 onclick={closeModal}
                 ></lightning-button-icon>
                 <h2 id="id-of-modalheader-h2" class="slds-text-heading_large">
-                    File preview
+                    {label.MS_file_preview}
                 </h2>
             </header>
             <div class="slds-modal__content" id="modal-content-id-1">
@@ -42,9 +42,8 @@
             <footer class="slds-modal__footer slds-grid slds-grid_alighn_spread">
                 <lightning-button
                 variant="brand-outline"
-                label="Cancel"
+                label={label.MS_cancel}
                 onclick={closeModal}
-                title="Cancel"
                 class="slds-var-m-left_x-small"></lightning-button>
             </footer>
         </div>
