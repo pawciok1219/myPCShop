@@ -34,7 +34,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
         if(error){ 
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error loading record files',
+                    title: 'Error loading record files!',
                     message: error.body.message,
                     variant: 'error',
                 }),
@@ -59,17 +59,17 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
 
     handleCheckBoxChange(event){
         if(event.target.checked){
-            var url = event.target.value;
+            let url = event.target.value;
             updateDisplayURL({ recordId: this.recordId, url: event.target.value})
             .then(result => {
-                var selected = [...this.template.querySelectorAll('lightning-input')].filter(input => input.value != url);
+                let selected = [...this.template.querySelectorAll('lightning-input')].filter(input => input.value != url);
                 selected.forEach(element => element.checked=false)
                 refreshApex(this.displayurl);
             })
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error in selecting profile image',
+                        title: 'Error in selecting profile image!',
                         message: error.body.message,
                         variant: 'error'
                     })
@@ -83,7 +83,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error',
+                        title: 'Error!',
                         message: error.body.message,
                         variant: 'error'
                     })
@@ -109,7 +109,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
                 .catch(error => {
                     this.dispatchEvent(
                         new ShowToastEvent({
-                            title: 'Error',
+                            title: 'Error!',
                             message: error.body.message,
                             variant: 'error'
                         })
@@ -120,7 +120,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
         .catch(error => {
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error deleting file',
+                    title: 'Error deleting file!',
                     message: error.body.message,
                     variant: 'error'
                 })
@@ -150,7 +150,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
     }
 
     previewImage(event){
-        var url = event.target.dataset.id
+        let url = event.target.dataset.id
         window.open(url, "_blank");
     }
 
@@ -179,7 +179,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error',
+                        title: 'Error!',
                         message: error.body.message,
                         variant: 'error'
                     })
@@ -189,7 +189,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
         .catch(error => {
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error',
+                    title: 'Error!',
                     message: error.body.message,
                     variant: 'error'
                 })
