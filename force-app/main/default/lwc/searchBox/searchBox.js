@@ -154,7 +154,7 @@ export default class SearchBox extends NavigationMixin(LightningElement) {
     }
 
     cols = [
-        { label:'Product name', fieldName:'Url', type: 'url',  typeAttributes: {label: { fieldName: 'UrlName' }, target: '_blank'}},
+        { label:'Product name', fieldName:'Url', type: 'url',  typeAttributes: {label: { fieldName: 'UrlName' }}},
         { label:'Producer', fieldName:'Producer__c', type: 'text'},
         { label:'Model', fieldName:'Model__c', type: 'text'},
         { label:'Product Family', fieldName:'Family', type: 'text'},
