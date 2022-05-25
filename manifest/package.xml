@@ -89,10 +89,6 @@
 		<name>CustomLabel</name>
 	</types>
 	<types>
-		<members>*</members>
-		<name>CustomLabels</name>
-	</types>
-	<types>
 		<members>Product2</members>
 		<name>CustomObject</name>
 	</types>
