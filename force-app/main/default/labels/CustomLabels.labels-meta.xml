@@ -28,7 +28,7 @@
         <shortDescription>MS_close</shortDescription>
         <value>Close</value>
     </labels>
-    <labels> 
+    <labels>
         <fullName>MS_delete</fullName>
         <language>en_US</language>
         <protected>true</protected>
