@@ -1,6 +1,7 @@
 import { LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { createRecord } from 'lightning/uiRecordApi';
+import getStandardPricebookId from '@salesforce/apex/filePreviewAndDownloadController.getStandardPricebookId';
 import MS_close from '@salesforce/label/c.MS_close';
 import MS_product_created from '@salesforce/label/c.MS_product_created';
 import MS_product_created_id from '@salesforce/label/c.MS_product_created_id';
@@ -54,20 +55,23 @@ export default class CreateProductRecord extends LightningElement {
             variant: "success"
         });
         this.dispatchEvent(toastEvent);
-
         this.Id = recordId;
-        let fields = {'Pricebook2Id' : '01s7Q000006w2QqQAI', 'Product2Id' : recordId, 'UnitPrice' : this.productPrice};
-        let objRecordInput = {'apiName' : 'PricebookEntry', fields};
-        createRecord(objRecordInput).then(response => {
-        }).catch(error => {
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: MS_error_adding_price,
-                    message: error.body.message,
-                    variant: 'error',
-                }),
-            );
-        });
+
+        getStandardPricebookId()
+        .then(result => {
+            let fields = {'Pricebook2Id' : result, 'Product2Id' : recordId, 'UnitPrice' : this.productPrice};
+            let objRecordInput = {'apiName' : 'PricebookEntry', fields};
+            createRecord(objRecordInput).then(response => {
+            }).catch(error => {
+                this.dispatchEvent(
+                    new ShowToastEvent({
+                        title: MS_error_adding_price,
+                        message: error.body.message,
+                        variant: 'error',
+                    }),
+                );
+            });
+        })
         this.isModalImageOpen = true;
     }
 
