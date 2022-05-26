@@ -38,4 +38,12 @@ public with sharing class filePreviewAndDownloadController {
             delete files; 
         }  
      }
+
+     @AuraEnabled
+     public static String getStandardPricebookId(){
+            Pricebook2 pricebook = [SELECT Id FROM Pricebook2 WHERE Name='Standard Price Book' LIMIT 1];
+            return pricebook.Id;
+     } 
+
+
 }
