@@ -1,0 +1,4 @@
+<aura:component implements="lightning:isUrlAddressable,flexipage:availableForAllPageTypes">
+    <lightning:workspaceAPI aura:id="workspace"/> 
+    <c:createProductRecord onclose="{!c.closeQA}"/>
+</aura:component>

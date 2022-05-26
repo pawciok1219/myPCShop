@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>MS_available</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_available</shortDescription>
+        <value>Available</value>
+    </labels>
+    <labels>
+        <fullName>MS_cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>MS_clear</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_clear</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>MS_close</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>MS_delete</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>MS_edit_product</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_edit_product</shortDescription>
+        <value>Edit product</value>
+    </labels>
+    <labels>
+        <fullName>MS_error</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error</shortDescription>
+        <value>Error!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_adding_price</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_adding_price</shortDescription>
+        <value>Error in adding the price!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_deleting_file</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_deleting_file</shortDescription>
+        <value>Error deleting file!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_loading_files</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_loading_files</shortDescription>
+        <value>Error loading files!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_loading_price_record</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_loading_price_record</shortDescription>
+        <value>Error loading the price of this record!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_selecting_profile</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_selecting_profile</shortDescription>
+        <value>Error in selecting profile image!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_updating_price</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_updating_price</shortDescription>
+        <value>Error updating product price!</value>
+    </labels>
+    <labels>
+        <fullName>MS_file_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_file_name</shortDescription>
+        <value>FileName -</value>
+    </labels>
+    <labels>
+        <fullName>MS_file_preview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_file_preview</shortDescription>
+        <value>File preview</value>
+    </labels>
+    <labels>
+        <fullName>MS_file_preview_big</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_file_preview_big</shortDescription>
+        <value>File Preview</value>
+    </labels>
+    <labels>
+        <fullName>MS_files_uploaded</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_files_uploaded</shortDescription>
+        <value>Files Uploaded Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>MS_model</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_model</shortDescription>
+        <value>Product Model</value>
+    </labels>
+    <labels>
+        <fullName>MS_new_product</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_new_product</shortDescription>
+        <value>New product</value>
+    </labels>
+    <labels>
+        <fullName>MS_preview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_preview</shortDescription>
+        <value>Preview</value>
+    </labels>
+    <labels>
+        <fullName>MS_price</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_price</shortDescription>
+        <value>Price (EUR)</value>
+    </labels>
+    <labels>
+        <fullName>MS_price_underflow</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_price_underflow</shortDescription>
+        <value>Price must be greater than 0.</value>
+    </labels>
+    <labels>
+        <fullName>MS_producer</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_producer</shortDescription>
+        <value>Producer</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_code</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_code</shortDescription>
+        <value>Product Code</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_created</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_created</shortDescription>
+        <value>Product has been created successfully!</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_created_id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_created_id</shortDescription>
+        <value>Product created :</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_family</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_family</shortDescription>
+        <value>Product Family</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_name</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_search</shortDescription>
+        <value>Product Search</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_updated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_updated</shortDescription>
+        <value>Product updated.</value>
+    </labels>
+    <labels>
+        <fullName>MS_product_updated_success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_product_updated_success</shortDescription>
+        <value>Product has been updated successfully!</value>
+    </labels>
+    <labels>
+        <fullName>MS_profile_image</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_profile_image</shortDescription>
+        <value>Profile Image</value>
+    </labels>
+    <labels>
+        <fullName>MS_records_not_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_records_not_found</shortDescription>
+        <value>Records were not found.</value>
+    </labels>
+    <labels>
+        <fullName>MS_save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>MS_save_and_new</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_save_and_new</shortDescription>
+        <value>Save &amp; New</value>
+    </labels>
+    <labels>
+        <fullName>MS_save_and_next</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_save_and_next</shortDescription>
+        <value>Save &amp; Next</value>
+    </labels>
+    <labels>
+        <fullName>MS_search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>MS_search_empty</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_search_empty</shortDescription>
+        <value>All of the search fields are empty.</value>
+    </labels>
+    <labels>
+        <fullName>MS_select_family</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_select_family</shortDescription>
+        <value>Select a product family</value>
+    </labels>
+    <labels>
+        <fullName>MS_select_producer</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_select_producer</shortDescription>
+        <value>Select a producer</value>
+    </labels>
+    <labels>
+        <fullName>MS_success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_success</shortDescription>
+        <value>Success!</value>
+    </labels>
+    <labels>
+        <fullName>MS_upload_product_images</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_upload_product_images</shortDescription>
+        <value>Upload product images</value>
+    </labels>
+</CustomLabels>
