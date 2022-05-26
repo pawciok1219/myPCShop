@@ -1,5 +1,5 @@
 @IsTest
-public with sharing class fileControllerTest {
+public with sharing class MS_FileControllerTest {
     @TestSetup
     public static void testSetup(){
         Product2 productTest = new Product2(Name='CPU i5',Model__c='i5-4434',Producer__c='Intel',ProductCode='G88E',Available__c=true,Family='CPU', DisplayUrl='Test');
@@ -27,7 +27,7 @@ public with sharing class fileControllerTest {
         for(Product2 product : listProduct){
             tempPr = product.Id;
         }
-        Boolean tempTest = fileController.haveDisplayUrl(tempPr, 'Test');
+        Boolean tempTest = MS_FileController.haveDisplayUrl(tempPr, 'Test');
         System.assertEquals(true, tempTest);
     }
 
@@ -38,7 +38,7 @@ public with sharing class fileControllerTest {
         for(Product2 product : listProduct){
             tempPr = product.Id;
         }
-        Boolean tempTest = fileController.haveDisplayUrl(tempPr, 'yes');
+        Boolean tempTest = MS_FileController.haveDisplayUrl(tempPr, 'yes');
         System.assertEquals(false, tempTest);
     }
 
@@ -49,14 +49,14 @@ public with sharing class fileControllerTest {
         for(Product2 product : listProduct){
             tempPr = product.Id;
         }
-        List <ContentVersion> tempList = fileController.getVersionFiles(tempPr);
+        List <ContentVersion> tempList = MS_FileController.getVersionFiles(tempPr);
         System.assertEquals(1, tempList.size());
 
     }
 
     @IsTest
     public static void shouldNotReturnListVersionFilesDisplayUrl(){
-        List <ContentVersion> tempList = fileController.getVersionFiles('tempPr');
+        List <ContentVersion> tempList = MS_FileController.getVersionFiles('tempPr');
         System.assertEquals(0, tempList.size());
     }
 }

@@ -1,4 +1,4 @@
-public with sharing class editRecordController {
+public with sharing class MS_EditRecordController {
 
     @AuraEnabled(cacheable=true)
     public static PricebookEntry getStandardPriceProduct(String productId){

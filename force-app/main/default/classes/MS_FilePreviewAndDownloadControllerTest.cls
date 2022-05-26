@@ -1,5 +1,5 @@
 @IsTest
-public with sharing class filePreviewAndDownloadControllerTest {
+public with sharing class MS_FilePreviewAndDownloadControllerTest {
 
     @TestSetup
     public static void testSetup() {
@@ -34,7 +34,7 @@ public with sharing class filePreviewAndDownloadControllerTest {
         List<ContentVersion> docs = [SELECT Id,ContentDocumentId, FileExtension, Title 
             FROM ContentVersion WHERE ContentDocumentId IN : fileIDs];
         Map<Id, ContentVersion> mapIdTitle = new Map<Id, ContentVersion>(docs);
-        Map<Id, ContentVersion> mapFromMethod = filePreviewAndDownloadController.getRelatedFilesByRecordId(product.Id);
+        Map<Id, ContentVersion> mapFromMethod = MS_FilePreviewAndDownloadController.getRelatedFilesByRecordId(product.Id);
 
         System.assertEquals(mapIdTitle,mapFromMethod);
     }
@@ -43,14 +43,14 @@ public with sharing class filePreviewAndDownloadControllerTest {
     public static void shouldContentDocumentByRecordId() {
         Product2 product = [SELECT Id, Name, Model__c, Producer__c, ProductCode, Available__c, Family FROM Product2 WHERE ProductCode='G88E'];
         ContentDocumentLink file = [SELECT Id, ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId = :product.Id];
-        filePreviewAndDownloadController.deleteContentDocument(file.ContentDocumentId);
+        MS_FilePreviewAndDownloadController.deleteContentDocument(file.ContentDocumentId);
         System.assert(file.ContentDocumentId!=null);
     }
 
     @IsTest
     public static void shouldUpdateDisplayURL() {
         Product2 product = [SELECT Id, Name, Model__c, Producer__c, ProductCode, Available__c, Family, DisplayUrl FROM Product2 WHERE ProductCode='G88E'];
-        filePreviewAndDownloadController.updateDisplayURL(product.Id,'testurl');
+        MS_FilePreviewAndDownloadController.updateDisplayURL(product.Id,'testurl');
         Product2 productAfterUpdate = [SELECT Id, Name, Model__c, Producer__c, ProductCode, Available__c, Family, DisplayUrl FROM Product2 WHERE ProductCode='G88E'];
         System.assertEquals('testurl',productAfterUpdate.DisplayUrl);
     }
@@ -58,7 +58,7 @@ public with sharing class filePreviewAndDownloadControllerTest {
     @IsTest
     public static void shouldDeleteAllFilesByRecordId() {
         Product2 product = [SELECT Id, Name, Model__c, Producer__c, ProductCode, Available__c, Family, DisplayUrl FROM Product2 WHERE ProductCode='G88E'];
-        filePreviewAndDownloadController.deleteAllFilesByRecordId(product.Id);
+        MS_FilePreviewAndDownloadController.deleteAllFilesByRecordId(product.Id);
         List<ContentDocumentLink> files = [SELECT ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId = :product.Id];
         System.assertEquals(0,files.size());
     }

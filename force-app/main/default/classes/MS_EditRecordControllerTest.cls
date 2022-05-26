@@ -1,5 +1,5 @@
 @IsTest
-public with sharing class editRecordControllerTest {
+public with sharing class MS_EditRecordControllerTest {
     @TestSetup
     public static void testSetup(){
         Pricebook2 standartPricebook = new Pricebook2(Id=Test.getStandardPricebookId(), IsActive=true);
@@ -18,14 +18,14 @@ public with sharing class editRecordControllerTest {
     @IsTest
     public static void shouldGetStandardPriceProduct(){
         Product2 productTemp = [SELECT Id FROM Product2 LIMIT 1];
-        PricebookEntry pricebookentryTemp = editRecordController.getStandardPriceProduct(productTemp.Id);
+        PricebookEntry pricebookentryTemp = MS_EditRecordController.getStandardPriceProduct(productTemp.Id);
         System.assertEquals(1000, pricebookentryTemp.UnitPrice);
     }
 
     @IsTest
     public static void shouldUpdateStandartPriceProduct(){
         PricebookEntry pricebookentryTemp = [SELECT Id from PricebookEntry LIMIT 1];
-        editRecordController.updateStandardPrice(pricebookentryTemp.Id, 130);
+        MS_EditRecordController.updateStandardPrice(pricebookentryTemp.Id, 130);
         PricebookEntry pricebookEntryAfterUpdate = [SELECT UnitPrice FROM PricebookEntry LIMIT 1];
 
         System.assertEquals(130,pricebookEntryAfterUpdate.UnitPrice);

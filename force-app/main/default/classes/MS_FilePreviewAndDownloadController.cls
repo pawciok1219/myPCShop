@@ -1,4 +1,4 @@
-public with sharing class filePreviewAndDownloadController {
+public with sharing class MS_FilePreviewAndDownloadController {
     @AuraEnabled(cacheable=true)
       public static Map<ID, ContentVersion> getRelatedFilesByRecordId(String recordId) {    
             List<ContentDocumentLink> files = [SELECT ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId = :recordId];

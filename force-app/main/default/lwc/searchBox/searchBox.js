@@ -1,5 +1,5 @@
 import { LightningElement, wire, track } from 'lwc';
-import getProducts from '@salesforce/apex/customSearchProduct.getProducts';
+import getProducts from '@salesforce/apex/MS_CustomSearchProduct.getProducts';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 import { NavigationMixin } from 'lightning/navigation';
 

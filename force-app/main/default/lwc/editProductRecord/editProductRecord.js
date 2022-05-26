@@ -1,10 +1,10 @@
 import { LightningElement, track, wire, api } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import getStandardPriceProduct from '@salesforce/apex/editRecordController.getStandardPriceProduct';
-import updateStandardPrice from '@salesforce/apex/editRecordController.updateStandardPrice';
-import getRelatedFilesByRecordId from '@salesforce/apex/filePreviewAndDownloadController.getRelatedFilesByRecordId';
-import deleteContentDocument from '@salesforce/apex/filePreviewAndDownloadController.deleteContentDocument';
-import updateDisplayURL from '@salesforce/apex/filePreviewAndDownloadController.updateDisplayURL';
+import getStandardPriceProduct from '@salesforce/apex/MS_EditRecordController.getStandardPriceProduct';
+import updateStandardPrice from '@salesforce/apex/MS_EditRecordController.updateStandardPrice';
+import getRelatedFilesByRecordId from '@salesforce/apex/MS_FilePreviewAndDownloadController.getRelatedFilesByRecordId';
+import deleteContentDocument from '@salesforce/apex/MS_FilePreviewAndDownloadController.deleteContentDocument';
+import updateDisplayURL from '@salesforce/apex/MS_FilePreviewAndDownloadController.updateDisplayURL';
 import { refreshApex } from "@salesforce/apex";
 import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
 import { NavigationMixin } from 'lightning/navigation';

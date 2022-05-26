@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>MS_CustomSearchProduct</members>
+		<members>MS_CustomSearchProductTest</members>
+		<members>MS_EditRecordController</members>
+		<members>MS_EditRecordControllerTest</members>
+		<members>MS_FileController</members>
+		<members>MS_FileControllerTest</members>
+		<members>MS_FilePreviewAndDownloadController</members>
+		<members>MS_FilePreviewAndDownloadControllerTest</members>
 		<members>WebToLeadController</members>
 		<members>WebToLeadControllerTest</members>
-		<members>customSearchProduct</members>
-		<members>customSearchProductTest</members>
-		<members>editRecordController</members>
-		<members>editRecordControllerTest</members>
-		<members>fileController</members>
-		<members>fileControllerTest</members>
-		<members>filePreviewAndDownloadController</members>
-		<members>filePreviewAndDownloadControllerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -101,6 +101,7 @@
 		<members>LightningService_UtilityBar</members>
 		<members>MyPCShop_UtilityBar</members>
 		<members>Product_Record_Page</members>
+		<members>Search_product</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>

@@ -1,4 +1,4 @@
-public with sharing class customSearchProduct {
+public with sharing class MS_CustomSearchProduct {
 
     @AuraEnabled(cacheable = true)
     public static List<Product2> getProducts(String productName, String model, String productCode, String producer, String family){

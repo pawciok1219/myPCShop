@@ -1,4 +1,4 @@
-public with sharing class fileController {
+public with sharing class MS_FileController {
     @AuraEnabled(cacheable=true)
     public static List<ContentVersion> getVersionFiles(String recordId){
             return [
@@ -12,7 +12,7 @@ public with sharing class fileController {
 		VersionNumber,
 		CreatedDate,
 		VersionData,
-                FirstPublishLocationId
+        FirstPublishLocationId
 		FROM ContentVersion
 		WHERE FirstPublishLocationId =:recordId
 			ORDER BY CreatedDate DESC

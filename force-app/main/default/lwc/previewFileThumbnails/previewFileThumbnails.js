@@ -1,6 +1,6 @@
 import { LightningElement, wire, api, track } from "lwc";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
-import getFileVersions from "@salesforce/apex/fileController.getVersionFiles";
+import getFileVersions from "@salesforce/apex/MS_FileController.getVersionFiles";
 import MS_error_loading_files from '@salesforce/label/c.MS_error_loading_files';
 
 export default class PreviewFileThumbnails extends LightningElement {

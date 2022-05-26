@@ -2,7 +2,7 @@ import { LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { createRecord } from 'lightning/uiRecordApi';
 import { NavigationMixin } from 'lightning/navigation';
-import getStandardPricebookId from '@salesforce/apex/filePreviewAndDownloadController.getStandardPricebookId';
+import getStandardPricebookId from '@salesforce/apex/MS_FilePreviewAndDownloadController.getStandardPricebookId';
 import MS_close from '@salesforce/label/c.MS_close';
 import MS_product_created from '@salesforce/label/c.MS_product_created';
 import MS_product_created_id from '@salesforce/label/c.MS_product_created_id';
