@@ -210,6 +210,14 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
 
     closeModal() {
         this.isModalOpen = false;
+        setTimeout(()=>{
+            this.closeQuickAction();
+        },1500);
+    }
+
+    closeQuickAction() {
+        const closeQA = new CustomEvent('close');
+        this.dispatchEvent(closeQA);
     }
 
     cancelAction(){

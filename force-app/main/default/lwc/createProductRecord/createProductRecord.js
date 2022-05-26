@@ -1,6 +1,7 @@
 import { LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { createRecord } from 'lightning/uiRecordApi';
+import { NavigationMixin } from 'lightning/navigation';
 import getStandardPricebookId from '@salesforce/apex/filePreviewAndDownloadController.getStandardPricebookId';
 import MS_close from '@salesforce/label/c.MS_close';
 import MS_product_created from '@salesforce/label/c.MS_product_created';
@@ -13,7 +14,7 @@ import MS_cancel from '@salesforce/label/c.MS_cancel';
 import MS_save_and_next from '@salesforce/label/c.MS_save_and_next';
 
 
-export default class CreateProductRecord extends LightningElement {
+export default class CreateProductRecord extends NavigationMixin(LightningElement) {
 
     label = {
         MS_close,
@@ -40,6 +41,23 @@ export default class CreateProductRecord extends LightningElement {
     handlePriceChange(event){
         this.productPrice = event.target.value;
     }
+
+    closeModalByCancelButton(){
+        this.closeQuickAction();
+        this[NavigationMixin.Navigate]({
+            type: 'standard__objectPage',
+            attributes: {
+                objectApiName: 'Product2',
+                actionName: 'home'
+            },
+        });
+    }
+
+    closeQuickAction() {
+        const closeQA = new CustomEvent('close');
+        this.dispatchEvent(closeQA);
+    }
+
 
     handleSubmit(event){
         event.preventDefault();
