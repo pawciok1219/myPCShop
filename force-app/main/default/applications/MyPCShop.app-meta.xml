@@ -16,7 +16,6 @@
     <tabs>standard-Product2</tabs>
     <tabs>Search_Products</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>MyPCShop_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>Search_Products</tab>

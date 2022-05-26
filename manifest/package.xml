@@ -97,9 +97,6 @@
 		<name>CustomTab</name>
 	</types>
 	<types>
-		<members>LightningSalesConsole_UtilityBar</members>
-		<members>LightningService_UtilityBar</members>
-		<members>MyPCShop_UtilityBar</members>
 		<members>Product_Record_Page</members>
 		<members>Search_product</members>
 		<name>FlexiPage</name>
