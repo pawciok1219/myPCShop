@@ -9,15 +9,7 @@
 		<members>MS_FileControllerTest</members>
 		<members>MS_FilePreviewAndDownloadController</members>
 		<members>MS_FilePreviewAndDownloadControllerTest</members>
-		<members>WebToLeadController</members>
-		<members>WebToLeadControllerTest</members>
 		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>WebToLead</members>
-		<members>WebToLeadSuccess</members>
-		<members>mainWebToLead</members>
-		<name>ApexPage</name>
 	</types>
 	<types>
 		<members>*</members>
