@@ -34,7 +34,7 @@ export default class PricebookProductsEdit extends LightningElement {
     @api productsList = [];
     @track isModalOpen = true;
     @track tempProductList = [];
-    @track percentNumber;
+    @track percentNumber = 0;
     @track priceEuroNumber = 0;
     @track blockedPercent = false;
     @track blockedEuro = false;
