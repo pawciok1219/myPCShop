@@ -1,0 +1,47 @@
+<template>
+    <div class="spinner">
+       <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+            </lightning-spinner>
+       </template>
+   </div>
+
+   <template if:true={modalTemplateOpen}>
+    <c-create-new-pricebook ongetmodalvalue={handleChangeModalOpen}></c-create-new-pricebook>
+   </template>
+ 
+     <lightning-card title={label.MS_search_pricebook} icon-name="standard:price_books">
+        <lightning-button style="float:right; margin-right:10px; margin-top:-25px;" label={label.MS_new_pricebook} variant="neutral"
+         onclick={openNewProductModal}></lightning-button>
+         <div class="search-box">
+            <c-pricebook-name-input ongetpricebookname={handleNameChange}></c-pricebook-name-input>
+            <div class="slds-grid" style="margin-top:-22px;">
+               <div class="slds-col" style="margin-right:5px;">
+                <c-pricebook-startdate-input ongetpricebookstartdate={handleStartDateChanged}></c-pricebook-startdate-input>
+               </div>
+               <div style="margin-right:75%;" class="slds-col">
+                <c-pricebook-enddate-input ongetpricebookenddate={handleEndDateChanged} ></c-pricebook-enddate-input>
+               </div>
+           </div>
+           <div style="margin-left:2px; margin-top:-15px;">
+            <c-pricebook-is-active-input ongetpricebookisactive={handleIsActiveChange}></c-pricebook-is-active-input>
+           </div>
+        </div>
+            <div class="slds-grid" style="margin-left:12px;">
+                <div class="slds-col"> <lightning-button style="margin-top:10px; margin-right:8px;" label={label.MS_search} variant="brand" onclick={handleSearchKeyword} ></lightning-button> </div>
+                <div class="slds-col" style="margin-right:91%;"> <lightning-button style="margin-top:10px;" label={label.MS_clear} variant="brand" onclick={handleClearKeyword}></lightning-button> </div>
+            </div>
+     </lightning-card>
+     <div if:true={isNotEmpty} style="margin-top:1%;">
+       <lightning-card>
+          <div style="margin-top:10px; margin-left:10px; margin-right:10px;">
+            <lightning-datatable hide-checkbox-column="true" key-field="Id" columns={columns}></lightning-datatable>
+             <template for:each={pricebookList} for:item="pricebook"> 
+                    <div onclick={handlePricebookSelect} key={pricebook.Id}>
+                        <c-search-box-pricebook-result key={pricebook.Id} pricebook={pricebook}></c-search-box-pricebook-result>
+                    </div>
+             </template>
+           </div>
+        </lightning-card>
+     </div>
+ </template>

@@ -294,4 +294,165 @@
         <shortDescription>MS_upload_product_images</shortDescription>
         <value>Upload product images</value>
     </labels>
+    <labels>
+        <fullName>MS_advanced_price_editing</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_advanced_price_editing</shortDescription>
+        <value>Advanced price editing</value>
+    </labels>
+    <labels>
+        <fullName>MS_details</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_details</shortDescription>
+        <value>Details</value>
+    </labels>
+    <labels>
+        <fullName>MS_enddate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_enddate</shortDescription>
+        <value>End date</value>
+    </labels>
+    <labels>
+        <fullName>MS_enddate_gt_startdate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_enddate_gt_startdate</shortDescription>
+        <value>The end date must be greater than the start date.</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_creating_pricebook</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_creating_pricebook</shortDescription>
+        <value>Error in creating pricebook!</value>
+    </labels>
+    <labels>
+        <fullName>MS_error_update_active</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_error_update_active</shortDescription>
+        <value>Error in updating pricebook activity status!</value>
+    </labels>
+    <labels>
+        <fullName>MS_full_details</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_full_details</shortDescription>
+        <value>Full details</value>
+    </labels>
+    <labels>
+        <fullName>MS_isActive</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_isActive</shortDescription>
+        <value>Is Active</value>
+    </labels>
+    <labels>
+        <fullName>MS_modified_products</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_modified_products</shortDescription>
+        <value>Modified products</value>
+    </labels>
+    <labels>
+        <fullName>MS_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>MS_new_pricebook</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_new_pricebook</shortDescription>
+        <value>New pricebook</value>
+    </labels>
+    <labels>
+        <fullName>MS_price_updated_success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_price_updated_success</shortDescription>
+        <value>Price updated successfully!</value>
+    </labels>
+    <labels>
+        <fullName>MS_pricebook_created</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_pricebook_created</shortDescription>
+        <value>Pricebook created :</value>
+    </labels>
+    <labels>
+        <fullName>MS_pricebook_created_success</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_pricebook_created_success</shortDescription>
+        <value>Pricebook has been created successfully!</value>
+    </labels>
+    <labels>
+        <fullName>MS_pricebook_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_pricebook_name</shortDescription>
+        <value>Pricebook Name</value>
+    </labels>
+    <labels>
+        <fullName>MS_pricebook_not_contain_product</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_pricebook_not_contain_product</shortDescription>
+        <value>The pricebook does not contain any product.</value>
+    </labels>
+    <labels>
+        <fullName>MS_pricebook_s_products</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_pricebook&apos;s_products</shortDescription>
+        <value>Pricebook&apos;s products</value>
+    </labels>
+    <labels>
+        <fullName>MS_prices_updated_successfully</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_prices_updated_successfully</shortDescription>
+        <value>Prices updated successfully!</value>
+    </labels>
+    <labels>
+        <fullName>MS_search_pricebook</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_search_pricebook</shortDescription>
+        <value>Search pricebook</value>
+    </labels>
+    <labels>
+        <fullName>MS_select_a_pricebook</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_select_a_pricebook</shortDescription>
+        <value>Please select a pricebook.</value>
+    </labels>
+    <labels>
+        <fullName>MS_specify_how_much_euro</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_specify_how_much_euro</shortDescription>
+        <value>Specify by how much € you want to reduce/increase the price.</value>
+    </labels>
+    <labels>
+        <fullName>MS_specify_how_much_percent</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_specify_how_much_percent</shortDescription>
+        <value>Specify by how much % you want to reduce/increase the price.</value>
+    </labels>
+    <labels>
+        <fullName>MS_startdate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_startdate</shortDescription>
+        <value>Start date</value>
+    </labels>
 </CustomLabels>
