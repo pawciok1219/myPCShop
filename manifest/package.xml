@@ -13,6 +13,8 @@
 		<members>MS_FilePreviewAndDownloadControllerTest</members>
 		<members>MS_GetProductsFromPricebook</members>
 		<members>MS_GetProductsFromPricebookTest</members>
+		<members>MS_GoogleSSOAuth</members>
+		<members>MS_GoogleSSOAuthTest</members>
 		<members>MS_NewPricebookController</members>
 		<members>MS_NewPricebookControllerTest</members>
 		<name>ApexClass</name>
@@ -28,7 +30,17 @@
 	</types>
 	<types>
 		<members>*</members>
+		<name>AuthProvider</name>
+	</types>
+	<types>
+		<members>*</members>
 		<name>CompactLayout</name>
+	</types>
+	<types>
+		<members>X771298</members>
+		<members>X7827612</members>
+		<members>logo</members>
+		<name>ContentAsset</name>
 	</types>
 	<types>
 		<members>MyPCShop</members>
@@ -112,14 +124,27 @@
 		<name>CustomLabel</name>
 	</types>
 	<types>
+		<members>Account</members>
 		<members>Pricebook2</members>
 		<members>Product2</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
+		<members>myPCShop</members>
+		<name>CustomSite</name>
+	</types>
+	<types>
 		<members>Pricebook_Manager</members>
 		<members>Search_Products</members>
 		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>Contact.Standard_Contact_Duplicate_Rule</members>
+		<name>DuplicateRule</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>ExperienceBundle</name>
 	</types>
 	<types>
 		<members>Pricebook_Manager</members>
@@ -173,11 +198,44 @@
 	</types>
 	<types>
 		<members>*</members>
+		<name>Network</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>NetworkBranding</name>
+	</types>
+	<types>
+		<members>*</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
 		<members>Admin</members>
+		<members>Customer Community Login User</members>
+		<members>Customer Community Plus Login User</members>
+		<members>Customer Community Plus User</members>
+		<members>Customer Community User</members>
+		<members>Customer Portal Manager Custom</members>
+		<members>Customer Portal Manager Standard</members>
+		<members>Guest License User</members>
+		<members>Partner Community Login User</members>
+		<members>Partner Community User</members>
+		<members>myPCShop Profile</members>
+		<members>myPCShop User</members>
 		<name>Profile</name>
+	</types>
+	<types>
+		<members>CEO</members>
+		<name>Role</name>
+	</types>
+	<types>
+		<members>GoogleApps</members>
+		<name>Settings</name>
+	</types>
+	<types>
+		<members>myPCShop.Customer_Members</members>
+		<members>myPCShop.Members_without_contribution</members>
+		<members>myPCShop.Partner_and_Customer_members</members>
+		<name>UserCriteria</name>
 	</types>
 	<types>
 		<members>Pricebook2.startdatenotgreaterthanenddate</members>
