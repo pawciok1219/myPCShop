@@ -231,6 +231,12 @@
 		<name>Settings</name>
 	</types>
 	<types>
+		<members>myPCShop.Customer_Members</members>
+		<members>myPCShop.Members_without_contribution</members>
+		<members>myPCShop.Partner_and_Customer_members</members>
+		<name>UserCriteria</name>
+	</types>
+	<types>
 		<members>Pricebook2.startdatenotgreaterthanenddate</members>
 		<name>ValidationRule</name>
 	</types>
