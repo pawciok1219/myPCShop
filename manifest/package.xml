@@ -209,6 +209,15 @@
 	</types>
 	<types>
 		<members>Admin</members>
+		<members>Customer Community Login User</members>
+		<members>Customer Community Plus Login User</members>
+		<members>Customer Community Plus User</members>
+		<members>Customer Community User</members>
+		<members>Customer Portal Manager Custom</members>
+		<members>Customer Portal Manager Standard</members>
+		<members>Guest License User</members>
+		<members>Partner Community Login User</members>
+		<members>Partner Community User</members>
 		<members>myPCShop Profile</members>
 		<members>myPCShop User</members>
 		<name>Profile</name>
@@ -220,12 +229,6 @@
 	<types>
 		<members>GoogleApps</members>
 		<name>Settings</name>
-	</types>
-	<types>
-		<members>myPCShop.Customer_Members</members>
-		<members>myPCShop.Members_without_contribution</members>
-		<members>myPCShop.Partner_and_Customer_members</members>
-		<name>UserCriteria</name>
 	</types>
 	<types>
 		<members>Pricebook2.startdatenotgreaterthanenddate</members>
