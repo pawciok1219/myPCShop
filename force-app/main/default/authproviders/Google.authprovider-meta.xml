@@ -8,7 +8,7 @@
     <iconUrl>https://login.salesforce.com/icons/google-colored.png</iconUrl>
     <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
     <providerType>Google</providerType>
-    <registrationHandler>GoogleSSOAuth</registrationHandler>
+    <registrationHandler>MS_GoogleSSOAuth</registrationHandler>
     <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
     <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
     <sendSecretInApis>true</sendSecretInApis>

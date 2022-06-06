@@ -6,10 +6,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>GoogleSSOAuth</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>MS_CustomSearchPricebook</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -55,6 +51,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MS_GetProductsFromPricebookTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MS_GoogleSSOAuth</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MS_GoogleSSOAuthTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
