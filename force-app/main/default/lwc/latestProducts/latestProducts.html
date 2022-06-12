@@ -1,0 +1,40 @@
+<template>
+  <div style="height:382px; padding:20px; display:flex;justify-content:space-around;border-radius:20px; border-width: 1px; border-style:solid; border-color:lightgray;">
+    <div class="spinner">
+      <template if:true={isLoading}>
+           <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+           </lightning-spinner>
+      </template>
+  </div>
+
+  <div style="position: relative; display:flex; justify-content:left; align-items:center; margin-left:-3%">
+    <lightning-button-icon
+    icon-name="utility:back"
+    onclick={handlePreviousChangeOffset}
+    size="large"
+    variant="bare"
+    disabled={isFirstPage}>
+    </lightning-button-icon>
+  </div>
+
+  <div class="demo-only demo-only--sizing slds-grid slds-wrap" style="border-width:0px;">
+      <template for:each={productList} for:item="product">
+        <c-product-record-card
+        key={product.Id}
+        product={product}>
+      </c-product-record-card>
+      </template>
+  </div>
+
+  <div style="position: relative; display:flex; justify-content:right; align-items:center;">
+    <lightning-button-icon
+    icon-name="utility:forward"
+    onclick={handleNextChangeOffset}
+    size="large"
+    variant="bare"
+    disabled={isLastPage}>
+    </lightning-button-icon>
+  </div>
+</div>
+</template>
+
