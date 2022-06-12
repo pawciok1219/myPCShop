@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>MS_ContentDistributionLinks</members>
+		<members>MS_ContentDistributionLinksTest</members>
 		<members>MS_CustomSearchPricebook</members>
 		<members>MS_CustomSearchPricebookTest</members>
 		<members>MS_CustomSearchProduct</members>
@@ -17,11 +19,19 @@
 		<members>MS_GoogleSSOAuthTest</members>
 		<members>MS_NewPricebookController</members>
 		<members>MS_NewPricebookControllerTest</members>
+		<members>MS_ProductCustomerPortal</members>
+		<members>MS_ProductCustomerPortalTest</members>
+		<members>MS_RecentlyViewedProducts</members>
+		<members>MS_RecentlyViewedProductsTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
 		<members>*</members>
 		<name>ApexTestSuite</name>
+	</types>
+	<types>
+		<members>MS_ContentDistribution</members>
+		<name>ApexTrigger</name>
 	</types>
 	<types>
 		<members>createNewRecordComponent</members>
@@ -37,9 +47,7 @@
 		<name>CompactLayout</name>
 	</types>
 	<types>
-		<members>X771298</members>
-		<members>X7827612</members>
-		<members>logo</members>
+		<members>*</members>
 		<name>ContentAsset</name>
 	</types>
 	<types>
@@ -53,6 +61,7 @@
 		<members>Product2.Model__c</members>
 		<members>Product2.Producer__c</members>
 		<members>Product2.Rating__c</members>
+		<members>User.PictureUrl__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -166,10 +175,13 @@
 		<name>Layout</name>
 	</types>
 	<types>
+		<members>companiesLogos</members>
 		<members>createNewPricebook</members>
 		<members>createProductRecord</members>
 		<members>editProductRecord</members>
 		<members>filePreviewAndDownloads</members>
+		<members>latestProducts</members>
+		<members>pageFooter</members>
 		<members>previewFileModal</members>
 		<members>previewFileThumbnailCard</members>
 		<members>previewFileThumbnails</members>
@@ -183,6 +195,8 @@
 		<members>productCodeInput</members>
 		<members>productModelInput</members>
 		<members>productNameInput</members>
+		<members>productRecordCard</members>
+		<members>recentlyViewedProducts</members>
 		<members>searchBox</members>
 		<members>searchBoxPricebook</members>
 		<members>searchBoxPricebookResult</members>

@@ -1,0 +1,18 @@
+<template>
+    <div style="border-width: 1px; border-style:solid; border-color:lightgray; border-radius:20px;">
+    <div class="slds-size_1-of-2" style="margin-left:27%;border-width:0px;" >
+        <div class="slds-text-align_center slds-m-around_x-small" style="border-width:0px;">
+        <lightning-carousel disable-auto-scroll>
+            <template for:each={recentlyProductsList} for:item="product">
+            <lightning-carousel-image
+                src={product.DisplayUrl}
+                header={product.Name}
+                key={product.Id}
+                description={product.Family}>
+            </lightning-carousel-image>
+        </template>
+        </lightning-carousel>
+        </div>
+  </div>
+    </div>
+</template>
