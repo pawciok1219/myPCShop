@@ -1,0 +1,17 @@
+<template>
+    <h1 style="font-size:18px; margin-bottom:10px;">{label.MS_filters}</h1>
+    <div style="display: flex; justify-content: center; flex-direction: column; background-color:rgb(243, 243, 243);padding:10px;">
+        <div style="min-width: 15%;">
+            <c-product-producer-picklist ongetproducervalue={handleProducerChange} ></c-product-producer-picklist>
+        </div>
+        <div style="min-width: 15%;">
+            <c-product-family-picklist ongetfamilyvalue={handleGetFamilyValue}></c-product-family-picklist>
+        </div>
+        <div style="min-width: 15%; margin-top: 3%;">
+            <c-product-price-slider min="0" max="3000" step="1" start="10" end="700" onchange={handlePriceChange}></c-product-price-slider>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <lightning-button label={label.MS_apply_filters} title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </div>
+</template>

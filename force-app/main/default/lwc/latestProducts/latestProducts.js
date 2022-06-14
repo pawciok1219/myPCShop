@@ -2,7 +2,7 @@ import { LightningElement, wire, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getLatestProducts from '@salesforce/apex/MS_ProductCustomerPortal.getLatestProducts';
 import getNumberOfRecords from '@salesforce/apex/MS_ProductCustomerPortal.getNumberOfRecords';
-
+import MS_error from '@salesforce/label/c.MS_error';
 
 export default class LatestProducts extends LightningElement {
 
@@ -30,7 +30,7 @@ export default class LatestProducts extends LightningElement {
         if(error){ 
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: "Error",
+                    title: MS_error,
                     message: error.body.message,
                     variant: 'error',
                 }),
@@ -52,7 +52,7 @@ export default class LatestProducts extends LightningElement {
         if(error){ 
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: "Error",
+                    title: MS_error,
                     message: error.body.message,
                     variant: 'error',
                 }),

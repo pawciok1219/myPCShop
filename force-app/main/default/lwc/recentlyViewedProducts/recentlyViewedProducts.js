@@ -1,5 +1,6 @@
 import { LightningElement, track, wire } from 'lwc';
 import  getRecentlyViewedProducts from '@salesforce/apex/MS_RecentlyViewedProducts.getRecentlyViewedProducts';
+import MS_error from '@salesforce/label/c.MS_error';
 
 export default class RecentlyViewedProducts extends LightningElement {
 
@@ -20,7 +21,7 @@ export default class RecentlyViewedProducts extends LightningElement {
         if(error){ 
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: "Error",
+                    title: MS_error,
                     message: error.body.message,
                     variant: 'error',
                 }),
