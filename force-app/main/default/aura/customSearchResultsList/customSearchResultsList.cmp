@@ -1,0 +1,15 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute type="list" name="recordIds" />
+    <aura:attribute type="Integer" name="numberOfRecords" />
+    <aura:attribute type="Boolean" name="emptySearch" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:messageChannel type="Products_List_Communicate__c" onMessage="{!c.handleChanged}" scope="APPLICATION"/>
+
+    <h1 style="font-size:18px; margin-bottom:10px;">{!$Label.c.MS_search_results} ({!v.numberOfRecords}&thinsp;{!$Label.c.MS_records_found})</h1>
+    <aura:if isTrue="{!v.emptySearch}">
+          <img src="https://www.iamqatar.qa/assets/images/no-products-found.png" style="max-height:250px;margin-left:50%"/>
+    </aura:if> 
+    <aura:iteration items="{!v.recordIds}" var="recordObject">
+      <c:customSearchResultItem record="{!recordObject}" recordId="{!recordObject.Id}"/>
+    </aura:iteration>
+</aura:component>
