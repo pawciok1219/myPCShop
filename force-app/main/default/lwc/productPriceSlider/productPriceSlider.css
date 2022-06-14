@@ -1,0 +1,46 @@
+:host {
+    --slider-width: 300px;
+    --slider-height: 10px;
+    --slider-top-position: 2.5px;
+    --range-width: 20px;
+    --range-left-position: 20px;
+    --thumb-height: 15px;
+    --thumb-width: 15px;
+    --thumb-left-position:30px;
+    --thumb-active-color: #1b5297;
+}
+
+.slider {
+    border-radius: 5px;
+    background: #E0E0E0;
+    background: linear-gradient(left top, #E0E0E0, #c57777);
+    width: var( --slider-width );
+    height: var( --slider-height );
+    margin: var( --slider-top-position );
+  }
+
+  .range {
+    position: relative;
+    width: calc( var( --range-width ) - var( --thumb-width ));
+    height: var( --slider-height );
+    left: calc( var( --range-left-position ) + var( --thumb-width ) );
+    background: rgb(0, 195, 255);
+    cursor: pointer;
+  }
+
+  .thumb {
+    position: relative;
+    width: var( --thumb-width );
+    height: var( --thumb-height );
+    border-radius: 50%;;
+    background: var( --thumb-active-color );
+    cursor: pointer;
+    left: var( --thumb-left-position );
+  }
+
+  .start {
+    top: calc( ( var( --slider-height ) + var( --slider-top-position ) + var( --thumb-height )*0) * -1);
+  }
+  .end {
+    top: calc( ( var( --slider-height ) + var( --slider-top-position ) + var( --thumb-height )*1) * -1);
+  }

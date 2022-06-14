@@ -1,4 +1,4 @@
-public with sharing class MS_ProductCustomerPortal {
+public without sharing class MS_ProductCustomerPortal {
 
     @AuraEnabled(cacheable = true)
     public static List<PricebookEntry> getLatestProducts(Integer offsetNumber) {
