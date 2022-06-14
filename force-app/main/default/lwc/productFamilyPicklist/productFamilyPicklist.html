@@ -1,0 +1,7 @@
+<template>
+        <template if:true={leadSourceValues.data}>
+            <lightning-combobox name="progress" placeholder={label.MS_select_family} value={value}
+                options={leadSourceValues.data.values} onchange={handleChange}>
+            </lightning-combobox>
+        </template>
+</template>
