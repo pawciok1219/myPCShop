@@ -14,12 +14,12 @@ public with sharing class MS_GoogleSSOAuthTest {
         'testuse8888r@gmail.com', null, 'testuserlong', 'en_US', 
         'google', null, new Map<String, String>{'language' => 'en_US'});
 
-    try {
-        User u = handler.createUser(null, sampleData);
-        sampleData = new Auth.UserData('testNewId', 'testNewFirst', 'testNewLast',
+        try{
+            User u = handler.createUser(null, sampleData);
+            sampleData = new Auth.UserData('testNewId', 'testNewFirst', 'testNewLast',
                                     'testNewFirst testNewLast', 'testnewuser@gmail.com', null, 'testnewuserlong', 'en_US', 'google',
                                      null, new Map<String, String>{});
-        handler.updateUser(null, null, sampleData);
-    } catch(Exception e){}
+            handler.updateUser(null, null, sampleData);
+        }catch(Exception e){}
     }
 }

@@ -1,25 +1,18 @@
 <template>
-    <div class="slds-size_1-of-3" style="border-width:0px;">
-        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small" style="border-width:0px;">
-            <article class="slds-card" style="width:232px; max-height: 200px;border-width: 0px;">
-                <div style="height:180px;width:auto;border-width: 0px;">
-                <img src={product.DisplayUrl}/>
-                </div>
-                <div class="slds-card__header slds-grid" style="margin-top:18%">
-                  <header class="slds-media slds-media_center slds-has-flexi-truncate" style="display:flex; align-items: center; justify-content: center;">
-                    <div class="slds-media__body">
-                      <h2 class="slds-card__header-title" style="display: flex; align-items: center; justify-content: center;">
-                        <p><small>{product.Family}</small></p>
-                      </h2>
-                    </div>
-                  </header> 
-                </div>
-                <div class="slds-card__body slds-card__body_inner">
-                  <p style="font-size: 15px;margin-top:-12px;"><strong>{product.Name}</strong></p>
-                    </br>
-                    <strong style="color:firebrick;font-size:19px; font-family: arial; float:bottom;">€ {product.UnitPrice}</strong>
-                </div>
-              </article>
-        </div>
-      </div>
+              <img src={product.DisplayUrl}/>
+              <div class="slds-card__header slds-grid slds-wrap" style="margin-top:10%">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate" style="display:flex; align-items: center; justify-content: center;">
+                  <div class="slds-media__body">
+                    <h2 class="slds-card__header-title" style="display: flex; align-items: center; justify-content: center;">
+                      <p><small>{product.Family}</small></p>
+                    </h2>
+                  </div>
+                </header> 
+              </div>
+              <div class="slds-card__body slds-card__body_inner">
+                <p style="font-size: 15px;margin-top:-12px;display: flex; align-items: center; justify-content: center;"><strong>{product.Name}</strong></p>
+                  </br>
+                  <strong style="color:firebrick;font-size:18px; font-family: arial; float:bottom;display: flex; align-items: center; justify-content: center;">
+                    € {product.UnitPrice}</strong>
+              </div>
 </template>

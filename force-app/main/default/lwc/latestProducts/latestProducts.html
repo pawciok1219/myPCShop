@@ -1,39 +1,45 @@
 <template>
-  <div style="height:382px; margin-top:30px;padding:30px; display:flex;justify-content:space-around;border-radius:20px; border-width: 1px; border-style:solid; border-color:lightgray;">
-    <div class="spinner">
-      <template if:true={isLoading}>
-           <lightning-spinner alternative-text="Loading" variant="brand" size="large">
-           </lightning-spinner>
-      </template>
+<h1 style="font-size:20px;font-weight:700;color:#333;text-align:center;word-wrap:break-word;text-transform:uppercase;margin-bottom:20px;">{label.MS_latest_products}</h1>
+<div style="padding:20px;padding-bottom:5px;margin-top:25px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
+  <div class="spinner">
+    <template if:true={isLoading}>
+         <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+         </lightning-spinner>
+    </template>
+</div>
+<div class="slds-grid slds-gutters">
+  <div class="slds-col">
+    <span style="position: relative; display:flex; justify-content:left; align-items:center; margin-top:50%;">
+      <lightning-button-icon style="margin-top:200%;"
+      icon-name="utility:back"
+      onclick={handlePreviousChangeOffset}
+      size="large"
+      variant="bare"
+      disabled={isFirstPage}>
+      </lightning-button-icon>
+    </span>
   </div>
-
-  <div style="position: relative; display:flex; justify-content:left; align-items:center; margin-left:-3%">
-    <lightning-button-icon
-    icon-name="utility:back"
-    onclick={handlePreviousChangeOffset}
-    size="large"
-    variant="bare"
-    disabled={isFirstPage}>
-    </lightning-button-icon>
-  </div>
-
-  <div class="demo-only demo-only--sizing slds-grid slds-wrap" style="border-width:0px;">
-      <template for:each={productList} for:item="product">
-        <c-product-record-card
-        key={product.Id}
+  <div class="slds-grid">
+    <template for:each={productList} for:item="product">
+    <div class="slds-col" style="margin-left:10px;margin-right:10px;" key={product.Id}>
+      <span><c-product-record-card
         product={product}>
       </c-product-record-card>
-      </template>
+    </span>
+    </div>
+    </template>
   </div>
-
-  <div style="position: relative; display:flex; justify-content:right; align-items:center;">
-    <lightning-button-icon
-    icon-name="utility:forward"
-    onclick={handleNextChangeOffset}
-    size="large"
-    variant="bare"
-    disabled={isLastPage}>
-    </lightning-button-icon>
+  <div class="slds-col">
+    <span style="position: relative;display:flex; justify-content:right; align-items:center;margin-top:50%;">
+      <lightning-button-icon style="margin-top:200%;"
+      icon-name="utility:forward"
+      onclick={handleNextChangeOffset}
+      size="large"
+      variant="bare"
+      disabled={isLastPage}>
+      </lightning-button-icon>
+    </span>
   </div>
+</div>
 </div>
 </template>

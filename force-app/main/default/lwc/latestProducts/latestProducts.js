@@ -3,8 +3,14 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getLatestProducts from '@salesforce/apex/MS_ProductCustomerPortal.getLatestProducts';
 import getNumberOfRecords from '@salesforce/apex/MS_ProductCustomerPortal.getNumberOfRecords';
 import MS_error from '@salesforce/label/c.MS_error';
+import MS_latest_products from '@salesforce/label/c.MS_latest_products';
+
 
 export default class LatestProducts extends LightningElement {
+
+    label = {
+        MS_latest_products
+    };
 
     @track productList = [];
     @track offset = 0;

@@ -1,4 +1,7 @@
 <template>
+    <template if:true={recentlyProductsList.length}>
+    <h1 style="font-size:20px;font-weight:700;color:#333;text-align:center;word-wrap: break-word;text-transform:uppercase;margin-bottom:24px;">
+        {label.MS_recently_viewed}</h1>
     <div style="border-width: 1px; border-style:solid; border-color:lightgray; border-radius:20px;">
     <div class="slds-size_1-of-2" style="margin-left:27%;border-width:0px;" >
         <div class="slds-text-align_center slds-m-around_x-small" style="border-width:0px;">
@@ -13,6 +16,7 @@
         </template>
         </lightning-carousel>
         </div>
-  </div>
     </div>
+    </div>
+    </template>
 </template>

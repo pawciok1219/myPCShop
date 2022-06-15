@@ -1,4 +1,5 @@
 img {
-    object-fit: cover;
-    max-height: 230px;  
+    object-fit: contain;
+    width: 210px;
+    height: 210px;  
 }
