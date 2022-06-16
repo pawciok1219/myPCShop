@@ -107,6 +107,7 @@
 		<members>MS_filters</members>
 		<members>MS_full_details</members>
 		<members>MS_isActive</members>
+		<members>MS_latest_products</members>
 		<members>MS_model</members>
 		<members>MS_modified_products</members>
 		<members>MS_name</members>
@@ -135,6 +136,7 @@
 		<members>MS_product_updated</members>
 		<members>MS_product_updated_success</members>
 		<members>MS_profile_image</members>
+		<members>MS_recently_viewed</members>
 		<members>MS_records_found</members>
 		<members>MS_records_not_found</members>
 		<members>MS_save</members>

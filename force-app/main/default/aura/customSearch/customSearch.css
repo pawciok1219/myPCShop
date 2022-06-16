@@ -1,15 +1,15 @@
 .THIS {
     padding: 0 10px;
+    font-size: calc(10px + 2 * ((100vw - 900px) / 700));
  }
 
  .THIS .slds-lookup__search-input {
-   float:left;
+   left:0;
    height: 45px;
  }
  
  .THIS .buttonSearch {
    position:absolute;
-   right:0px;
+   right:0;
    height:45px;
-   width:95px;
  }

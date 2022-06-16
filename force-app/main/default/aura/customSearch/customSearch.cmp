@@ -2,8 +2,8 @@
 <aura:attribute name="searchText" type="String" default=""/>
 <div class="slds-form-element slds-lookup" data-select="single">
     <div class="slds-form-element__control">
-            <lightning:button variant="brand" onclick="{!c.handleClick }" class="buttonSearch" label={!$Label.c.MS_search} iconName="utility:search" iconPosition="left"/>
-            <ui:inputText value="{!v.searchText}" class="slds-lookup__search-input slds-input" placeholder={!$Label.c.MS_search_product_holder} />
+            <lightning:button variant="brand" onclick="{!c.handleClick}" class="buttonSearch" label="{!$Label.c.MS_search}" iconName="utility:search" iconPosition="left" />
+            <ui:inputText value="{!v.searchText}" class="slds-lookup__search-input slds-input" placeholder="{!$Label.c.MS_search_product_holder}" />
     </div>
 </div>
 </aura:component>
