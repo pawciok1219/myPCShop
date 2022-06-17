@@ -9,7 +9,9 @@
     <aura:if isTrue="{!v.emptySearch}">
           <img src="https://www.iamqatar.qa/assets/images/no-products-found.png" style="max-height:250px;margin-left:50%"/>
     </aura:if> 
+    <div class="slds-scrollable_y" style="max-height:760px;">
     <aura:iteration items="{!v.recordIds}" var="recordObject">
       <c:customSearchResultItem record="{!recordObject}" recordId="{!recordObject.Id}"/>
     </aura:iteration>
+    </div>
 </aura:component>

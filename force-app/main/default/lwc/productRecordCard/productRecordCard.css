@@ -3,3 +3,18 @@ img {
     width: 210px;
     height: 210px;  
 }
+
+.product {
+    padding-right: 7px;
+    padding-left: 7px;
+    border-color:lightgray;
+    padding-top: 7px;
+    transition: 0.8s ease;
+}
+
+.product:hover {
+    border-width: 1px; 
+    border-style:solid; 
+    border-color:lightgray;
+    border-radius:5px;
+}
