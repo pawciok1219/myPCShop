@@ -121,7 +121,7 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
                 );
             });
         } else {
-            updateDisplayURL({ recordId: this.recordId, url: ''})
+            updateDisplayURL({ recordId: this.recordId, url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png'})
             .then(result => {
                 refreshApex(this.wiredActivities);
             })
@@ -200,9 +200,6 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
     }
 
     saveAction() {
-        if(this.displayurl == null){
-            updateDisplayURL({ recordId: this.recordId, url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png'});
-        }
         this.closeModal();
         eval("$A.get('e.force:refreshView').fire();");
         this[NavigationMixin.Navigate]({
@@ -246,9 +243,6 @@ export default class FilePreviewAndDownloads extends NavigationMixin(LightningEl
     }
 
     saveAndNewAction(){
-        if(this.displayurl == null){
-            updateDisplayURL({ recordId: this.recordId, url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png'});
-        }
         this.closeModal();
         eval("$A.get('e.force:refreshView').fire();");
         this[NavigationMixin.Navigate]({
