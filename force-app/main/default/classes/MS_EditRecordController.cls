@@ -1,10 +1,10 @@
 public with sharing class MS_EditRecordController {
 
-   @AuraEnabled(cacheable=true)
-   public static PricebookEntry getStandardPriceProduct(String productId){
-         Pricebook2 pricebook = [SELECT Id, Name FROM Pricebook2 WHERE Name='Standard Price Book' LIMIT 1];
-         PricebookEntry pricebookentry = [SELECT Id, UnitPrice FROM PricebookEntry WHERE Product2Id =: productId AND Pricebook2Id =: pricebook.Id LIMIT 1];
-         return pricebookentry;
+    @AuraEnabled(cacheable=true)
+    public static PricebookEntry getStandardPriceProduct(String productId){
+          Pricebook2 pricebook = [SELECT Id, Name FROM Pricebook2 WHERE Name='Standard Price Book' LIMIT 1];
+          PricebookEntry pricebookentry = [SELECT Id, UnitPrice FROM PricebookEntry WHERE Product2Id =: productId AND Pricebook2Id =: pricebook.Id LIMIT 1];
+          return pricebookentry;
    }
 
 

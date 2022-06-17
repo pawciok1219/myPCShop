@@ -3,4 +3,4 @@
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
     <lightning:messageChannel type="Products_List_Communicate__c" aura:id="productsListCommunicate" scope="APPLICATION"/>
     <c:filtersForCustomSearch onchangeproducts="{!c.handleLWCEvent}" listOfProducts="{!v.recordIds}" />
-</aura:component>	
+</aura:component>

@@ -455,4 +455,109 @@
         <shortDescription>MS_startdate</shortDescription>
         <value>Start date</value>
     </labels>
+    <labels>
+        <fullName>MS_24_7_technical_support</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_24_7_technical_support</shortDescription>
+        <value>24/7 technical support!</value>
+    </labels>
+    <labels>
+        <fullName>MS_3000_products</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_3000_products</shortDescription>
+        <value>3000 products on offer!</value>
+    </labels>
+    <labels>
+        <fullName>MS_apply_filters</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_apply_filters</shortDescription>
+        <value>Apply filters</value>
+    </labels>
+    <labels>
+        <fullName>MS_competitive_prices</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_competitive_prices</shortDescription>
+        <value>Best discounts!</value>
+    </labels>
+    <labels>
+        <fullName>MS_easy_online_shopping</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_easy_online_shopping</shortDescription>
+        <value>Easy and fast online shopping!</value>
+    </labels>
+    <labels>
+        <fullName>MS_fast_and_safe_shipping</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_fast_and_safe_shipping</shortDescription>
+        <value>Fast and safe shipping!</value>
+    </labels>
+    <labels>
+        <fullName>MS_filters</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_filters</shortDescription>
+        <value>Filters</value>
+    </labels>
+    <labels>
+        <fullName>MS_latest_products</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_latest_products</shortDescription>
+        <value>LATEST PRODUCTS</value>
+    </labels>
+    <labels>
+        <fullName>MS_no_products_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_no_products_found</shortDescription>
+        <value>No products were found.</value>
+    </labels>
+    <labels>
+        <fullName>MS_over_10000_customers</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_over_10000_customers</shortDescription>
+        <value>Over 10000 customers!</value>
+    </labels>
+    <labels>
+        <fullName>MS_price_range</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_price_range</shortDescription>
+        <value>Price range</value>
+    </labels>
+    <labels>
+        <fullName>MS_recently_viewed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_recently_viewed</shortDescription>
+        <value>RECENTLY VIEWED</value>
+    </labels>
+    <labels>
+        <fullName>MS_records_found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_records_found</shortDescription>
+        <value>records found</value>
+    </labels>
+    <labels>
+        <fullName>MS_search_product_holder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_search_product_holder</shortDescription>
+        <value>Search Product...</value>
+    </labels>
+    <labels>
+        <fullName>MS_search_results</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_search_results</shortDescription>
+        <value>Search Results</value>
+    </labels>
 </CustomLabels>
