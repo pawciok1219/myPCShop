@@ -259,7 +259,6 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
         event.preventDefault();
         this.template.querySelector('lightning-record-edit-form').submit(this.fields);
         refreshApex(this.wiredActivities);
-        refreshApex(this.wiredActive);
         this.closeModal();
     }
 
@@ -284,7 +283,6 @@ export default class EditProductRecord extends NavigationMixin(LightningElement)
             );
         });
         refreshApex(this.wiredActivities);
-        refreshApex(this.wiredActive);
         eval("$A.get('e.force:refreshView').fire();");
 
         this[NavigationMixin.Navigate]({
