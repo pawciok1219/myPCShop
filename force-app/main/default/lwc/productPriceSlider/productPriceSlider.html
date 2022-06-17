@@ -1,0 +1,23 @@
+<template>
+  <div class="slds-form-element" onmouseup={onMouseUp}>
+    <label class="slds-form-element__label slds-grid" for="input">
+            <span style="font-size:12px;" class="slds-col">{label.MS_price_range}</span>
+            <span style="font-size:12px;" class="slds-slider-label__range slds-col_bump-left">{min}-{max} €</span>
+        </label>
+    <div class="slds-form-element__control">
+      <div class="slds-slider">
+        <section class="range-slider">
+          <span class="rangeValues"></span>
+          <div id="slider" class="slider slds-slider__range" onmousemove={onMouseMove} onmousedown={handleMouseDown}>
+            <div class="range" data-name="range"></div>
+            <div class="thumb start" data-name="start" ontouchstart={handleMouseDown} ontouchmove={onMouseMove}
+              ontouchend={onMouseUp}></div>
+            <div class="thumb end" data-name="end" ontouchstart={handleMouseDown} ontouchmove={onMouseMove}
+              ontouchend={onMouseUp}></div>
+          </div>
+          <span style="font-size:12px;" class="slds-slider__value" aria-hidden="true">{start} - {end} €</span>
+        </section>
+      </div>
+    </div>
+  </div>
+</template>

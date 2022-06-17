@@ -27,6 +27,7 @@
     <enableUpDownVote>false</enableUpDownVote>
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <logoutUrl>https://my-pcshopdev-developer-edition.eu44.force.com/s/</logoutUrl>
     <networkMemberGroups>
         <profile>Admin</profile>
         <profile>myPCShop User</profile>

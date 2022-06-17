@@ -3,6 +3,8 @@
 	<types>
 		<members>MS_ContentDistributionLinks</members>
 		<members>MS_ContentDistributionLinksTest</members>
+		<members>MS_CustomSearchController</members>
+		<members>MS_CustomSearchControllerTest</members>
 		<members>MS_CustomSearchPricebook</members>
 		<members>MS_CustomSearchPricebookTest</members>
 		<members>MS_CustomSearchProduct</members>
@@ -35,6 +37,10 @@
 	</types>
 	<types>
 		<members>createNewRecordComponent</members>
+		<members>customDataForFilters</members>
+		<members>customSearch</members>
+		<members>customSearchResultItem</members>
+		<members>customSearchResultsList</members>
 		<members>editRecordComponent</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
@@ -51,6 +57,10 @@
 		<name>ContentAsset</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>CspTrustedSite</name>
+	</types>
+	<types>
 		<members>MyPCShop</members>
 		<name>CustomApplication</name>
 	</types>
@@ -65,13 +75,18 @@
 		<name>CustomField</name>
 	</types>
 	<types>
+		<members>MS_24_7_technical_support</members>
+		<members>MS_3000_products</members>
 		<members>MS_advanced_price_editing</members>
+		<members>MS_apply_filters</members>
 		<members>MS_available</members>
 		<members>MS_cancel</members>
 		<members>MS_clear</members>
 		<members>MS_close</members>
+		<members>MS_competitive_prices</members>
 		<members>MS_delete</members>
 		<members>MS_details</members>
+		<members>MS_easy_online_shopping</members>
 		<members>MS_edit_product</members>
 		<members>MS_enddate</members>
 		<members>MS_enddate_gt_startdate</members>
@@ -84,19 +99,25 @@
 		<members>MS_error_selecting_profile</members>
 		<members>MS_error_update_active</members>
 		<members>MS_error_updating_price</members>
+		<members>MS_fast_and_safe_shipping</members>
 		<members>MS_file_name</members>
 		<members>MS_file_preview</members>
 		<members>MS_file_preview_big</members>
 		<members>MS_files_uploaded</members>
+		<members>MS_filters</members>
 		<members>MS_full_details</members>
 		<members>MS_isActive</members>
+		<members>MS_latest_products</members>
 		<members>MS_model</members>
 		<members>MS_modified_products</members>
 		<members>MS_name</members>
 		<members>MS_new_pricebook</members>
 		<members>MS_new_product</members>
+		<members>MS_no_products_found</members>
+		<members>MS_over_10000_customers</members>
 		<members>MS_preview</members>
 		<members>MS_price</members>
+		<members>MS_price_range</members>
 		<members>MS_price_underflow</members>
 		<members>MS_price_updated_success</members>
 		<members>MS_pricebook_created</members>
@@ -115,6 +136,8 @@
 		<members>MS_product_updated</members>
 		<members>MS_product_updated_success</members>
 		<members>MS_profile_image</members>
+		<members>MS_recently_viewed</members>
+		<members>MS_records_found</members>
 		<members>MS_records_not_found</members>
 		<members>MS_save</members>
 		<members>MS_save_and_new</members>
@@ -122,6 +145,8 @@
 		<members>MS_search</members>
 		<members>MS_search_empty</members>
 		<members>MS_search_pricebook</members>
+		<members>MS_search_product_holder</members>
+		<members>MS_search_results</members>
 		<members>MS_select_a_pricebook</members>
 		<members>MS_select_family</members>
 		<members>MS_select_producer</members>
@@ -180,6 +205,8 @@
 		<members>createProductRecord</members>
 		<members>editProductRecord</members>
 		<members>filePreviewAndDownloads</members>
+		<members>filtersForCustomSearch</members>
+		<members>headerLogos</members>
 		<members>latestProducts</members>
 		<members>pageFooter</members>
 		<members>previewFileModal</members>
@@ -193,8 +220,11 @@
 		<members>pricebookProductsEdit</members>
 		<members>pricebookStartdateInput</members>
 		<members>productCodeInput</members>
+		<members>productFamilyPicklist</members>
 		<members>productModelInput</members>
 		<members>productNameInput</members>
+		<members>productPriceSlider</members>
+		<members>productProducerPicklist</members>
 		<members>productRecordCard</members>
 		<members>recentlyViewedProducts</members>
 		<members>searchBox</members>

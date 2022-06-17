@@ -1,4 +1,4 @@
-public with sharing class MS_RecentlyViewedProducts {
+public without sharing class MS_RecentlyViewedProducts {
 
     @AuraEnabled(cacheable=true)
     public static List<Product2> getRecentlyViewedProducts(){
