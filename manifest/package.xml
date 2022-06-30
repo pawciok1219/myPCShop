@@ -63,7 +63,12 @@
 		<name>CompactLayout</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>X771298</members>
+		<members>blockchain4469146</members>
+		<members>logo</members>
+		<members>movieicon1</members>
+		<members>servlet</members>
+		<members>sso_background3</members>
 		<name>ContentAsset</name>
 	</types>
 	<types>
