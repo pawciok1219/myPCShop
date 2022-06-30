@@ -154,4 +154,4 @@ export default class ProductReviews extends NavigationMixin(LightningElement) {
     handleCloseModal(){
         this.displayEditForm = false;
     }
-}  
+}

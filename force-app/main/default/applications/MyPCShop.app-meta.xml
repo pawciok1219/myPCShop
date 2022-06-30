@@ -15,8 +15,12 @@
     <tabs>standard-Lead</tabs>
     <tabs>standard-Product2</tabs>
     <tabs>Search_Products</tabs>
+    <tabs>ProductReview__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>ProductReview__c</tab>
+        </mappings>
         <mappings>
             <tab>Search_Products</tab>
         </mappings>

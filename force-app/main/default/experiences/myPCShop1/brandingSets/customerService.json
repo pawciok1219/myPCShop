@@ -7,7 +7,7 @@
     "ActionColor" : "#2574A9",
     "BorderColor" : "rgb(212, 212, 212)",
     "CardBackgroundColor" : "rgba(255, 255, 255, 0)",
-    "CompanyLogo" : "/file-asset/servlet?v=1",
+    "CompanyLogo" : "/file-asset/logos?v=1",
     "DetailTextColor" : "rgb(39, 34, 34)",
     "ErrorFontColor" : "#ff9e9e",
     "HeaderFonts" : "Montserrat",

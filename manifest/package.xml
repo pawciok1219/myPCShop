@@ -3,6 +3,8 @@
 	<types>
 		<members>MS_ContentDistributionLinks</members>
 		<members>MS_ContentDistributionLinksTest</members>
+		<members>MS_CustomProductPageController</members>
+		<members>MS_CustomProductPageControllerTest</members>
 		<members>MS_CustomSearchController</members>
 		<members>MS_CustomSearchControllerTest</members>
 		<members>MS_CustomSearchPricebook</members>
@@ -33,7 +35,12 @@
 	</types>
 	<types>
 		<members>MS_ContentDistribution</members>
+		<members>MS_ContentDocumentShareSetByRecord</members>
 		<name>ApexTrigger</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>ApprovalProcess</name>
 	</types>
 	<types>
 		<members>createNewRecordComponent</members>
@@ -42,6 +49,9 @@
 		<members>customSearchResultItem</members>
 		<members>customSearchResultsList</members>
 		<members>editRecordComponent</members>
+		<members>productAddReviewComponent</members>
+		<members>productPageComponent</members>
+		<members>productReviewsComponent</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
@@ -71,23 +81,31 @@
 		<members>Product2.Model__c</members>
 		<members>Product2.Producer__c</members>
 		<members>Product2.Rating__c</members>
+		<members>ProductReview__c.Accepted__c</members>
+		<members>ProductReview__c.Comment__c</members>
+		<members>ProductReview__c.Product__c</members>
+		<members>ProductReview__c.Rating__c</members>
 		<members>User.PictureUrl__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
 		<members>MS_24_7_technical_support</members>
 		<members>MS_3000_products</members>
+		<members>MS_add_to_cart</members>
 		<members>MS_advanced_price_editing</members>
 		<members>MS_apply_filters</members>
 		<members>MS_available</members>
 		<members>MS_cancel</members>
+		<members>MS_category</members>
 		<members>MS_clear</members>
 		<members>MS_close</members>
 		<members>MS_competitive_prices</members>
 		<members>MS_delete</members>
+		<members>MS_description</members>
 		<members>MS_details</members>
 		<members>MS_easy_online_shopping</members>
 		<members>MS_edit_product</members>
+		<members>MS_edit_review</members>
 		<members>MS_enddate</members>
 		<members>MS_enddate_gt_startdate</members>
 		<members>MS_error</members>
@@ -109,12 +127,15 @@
 		<members>MS_isActive</members>
 		<members>MS_latest_products</members>
 		<members>MS_model</members>
+		<members>MS_model_v2</members>
 		<members>MS_modified_products</members>
 		<members>MS_name</members>
 		<members>MS_new_pricebook</members>
 		<members>MS_new_product</members>
 		<members>MS_no_products_found</members>
+		<members>MS_no_reviews_available</members>
 		<members>MS_over_10000_customers</members>
+		<members>MS_per_item</members>
 		<members>MS_preview</members>
 		<members>MS_price</members>
 		<members>MS_price_range</members>
@@ -136,9 +157,17 @@
 		<members>MS_product_updated</members>
 		<members>MS_product_updated_success</members>
 		<members>MS_profile_image</members>
+		<members>MS_rating</members>
 		<members>MS_recently_viewed</members>
 		<members>MS_records_found</members>
 		<members>MS_records_not_found</members>
+		<members>MS_review_created</members>
+		<members>MS_review_subject</members>
+		<members>MS_review_successfully_deleted</members>
+		<members>MS_review_updated</members>
+		<members>MS_review_waiting</members>
+		<members>MS_reviews</members>
+		<members>MS_reviews_pag</members>
 		<members>MS_save</members>
 		<members>MS_save_and_new</members>
 		<members>MS_save_and_next</members>
@@ -153,14 +182,20 @@
 		<members>MS_specify_how_much_euro</members>
 		<members>MS_specify_how_much_percent</members>
 		<members>MS_startdate</members>
+		<members>MS_subject</members>
+		<members>MS_submit</members>
 		<members>MS_success</members>
+		<members>MS_thank_for_review</members>
+		<members>MS_updated_review_wait_for_accept</members>
 		<members>MS_upload_product_images</members>
+		<members>MS_your_review_wait_for_accept</members>
 		<name>CustomLabel</name>
 	</types>
 	<types>
 		<members>Account</members>
 		<members>Pricebook2</members>
 		<members>Product2</members>
+		<members>ProductReview__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -169,6 +204,7 @@
 	</types>
 	<types>
 		<members>Pricebook_Manager</members>
+		<members>ProductReview__c</members>
 		<members>Search_Products</members>
 		<name>CustomTab</name>
 	</types>
@@ -203,12 +239,15 @@
 		<members>companiesLogos</members>
 		<members>createNewPricebook</members>
 		<members>createProductRecord</members>
+		<members>customProductPage</members>
 		<members>editProductRecord</members>
+		<members>editProductReview</members>
 		<members>filePreviewAndDownloads</members>
 		<members>filtersForCustomSearch</members>
 		<members>headerLogos</members>
 		<members>latestProducts</members>
 		<members>pageFooter</members>
+		<members>paginator</members>
 		<members>previewFileModal</members>
 		<members>previewFileThumbnailCard</members>
 		<members>previewFileThumbnails</members>
@@ -219,6 +258,7 @@
 		<members>pricebookNameInput</members>
 		<members>pricebookProductsEdit</members>
 		<members>pricebookStartdateInput</members>
+		<members>productAddReviewForm</members>
 		<members>productCodeInput</members>
 		<members>productFamilyPicklist</members>
 		<members>productModelInput</members>
@@ -226,10 +266,12 @@
 		<members>productPriceSlider</members>
 		<members>productProducerPicklist</members>
 		<members>productRecordCard</members>
+		<members>productReviews</members>
 		<members>recentlyViewedProducts</members>
 		<members>searchBox</members>
 		<members>searchBoxPricebook</members>
 		<members>searchBoxPricebookResult</members>
+		<members>starRatings</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
@@ -238,6 +280,8 @@
 	</types>
 	<types>
 		<members>Product2.AllProducts</members>
+		<members>ProductReview__c.All</members>
+		<members>ProductReview__c.Unaccepted_Reviews</members>
 		<name>ListView</name>
 	</types>
 	<types>
@@ -288,6 +332,14 @@
 	<types>
 		<members>Product2.New</members>
 		<name>WebLink</name>
+	</types>
+	<types>
+		<members>ProductReview__c</members>
+		<name>Workflow</name>
+	</types>
+	<types>
+		<members>ProductReview__c.changeToTrue</members>
+		<name>WorkflowFieldUpdate</name>
 	</types>
 	<version>53.0</version>
 </Package>
