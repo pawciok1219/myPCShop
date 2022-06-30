@@ -35,7 +35,6 @@
 	</types>
 	<types>
 		<members>MS_ContentDistribution</members>
-		<members>MS_ContentDocumentShareSetByRecord</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -63,12 +62,7 @@
 		<name>CompactLayout</name>
 	</types>
 	<types>
-		<members>X771298</members>
-		<members>blockchain4469146</members>
-		<members>logo</members>
-		<members>movieicon1</members>
-		<members>servlet</members>
-		<members>sso_background3</members>
+		<members>*</members>
 		<name>ContentAsset</name>
 	</types>
 	<types>
