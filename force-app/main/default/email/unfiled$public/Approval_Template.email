@@ -1,0 +1,10 @@
+Hello,
+a new unapproved review has appeared.
+
+Product: {!ProductReview__c.Product__c}
+Subject: {!ProductReview__c.Name}
+Rating: {!ProductReview__c.Rating__c}
+Comment: {!ProductReview__c.Comment__c}
+
+To approve or reject, simply respond to this email with 'approve' or 'reject' or click here to approve within Salesforce.
+{!ApprovalRequest.External_URL}

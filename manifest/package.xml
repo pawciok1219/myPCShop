@@ -213,6 +213,10 @@
 		<name>DuplicateRule</name>
 	</types>
 	<types>
+		<members>unfiled$public/Approval_Template</members>
+		<name>EmailTemplate</name>
+	</types>
+	<types>
 		<members>*</members>
 		<name>ExperienceBundle</name>
 	</types>
@@ -293,7 +297,7 @@
 		<name>NetworkBranding</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>enable_proccess_builder</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
