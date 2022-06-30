@@ -1,0 +1,78 @@
+<template>
+
+    <template if:false={reviewsToShow}>
+        <div class="slds-align_absolute-center" style="margin-top:20px;"><strong style="font-size: 15px;">{label.MS_no_reviews_available}</strong></div>
+    </template>
+
+    <template if:true={displayEditForm}>
+        <c-edit-product-review product-review={productReview} product-id={productId} rating={productReview.Rating__c} onclose={handleCloseModal} onrefresh={refresh}></c-edit-product-review>
+    </template>
+
+    <div style="min-height:40vh;">
+    <template if:true={reviewsToShow}>
+        <div class="slds-feed reviews-style slds-is-relative" style="margin-left:0;min-width:100%;">
+
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="small" variant="brand"></lightning-spinner>
+            </template>
+
+            <ul class="slds-feed__list" style="margin-bottom:10px;">
+                <template for:each={productReviews} for:item="productReview">
+                    <li class="slds-feed__item" key={productReview.Id}>
+                        <article class="slds-post">
+                            <header class="slds-post__header slds-media">
+                                <div class="slds-media__figure">
+                                    <template if:true={productReview.CreatedBy.PictureUrl__c}>
+                                    <lightning-avatar variant="circle" src={productReview.CreatedBy.PictureUrl__c}></lightning-avatar>
+                                    </template>
+                                    <template if:false={productReview.CreatedBy.PictureUrl__c}>
+                                        <lightning-avatar variant="circle" src={productReview.CreatedBy.SmallPhotoUrl}></lightning-avatar>
+                                    </template>
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+                                        <p>
+                                            <a  title={productReview.CreatedBy.Name} onclick={navigateToRecord} data-record-id={productReview.CreatedBy.Id}>
+                                                {productReview.CreatedBy.Name}
+                                            </a>
+                                        </p>
+                                        <div if:true={productReview.toRemove}>
+                                            <lightning-button-icon icon-name="utility:close" data-id={productReview.Id} onclick={deleteReview} class="slds-m-left_xx-small"></lightning-button-icon>
+                                            <lightning-button-icon icon-name="utility:edit" value={productReview} onclick={openEditForm} class="slds-m-left_xx-small"></lightning-button-icon>
+                                        </div>
+                                    </div>
+                                    <p class="slds-text-body_small" style="display:inline-flex;">
+                                        <c-star-ratings color-positive="#fdd500"
+                                        style="margin-left:-9px;"
+                                        color-default="#fdd500"
+                                        color-ok="#fdd500"
+                                        rating={productReview.Rating__c}
+                                        read-only-star="true"
+                                        color-negative="#fdd500" space-between="none" number-of-stars="5" size="xsmall"></c-star-ratings>
+                                        <lightning-formatted-date-time style="margin-top:8px;" value={productReview.LastModifiedDate}></lightning-formatted-date-time>
+                                    </p>
+                                </div>
+                            </header>
+                            <div class="slds-text-longform">
+                                <p class="slds-text-title_caps">
+                                    {productReview.Name}
+                                </p>
+                                <lightning-formatted-rich-text value={productReview.Comment__c}></lightning-formatted-rich-text>                                
+                            </div>
+                        
+                    </article>
+                </li>
+            </template>
+        </ul>
+    </div>
+        <c-paginator
+        page={page}
+        pages={pages}
+        total={total}
+        label={label.MS_reviews_pag}
+        onpreviouspage={handlePagePrevious}
+        onnextpage={handlePageNext}
+        ></c-paginator>
+    </template>
+    </div>
+</template>  

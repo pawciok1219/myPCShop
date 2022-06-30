@@ -1,0 +1,62 @@
+<template>
+    <div style="display: flex;justify-content:left;">
+    <div style="display:flex; justify-content:left; align-items:center;border-right-width: 1px; border-right-style:solid;border-right-color:lightgray;">
+    <div style="display:block;margin-right:12px;">
+    <img src={displayImage} height="300" width="300"/>
+    <div class="myProducts-gallery">
+        <template for:each={recentlyProductsList} for:item="image">
+            <img src={image} key={image.Id} data-value={image} onclick={changeDisplayPhoto}>
+        </template>
+    </div>
+    </div>
+    </div>
+    <div style="display:block;justify-content:left; margin-left:10px;">
+        <div style="margin-left:20px;border-bottom-width: 1px; border-bottom-style:solid; border-bottom-color:lightgray;">
+        <h1 style="font-size:20px;padding-bottom:5px;display:block;">{name}</h1>
+        <c-star-ratings style="display:block;width:119px;margin-left:-23px;margin-top:-16px;" space-between="none" rating={overallRating} static-color="#fdd500" read-only-star="true" number-of-stars="5" show-half-stars="true" size="xsmall"></c-star-ratings>
+        <p style="display:inline-block; font-size:12px;margin-top:-23px;padding-bottom:10px;margin-left:78px;position:absolute;color:#757575;">({numberofReviews} {label.MS_reviews})</p>
+        <template if:true={productcode}>
+        <p style="display:block; font-size:12px;color:#757575;margin-top:-5px;padding-bottom:10px;">{label.MS_product_code}: {productcode}</p>
+        </template>
+        </div>
+        <div style="padding-top:10px;margin-left:20px;">
+        <template if:true={productfamily}>
+        <p style="padding-bottom:10px; display:block; font-size:14px;color:#757575;">{label.MS_category}: <span style="color:black;">{productfamily}</span></p>
+        </template>
+        <template if:true={producer}>
+        <p style="padding-bottom:10px; display:block; font-size:14px;color:#757575;">{label.MS_producer}: <span style="color:black;">{producer}</span></p>
+        </template>
+        <template if:true={model}>
+        <p style="padding-bottom:10px; display:block; font-size:14px;color:#757575;">{label.MS_model_v2}: <span style="color:black;">{model}</span></p>
+        </template>
+        <template if:true={available}>
+        <p style="padding-bottom:10px; display:block; font-size:14px;color:#757575;">{label.MS_available}: <span style="margin-left:-9px;"><lightning-icon class='available-icon' icon-name="utility:success" size="small"></lightning-icon></span></p>
+        </template>
+        <template if:false={available}>
+        <p style="padding-bottom:10px; display:block; font-size:14px;color:#757575;">{label.MS_available}: <span style="margin-left:1px;"><lightning-icon icon-name="utility:ban" size="small"></lightning-icon></span></p>
+        </template>
+        <template if:true={description}>
+        <p style="padding-bottom:10px;width:350px;overflow: auto; display:block; font-size:14px;color:#757575;">{label.MS_description}: <span style="color:black;">{description}</span></p>
+        </template>
+        </div>
+    </div>
+    <div style="padding:10px;display:block;margin-left:30%;border-left-width: 1px; border-left-style:solid; border-left-color:lightgray; margin-right:5px;">
+        <strong style="display:inline-block;color:firebrick;font-size:25px; margin-left:65px;">
+            € {price}</strong><strong>{label.MS_per_item}</strong>
+        <template if:true={available}>
+        <div style="padding-bottom:5px;display:flex;justify-content:left;">
+        <lightning-combobox
+            style="padding:5px;"
+            placeholder="1"
+            name="progress"
+            options={options}>
+        </lightning-combobox>
+        <lightning-button label={label.MS_add_to_cart} icon-name="utility:cart" icon-position="left" style="margin-top:24px;"></lightning-button>
+        </div>
+        </template>
+        <div style="display:block;justify-content:left;margin-top:7px;padding-top:7px;border-top-width: 1px; border-top-style:solid; border-top-color:lightgray;">
+        </div>
+    </div>
+    </div>
+
+</template>

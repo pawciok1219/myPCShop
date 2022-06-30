@@ -1,0 +1,28 @@
+.available-icon {
+    --lwc-colorTextIconDefault: green;
+    margin-left:10px;
+}
+
+.myProducts-gallery {
+    max-width: 320px;
+    margin-top: 5px;
+}
+
+.myProducts-gallery img{
+    height: 50px;
+    width: 50px;
+    margin-left: 12px;
+    margin-bottom:5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-spacing: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0.8;
+}
+
+.myProducts-gallery img:hover {
+    opacity: 1;
+}
