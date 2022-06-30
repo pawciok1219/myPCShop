@@ -7,7 +7,7 @@
         <type>role</type>
     </allowedSubmitters>
     <allowedSubmitters>
-        <submitter>pawel.kamienski@britenet.com.pl</submitter>
+        <submitter>pawciok1219@britenet.com.pl</submitter>
         <type>user</type>
     </allowedSubmitters>
     <approvalPageFields>
@@ -24,7 +24,7 @@
         <allowDelegate>false</allowDelegate>
         <assignedApprover>
             <approver>
-                <name>pawel.kamienski@britenet.com.pl</name>
+                <name>pawciok1219@britenet.com.pl</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
