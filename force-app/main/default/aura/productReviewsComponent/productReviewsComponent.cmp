@@ -1,0 +1,3 @@
+<aura:component implements="force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    <c:productReviews recordId="{!v.recordId}"/>
+</aura:component>

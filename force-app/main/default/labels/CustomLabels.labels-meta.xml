@@ -560,4 +560,144 @@
         <shortDescription>MS_search_results</shortDescription>
         <value>Search Results</value>
     </labels>
+    <labels>
+        <fullName>MS_add_to_cart</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_add_to_cart</shortDescription>
+        <value>Add to cart</value>
+    </labels>
+    <labels>
+        <fullName>MS_category</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_category</shortDescription>
+        <value>Category</value>
+    </labels>
+    <labels>
+        <fullName>MS_description</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>MS_edit_review</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_edit_review</shortDescription>
+        <value>Edit Review</value>
+    </labels>
+    <labels>
+        <fullName>MS_model_v2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_model_v2</shortDescription>
+        <value>Model</value>
+    </labels>
+    <labels>
+        <fullName>MS_no_reviews_available</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_no_reviews_available</shortDescription>
+        <value>No reviews available.</value>
+    </labels>
+    <labels>
+        <fullName>MS_per_item</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_per_item</shortDescription>
+        <value>/per item</value>
+    </labels>
+    <labels>
+        <fullName>MS_rating</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_rating</shortDescription>
+        <value>Rating</value>
+    </labels>
+    <labels>
+        <fullName>MS_review_created</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_review_created</shortDescription>
+        <value>Review Created!</value>
+    </labels>
+    <labels>
+        <fullName>MS_review_subject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_review_subject</shortDescription>
+        <value>Review Subject</value>
+    </labels>
+    <labels>
+        <fullName>MS_review_successfully_deleted</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_review_successfully_deleted</shortDescription>
+        <value>Review successfully deleted!</value>
+    </labels>
+    <labels>
+        <fullName>MS_review_updated</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_review_updated</shortDescription>
+        <value>Review updated!</value>
+    </labels>
+    <labels>
+        <fullName>MS_review_waiting</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_review_waiting</shortDescription>
+        <value>Your review is waiting for confirmation!</value>
+    </labels>
+    <labels>
+        <fullName>MS_reviews</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_reviews</shortDescription>
+        <value>reviews</value>
+    </labels>
+    <labels>
+        <fullName>MS_reviews_pag</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_reviews_pag</shortDescription>
+        <value>reviews</value>
+    </labels>
+    <labels>
+        <fullName>MS_subject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_subject</shortDescription>
+        <value>Subject</value>
+    </labels>
+    <labels>
+        <fullName>MS_submit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>MS_thank_for_review</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_thank_for_review</shortDescription>
+        <value>Thank you for adding review.</value>
+    </labels>
+    <labels>
+        <fullName>MS_updated_review_wait_for_accept</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_updated_review_wait_for_accept</shortDescription>
+        <value>Your updated review will be displayed when accepted by the administrator.</value>
+    </labels>
+    <labels>
+        <fullName>MS_your_review_wait_for_accept</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MS_your_review_wait_for_accept</shortDescription>
+        <value>Your review will be displayed when accepted by the administrator.</value>
+    </labels>
 </CustomLabels>

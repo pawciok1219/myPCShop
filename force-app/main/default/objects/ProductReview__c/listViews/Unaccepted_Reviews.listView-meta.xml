@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unaccepted_Reviews</fullName>
+    <columns>NAME</columns>
+    <columns>Comment__c</columns>
+    <columns>Accepted__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Product__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Accepted__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Unaccepted Reviews</label>
+</ListView>

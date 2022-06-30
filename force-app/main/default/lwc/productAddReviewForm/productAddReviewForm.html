@@ -1,0 +1,55 @@
+<template>
+    <div style="max-height:370px;width:550px;margin-top:10px;margin-left:-10px;">
+    <div class="spinner">
+        <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                </lightning-spinner>
+        </template>
+    </div>
+    <template if:false={userHaveProductReview}>
+    <lightning-record-edit-form object-api-name={productReviewObject} onsuccess={handleSuccess} onsubmit={handleSubmit}>
+        <lightning-layout multiple-rows vertical-align="start">
+            <lightning-layout-item size="8" padding="horizontal-small">
+                <div class="slds-form-element" style="margin-left:5px;">                    
+                    <label for={nameField} class="slds-form-element__label" >{label.MS_review_subject}</label>
+                    <div class="slds-form-element__control">
+                        <lightning-input-field variant="label-hidden" field-name={nameField} required></lightning-input-field>
+                    </div>                    
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="horizontal-small">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="record-name">{label.MS_rating}</label>
+                    <div class="slds-form-element__control" style="margin-left:-23px;">
+                        <c-star-ratings onratingchange={handleRatingChanged} color-positive="#fdd500"
+                        color-default="#fdd500"
+                        color-ok="#fdd500"
+                        color-negative="#fdd500" space-between="small" number-of-stars="5" size="small"></c-star-ratings>
+                    </div>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small">
+                <lightning-input-field field-name={commentField} required></lightning-input-field>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div class="slds-align_absolute-center" style="margin-top: 5px">
+            <lightning-button label={label.MS_submit} type="submit" icon-name="utility:save"></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+    </template>
+   </div>
+   <template if:true={userHaveProductReview}>
+    <div class="slds-align_absolute-center" style="margin-top:20px; display:block; margin-left:45%;">
+        <template if:true={isAccepted}>
+        <strong style="font-size: 18px; display:inline-block;">{label.MS_thank_for_review}</strong></br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Eo_circle_green_white_checkmark.svg/2048px-Eo_circle_green_white_checkmark.svg.png" 
+        style="max-height:80px;display:inline-block;margin-left:10%;margin-top:5px;"/>
+        </template>
+        <template if:false={isAccepted}>
+            <strong style="font-size: 18px; display:inline-block;">{label.MS_review_waiting}</strong></br>
+            <img src="https://cdn-icons-png.flaticon.com/512/1231/1231050.png" 
+            style="max-height:80px;display:inline-block;margin-left:17%;margin-top:5px;"/>
+        </template>
+    </div>
+    </template>
+</template>

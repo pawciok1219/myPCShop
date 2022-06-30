@@ -1,4 +1,5 @@
-<template>    <div class="product">
+<template>    
+        <div class="product">
               <img src={product.DisplayUrl}/>
               <div class="slds-card__header slds-grid slds-wrap" style="margin-top:5%">
                 <header class="slds-media slds-media_center slds-has-flexi-truncate" style="display:flex; align-items: center; justify-content: center;">
@@ -10,7 +11,7 @@
                 </header> 
               </div>
               <div class="slds-card__body slds-card__body_inner">
-                <p style="font-size: 15px;margin-top:-12px;display: flex; align-items: center; justify-content: center;"><strong>{product.Name}</strong></p>
+                <p style="font-size: 15px;margin-top:-12px;display: flex; align-items: center; justify-content: center;"><strong><a href={sfdcBaseURL}>{product.Name}</a></strong></p>
                   </br>
                   <strong style="color:firebrick;font-size:18px; font-family: arial; float:bottom;display: flex; align-items: center; justify-content: center;">
                     € {product.UnitPrice}</strong>
