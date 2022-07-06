@@ -19,3 +19,18 @@ img {
     border-color:lightgray;
     border-radius:5px;
 }
+
+.product .cart{
+    display: none;
+}
+
+.product:hover .cart {
+    display: inline;
+}
+
+.cart{
+    transition: width 2s;
+    position:absolute;
+    margin-left:160px;
+    margin-top:-30px;
+}

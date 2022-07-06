@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>NumberOfProductsInCache</masterLabel>
+    <description>Message Channel to check number of Products in cache shopping cart.</description>
+    <isExposed>true</isExposed>
+
+    <lightningMessageFields>
+        <fieldName>number</fieldName>
+        <description>This is the id of record</description>
+    </lightningMessageFields>
+
+</LightningMessageChannel>

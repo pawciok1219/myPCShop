@@ -1,0 +1,9 @@
+<!-- margin-left:1198px; -->
+<template>
+    <template if:true={userId}>
+    <a href={sfdcBaseURL}><lightning-button-icon class="cart" style="position:absolute;margin-top:-101px;margin-left:66.5vw;" icon-name="utility:cart" size="large" variant="bare"></lightning-button-icon></a>
+    <template if:true={haveProductsInShoppingCart}>
+    <div class="circle1"><p style="color:white; font-size:12px;">{numberOfProductsInCache}</p></div>
+    </template>
+    </template>
+</template>
