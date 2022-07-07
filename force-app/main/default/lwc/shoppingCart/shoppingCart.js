@@ -11,13 +11,21 @@ import MS_shopping_clear from '@salesforce/label/c.MS_shopping_clear';
 import MS_total_value from '@salesforce/label/c.MS_total_value';
 import MS_clear_shopping_cart from '@salesforce/label/c.MS_clear_shopping_cart';
 import MS_place_order from '@salesforce/label/c.MS_place_order';
+import MS_yes from '@salesforce/label/c.MS_yes';
+import MS_no from '@salesforce/label/c.MS_no';
+import MS_confirmation from '@salesforce/label/c.MS_confirmation';
+import MS_are_you_sure_clean_shopping_cart from '@salesforce/label/c.MS_are_you_sure_clean_shopping_cart';
 
 export default class ShoppingCart extends LightningElement {
 
     label = {
         MS_total_value,
         MS_clear_shopping_cart,
-        MS_place_order
+        MS_place_order,
+        MS_yes,
+        MS_no,
+        MS_confirmation,
+        MS_are_you_sure_clean_shopping_cart
     };
 
     @track isLoading = true;

@@ -135,4 +135,19 @@ public without sharing class MS_ShoppingCartController {
         return contract.Id;
     }
 
+    @AuraEnabled(cacheable=true)
+    public static List<Order> getUserOrders(Id userId){
+        return [SELECT Id, OrderNumber, EffectiveDate, TotalAmount FROM Order WHERE OwnerId = :userId ORDER BY EffectiveDate DESC];
+    }
+
+    @AuraEnabled
+    public static List<OrderItem> getOrderItems(Id orderId){
+        return [SELECT Id, Product2Id, Quantity FROM OrderItem WHERE OrderId = :orderId];
+    }
+
+    @AuraEnabled
+    public static List<Product2> getProductDetails(Id productId){
+        return [SELECT Id, Name, DisplayUrl FROM Product2 WHERE Id = :productId];
+    }
+
 }

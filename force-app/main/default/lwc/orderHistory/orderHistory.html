@@ -1,0 +1,64 @@
+<template>
+    <template if:true={userHaveOrders}>
+    <div style="margin: 0 auto; position:relative;padding:20px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
+        <div class="spinner">
+            <template if:true={isLoading}>
+                 <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                 </lightning-spinner>
+            </template>
+        </div>
+    <h1 style="font-size:18px; margin-bottom:10px;">{label.MS_order_history}</h1>
+    <lightning-accordion onsectiontoggle={handleSectionToggle}>
+    <template for:each={orderList} for:item="order">
+        <lightning-accordion-section key={order.Id} name={order.Id} label={order.orderNumberLabel}>
+            <article class="slds-post">
+                <header class="slds-post__header slds-media">
+                    <div class="slds-media__figure" style="font-size:14px;">
+                        {label.MS_data_of_order}&nbsp;  <strong>{order.EffectiveDate}</strong> </br>
+                        {label.MS_total_amount_v2}&nbsp;  <strong>€{order.TotalAmount}</strong> </br>
+                        <div style="margin-top:8px;">
+                        <a href={order.detailUrl}><lightning-button label={label.MS_details} onclick={handleClick}></lightning-button></a>
+                        </div>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+                        </div>
+                    </div>
+                </header>
+        </article>
+        <h1 style="font-size:16px; margin-bottom:10px;">{label.MS_items_in_order}</h1>
+        <template for:each={order.products} for:item="product">
+        <div class="slds-page-header" key={product.Product2Id}>
+            <div class="slds-page-header__row">
+              <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                  <div class="slds-media__figure">
+                        <img src={product.displayurl} height="50" width="50"/>
+                  </div>
+                  <div class="slds-media__body">
+                    <div class="slds-page-header__name">
+                      <div class="slds-page-header__name-title">
+                        <h1>
+                            <span class="slds-page-header__title slds-truncate"><a href={product.url}>{product.name}</a></span>
+                        </h1>
+                      </div>
+                    </div>
+                    <p>{label.MS_quantity} &nbsp; <strong>{product.Quantity}</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+        </lightning-accordion-section>
+    </template>
+    </lightning-accordion>
+    </div>
+    </template>
+    <template if:false={userHaveOrders}>
+        <div style="margin: 0 auto;position:relative; height:230px;padding:20px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
+            <h1 style="font-size:18px; margin-bottom:10px;">{label.MS_order_history}</h1>
+            <img src="https://i.ibb.co/2vcH3LV/Przechwytywanie.png" style="max-height:150px;margin-left:35%;"/>
+          </div>
+    </template>
+</template>

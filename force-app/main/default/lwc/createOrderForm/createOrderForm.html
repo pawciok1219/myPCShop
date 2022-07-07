@@ -1,5 +1,8 @@
 <template>
-    
+    <template if:true={isModalOpen}>
+    <c-confirm-submit-modal content={label.MS_are_you_sure_place_order} title={label.MS_confirmation} onclosemodal={handleCloseModal}>
+    </c-confirm-submit-modal>
+    </template>  
     <div class="spinner">
         <template if:true={isLoading}>
              <lightning-spinner alternative-text="Loading" variant="brand" size="large">
@@ -8,41 +11,41 @@
       </div>
 
     <div style="max-height:920px;padding:20px;padding-bottom:6px;margin-top:25px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
-    <h1 style="font-size:22px; margin-bottom: 8px;">Shipping</h1>
-    <p style="margin-bottom: 10px;">Please enter your shipping details.</p>
+    <h1 style="font-size:22px; margin-bottom: 8px;">{label.MS_shipping}</h1>
+    <p style="margin-bottom: 10px;">{label.MS_please_enter_details}</p>
 
 
     <div class="slds-modal__content" style="margin-bottom:20px;">
         <div class="slds-grid">
             <div class="slds-col slds-size_1-of-2">
-                <lightning-input style="width:50%;" type="text" placeholder={currentUserFirstName} label="First Name" required disabled></lightning-input>
+                <lightning-input style="width:50%;" type="text" placeholder={currentUserFirstName} label={label.MS_first_name} required disabled></lightning-input>
             </div>
         </div>
         <div class="slds-grid">
             <div class="slds-col slds-size_1-of-2">
-                <lightning-input style="width:50%;" type="text" placeholder={currentUserLastName} label="Last Name" required disabled></lightning-input>
+                <lightning-input style="width:50%;" type="text" placeholder={currentUserLastName} label={label.MS_last_name} required disabled></lightning-input>
             </div>
         </div>
         <div class="slds-grid">
             <div class="slds-col slds-size_1-of-2">
-                <lightning-input style="width:50%;" type="text" placeholder={currentUserEmail} label="Email" required disabled></lightning-input>
+                <lightning-input style="width:50%;" type="text" placeholder={currentUserEmail} label={label.MS_email} required disabled></lightning-input>
             </div>
         </div>
         <div class="slds-grid">
             <div class="slds-col slds-size_1-of-2">
-                <lightning-input style="width:50%;" type="text" placeholder={currentUserPhone} label="Phone" required disabled></lightning-input>
+                <lightning-input style="width:50%;" type="text" placeholder={currentUserPhone} label={label.MS_phone} required disabled></lightning-input>
             </div>
         </div>
     </div>
 
-    <lightning-input type="checkbox" onchange={handleShippingBillingCheckbox} style="margin-bottom:8px;" label="Shipping address same as billing"></lightning-input>
+    <lightning-input type="checkbox" onchange={handleShippingBillingCheckbox} style="margin-bottom:8px;" label={label.MS_shipping_billing}></lightning-input>
 
         <lightning-record-edit-form object-api-name="Order" onsubmit={handleSubmit} onsuccess={handleSuccess}>
 
         <div style="display:flex;">
-        <h1 style="font-size:20px; margin-bottom: 10px;">Shipping Address</h1>
+        <h1 style="font-size:20px; margin-bottom: 10px;">{label.MS_shipping_address}</h1>
         <template if:false={shippingSameBilling}>
-        <h1 style="font-size:20px; margin-bottom: 10px; margin-left:38%;">Billing Address</h1>
+        <h1 style="font-size:20px; margin-bottom: 10px; margin-left:38%;">{label.MS_billing_address}</h1>
         </template>
         </div>
         <div class="slds-modal__content" id="modal-content-id-1">
@@ -61,17 +64,17 @@
                     </div>
                 </div>
         </div>
-        <h1 style="font-size:20px; margin-bottom: 10px;">Payment Method</h1>
+        <h1 style="font-size:20px; margin-bottom: 10px;">{label.MS_payment_method}</h1>
         <div style="height:50px;">
             <lightning-input-field style="width:50%;" data-id field-name="PaymentMethod__c" required> </lightning-input-field>
         </div>
-        <h1 style="font-size:20px; margin-bottom: 10px;">Order summary</h1>
+        <h1 style="font-size:20px; margin-bottom: 10px;">{label.MS_order_summary}</h1>
         <div style="height:50px;">
-            <p style="font-size:15px;">Total amount to be paid: &nbsp; <strong>€ {totalOrderPrice}</strong></p>
+            <p style="font-size:15px;">{label.MS_total_amount_be_paid} &nbsp; <strong>€ {totalOrderPrice}</strong></p>
         </div>
             <div style="display:inline-block; margin-left:40%; margin-top:-12px; margin-bottom:6px;">
-            <a href={shoppingCartUrl}><lightning-button style="margin-right:3px;" class="slds-m-top_small" variant="neutral" label='Back to shopping cart'></lightning-button></a>&nbsp;
-            <lightning-button class="slds-m-top_small" variant="brand" type="submit" label='Place Order'></lightning-button>
+            <a href={shoppingCartUrl}><lightning-button style="margin-right:3px;" class="slds-m-top_small" variant="neutral" label={label.MS_back_to_shopping_cart}></lightning-button></a>&nbsp;
+            <lightning-button class="slds-m-top_small" variant="brand" type="submit" label={label.MS_place_order}></lightning-button>
             </div>
     </lightning-record-edit-form>
     </div>

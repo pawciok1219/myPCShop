@@ -16,7 +16,10 @@ import updateQuantity from '@salesforce/apex/MS_ShoppingCartController.updateQua
 import MS_product_successfully_cart from '@salesforce/label/c.MS_product_successfully_cart';
 import MS_unit_price from '@salesforce/label/c.MS_unit_price';
 import MS_total_amount from '@salesforce/label/c.MS_total_amount';
-
+import MS_yes from '@salesforce/label/c.MS_yes';
+import MS_no from '@salesforce/label/c.MS_no';
+import MS_confirmation from '@salesforce/label/c.MS_confirmation';
+import MS_are_you_sure_remove_item from '@salesforce/label/c.MS_are_you_sure_remove_item';
 
 const fields = [NAME_FIELD,PRODUCTFAMILY_FIELD,MODEL_FIELD,PRODUCER_FIELD,DISPLAYURL_FIELD];
 
@@ -24,7 +27,11 @@ export default class ShoppingCartItem extends NavigationMixin(LightningElement) 
 
     label = {
         MS_unit_price,
-        MS_total_amount
+        MS_total_amount,
+        MS_yes,
+        MS_no,
+        MS_confirmation,
+        MS_are_you_sure_remove_item
     };
 
     @api recordId;

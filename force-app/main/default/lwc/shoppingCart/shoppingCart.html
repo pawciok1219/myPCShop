@@ -1,8 +1,8 @@
 <template>
-    <c-confirm-modal title='Confirmation'
-        message='Are you sure you want to clean the shopping cart?'
-        confirm-label='Yes'
-        cancel-label='No'
+    <c-confirm-modal title={label.MS_confirmation}
+        message={label.MS_are_you_sure_clean_shopping_cart}
+        confirm-label={label.MS_yes}
+        cancel-label={label.MS_no}
         visible={isDialogVisible}
         original-message='halo'
         name="confirmModal"
@@ -43,7 +43,7 @@
   </template>
   <template if:false={haveProductsInShoppingCart}>
     <div style="margin: 0 auto; margin-top:-15px; position:relative; height:400px;width:1000px;padding:20px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
-      <img src="https://www.iamqatar.qa/assets/images/no-products-found.png" style="max-height:250px;margin-left:42%;margin-top:4%;"/>
+      <img src="https://bagbazaars.com/assets/img/no-product-found.png" style="max-height:250px;margin-left:24%;margin-top:4%;"/>
     </div>
   </template>
 
