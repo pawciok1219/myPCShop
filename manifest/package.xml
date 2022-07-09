@@ -229,6 +229,8 @@
 	</types>
 	<types>
 		<members>Account</members>
+		<members>Order</members>
+		<members>OrderItem</members>
 		<members>Pricebook2</members>
 		<members>Product2</members>
 		<members>ProductReview__c</members>
