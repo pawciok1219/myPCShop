@@ -1,0 +1,61 @@
+{
+  "appPageId" : "47f9dadf-9d86-42e8-90a8-e6de81fc106b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "020c3ad4-e856-49e7-839e-377a20798ac6",
+  "label" : "shoppingcart",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "Items you have selected for purchase.",
+        "bannerTextWithKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineArticles\">articles</a> and <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "bannerTextWithoutKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "pageType" : "",
+        "showSubTopics" : true,
+        "title" : "Shopping Cart",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "c48efc10-ae8a-4a98-8173-ea1a77d7a944",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "30918626-b5a2-46cd-8fa5-fcc3a7c57d9b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:shoppingCart",
+      "id" : "56025c5e-4f50-4c28-b0ea-96417c8a621e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "00a22134-9228-4921-9298-c41b080a0d61",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "cb61e8a1-e235-4b21-a960-8925ea0ac705",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Shopping Cart"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "631286b1-6e2c-4596-bcaa-37924c65639b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ac020eaa-5666-410d-ae86-27ce29d251a5",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-shoppingcart"
+}

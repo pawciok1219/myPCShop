@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message Channel to update shopping cart.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is list of records.</description>
+        <fieldName>list</fieldName>
+    </lightningMessageFields>
+    <masterLabel>UpdateShopList</masterLabel>
+</LightningMessageChannel>
