@@ -366,10 +366,6 @@
 		<name>Profile</name>
 	</types>
 	<types>
-		<members>*</members>
-		<name>ProfileSessionSetting</name>
-	</types>
-	<types>
 		<members>CEO</members>
 		<name>Role</name>
 	</types>
