@@ -44,10 +44,6 @@
 		<name>ApprovalProcess</name>
 	</types>
 	<types>
-		<members>*</members>
-		<name>Audience</name>
-	</types>
-	<types>
 		<members>createNewRecordComponent</members>
 		<members>customDataForFilters</members>
 		<members>customSearch</members>

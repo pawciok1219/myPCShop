@@ -3,7 +3,7 @@
     <consumerKey>303398319828-tb8lrl9jrrk7mav6kbkokefqjrlnh44c.apps.googleusercontent.com</consumerKey>
     <consumerSecret>0ueBMksSU4TBkQYJYoJaH4ZOydklOkxHFDELI8AEu3qO9IQjUw5bdQ==</consumerSecret>
     <defaultScopes>openid email profile</defaultScopes>
-    <executionUser>pawciok1219@britenet.com.pl</executionUser>
+    <executionUser>pawel.kamienski@britenet.com.pl</executionUser>
     <friendlyName>Google</friendlyName>
     <iconUrl>https://login.salesforce.com/icons/google-colored.png</iconUrl>
     <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
