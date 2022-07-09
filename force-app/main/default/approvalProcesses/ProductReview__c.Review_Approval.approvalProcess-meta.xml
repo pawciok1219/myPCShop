@@ -11,15 +11,7 @@
         <type>customerPortalUser</type>
     </allowedSubmitters>
     <allowedSubmitters>
-        <submitter>yevhenii.mukha@mypcshop.com</submitter>
-        <type>customerPortalUser</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
         <type>owner</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>GoogleAuthCustomerUser</submitter>
-        <type>portalRole</type>
     </allowedSubmitters>
     <allowedSubmitters>
         <submitter>CEO</submitter>
