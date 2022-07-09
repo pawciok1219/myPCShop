@@ -44,6 +44,10 @@
 		<name>ApprovalProcess</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>Audience</name>
+	</types>
+	<types>
 		<members>createNewRecordComponent</members>
 		<members>customDataForFilters</members>
 		<members>customSearch</members>
@@ -333,6 +337,10 @@
 		<members>ProductReview__c.All</members>
 		<members>ProductReview__c.Unaccepted_Reviews</members>
 		<name>ListView</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>NavigationMenu</name>
 	</types>
 	<types>
 		<members>*</members>
