@@ -27,6 +27,8 @@
 		<members>MS_ProductCustomerPortalTest</members>
 		<members>MS_RecentlyViewedProducts</members>
 		<members>MS_RecentlyViewedProductsTest</members>
+		<members>MS_ShoppingCartController</members>
+		<members>MS_ShoppingCartControllerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -74,6 +76,7 @@
 		<name>CustomApplication</name>
 	</types>
 	<types>
+		<members>Order.PaymentMethod__c</members>
 		<members>Pricebook2.End_Date__c</members>
 		<members>Pricebook2.Start_Date__c</members>
 		<members>Product2.Available__c</members>
@@ -91,20 +94,30 @@
 		<members>MS_24_7_technical_support</members>
 		<members>MS_3000_products</members>
 		<members>MS_add_to_cart</members>
+		<members>MS_add_to_cart_item</members>
 		<members>MS_advanced_price_editing</members>
 		<members>MS_apply_filters</members>
+		<members>MS_are_you_sure_clean_shopping_cart</members>
+		<members>MS_are_you_sure_place_order</members>
+		<members>MS_are_you_sure_remove_item</members>
 		<members>MS_available</members>
+		<members>MS_back_to_shopping_cart</members>
+		<members>MS_billing_address</members>
 		<members>MS_cancel</members>
 		<members>MS_category</members>
 		<members>MS_clear</members>
+		<members>MS_clear_shopping_cart</members>
 		<members>MS_close</members>
 		<members>MS_competitive_prices</members>
+		<members>MS_confirmation</members>
+		<members>MS_data_of_order</members>
 		<members>MS_delete</members>
 		<members>MS_description</members>
 		<members>MS_details</members>
 		<members>MS_easy_online_shopping</members>
 		<members>MS_edit_product</members>
 		<members>MS_edit_review</members>
+		<members>MS_email</members>
 		<members>MS_enddate</members>
 		<members>MS_enddate_gt_startdate</members>
 		<members>MS_error</members>
@@ -122,8 +135,11 @@
 		<members>MS_file_preview_big</members>
 		<members>MS_files_uploaded</members>
 		<members>MS_filters</members>
+		<members>MS_first_name</members>
 		<members>MS_full_details</members>
 		<members>MS_isActive</members>
+		<members>MS_items_in_order</members>
+		<members>MS_last_name</members>
 		<members>MS_latest_products</members>
 		<members>MS_model</members>
 		<members>MS_model_v2</members>
@@ -131,10 +147,19 @@
 		<members>MS_name</members>
 		<members>MS_new_pricebook</members>
 		<members>MS_new_product</members>
+		<members>MS_no</members>
 		<members>MS_no_products_found</members>
 		<members>MS_no_reviews_available</members>
+		<members>MS_order_history</members>
+		<members>MS_order_number</members>
+		<members>MS_order_successfully_placed</members>
+		<members>MS_order_summary</members>
 		<members>MS_over_10000_customers</members>
+		<members>MS_payment_method</members>
 		<members>MS_per_item</members>
+		<members>MS_phone</members>
+		<members>MS_place_order</members>
+		<members>MS_please_enter_details</members>
 		<members>MS_preview</members>
 		<members>MS_price</members>
 		<members>MS_price_range</members>
@@ -153,9 +178,11 @@
 		<members>MS_product_family</members>
 		<members>MS_product_name</members>
 		<members>MS_product_search</members>
+		<members>MS_product_successfully_cart</members>
 		<members>MS_product_updated</members>
 		<members>MS_product_updated_success</members>
 		<members>MS_profile_image</members>
+		<members>MS_quantity</members>
 		<members>MS_rating</members>
 		<members>MS_recently_viewed</members>
 		<members>MS_records_found</members>
@@ -178,6 +205,10 @@
 		<members>MS_select_a_pricebook</members>
 		<members>MS_select_family</members>
 		<members>MS_select_producer</members>
+		<members>MS_shipping</members>
+		<members>MS_shipping_address</members>
+		<members>MS_shipping_billing</members>
+		<members>MS_shopping_clear</members>
 		<members>MS_specify_how_much_euro</members>
 		<members>MS_specify_how_much_percent</members>
 		<members>MS_startdate</members>
@@ -185,8 +216,14 @@
 		<members>MS_submit</members>
 		<members>MS_success</members>
 		<members>MS_thank_for_review</members>
+		<members>MS_total_amount</members>
+		<members>MS_total_amount_be_paid</members>
+		<members>MS_total_amount_v2</members>
+		<members>MS_total_value</members>
+		<members>MS_unit_price</members>
 		<members>MS_updated_review_wait_for_accept</members>
 		<members>MS_upload_product_images</members>
+		<members>MS_yes</members>
 		<members>MS_your_review_wait_for_accept</members>
 		<name>CustomLabel</name>
 	</types>
@@ -234,13 +271,19 @@
 		<name>FlowDefinition</name>
 	</types>
 	<types>
+		<members>Order-Order Layout</members>
+		<members>Order-Order Layout Community</members>
+		<members>OrderItem-Order Product Layout</members>
 		<members>Pricebook2-Price Book Layout</members>
 		<members>Product2-Product Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
 		<members>companiesLogos</members>
+		<members>confirmModal</members>
+		<members>confirmSubmitModal</members>
 		<members>createNewPricebook</members>
+		<members>createOrderForm</members>
 		<members>createProductRecord</members>
 		<members>customProductPage</members>
 		<members>editProductRecord</members>
@@ -249,6 +292,7 @@
 		<members>filtersForCustomSearch</members>
 		<members>headerLogos</members>
 		<members>latestProducts</members>
+		<members>orderHistory</members>
 		<members>pageFooter</members>
 		<members>paginator</members>
 		<members>previewFileModal</members>
@@ -274,6 +318,9 @@
 		<members>searchBox</members>
 		<members>searchBoxPricebook</members>
 		<members>searchBoxPricebookResult</members>
+		<members>shoppingCart</members>
+		<members>shoppingCartItem</members>
+		<members>shoppingIcon</members>
 		<members>starRatings</members>
 		<name>LightningComponentBundle</name>
 	</types>
@@ -300,6 +347,10 @@
 		<name>PermissionSet</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>PlatformCachePartition</name>
+	</types>
+	<types>
 		<members>Admin</members>
 		<members>Customer Community Login User</members>
 		<members>Customer Community Plus Login User</members>
@@ -313,6 +364,10 @@
 		<members>myPCShop Profile</members>
 		<members>myPCShop User</members>
 		<name>Profile</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>ProfileSessionSetting</name>
 	</types>
 	<types>
 		<members>CEO</members>
