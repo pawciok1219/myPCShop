@@ -3,14 +3,6 @@
     <active>true</active>
     <allowRecall>true</allowRecall>
     <allowedSubmitters>
-        <submitter>pawciok1219@mypcshop.com</submitter>
-        <type>customerPortalUser</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>pawel.kamienski@mypcshop.com</submitter>
-        <type>customerPortalUser</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
     <allowedSubmitters>
