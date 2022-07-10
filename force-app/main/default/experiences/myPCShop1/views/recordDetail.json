@@ -48,7 +48,7 @@
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : { },
-          "componentName" : "c:productReviewsComponent",
+          "componentName" : "forceCommunity:availableForAllPageTypes",
           "id" : "6396295d-0666-4ba6-a9a3-f5f52a4ba44a",
           "renditionMap" : { },
           "type" : "component"
