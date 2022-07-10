@@ -48,7 +48,7 @@
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : { },
-          "componentName" : "forceCommunity:availableForAllPageTypes",
+          "componentName" : "c:productReviewsComponent",
           "id" : "6396295d-0666-4ba6-a9a3-f5f52a4ba44a",
           "renditionMap" : { },
           "type" : "component"
@@ -61,7 +61,7 @@
       }, {
         "components" : [ {
           "componentAttributes" : { },
-          "componentName" : "c:productAddReviewComponent",
+          "componentName" : "forceCommunity:availableForAllPageTypes",
           "id" : "3759dc28-5198-400a-b936-c9751489d679",
           "renditionMap" : { },
           "type" : "component"
