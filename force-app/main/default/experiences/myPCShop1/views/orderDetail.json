@@ -35,8 +35,8 @@
     "components" : [ {
       "componentAttributes" : {
         "customTitle" : "",
-        "parentRecordId" : "",
-        "relatedListName" : "",
+        "parentRecordId" : "{!recordId}",
+        "relatedListName" : "{!relationshipApiName}",
         "showBreadCrumbs" : true,
         "showCustomTitle" : false,
         "showManualRefreshButton" : true,
