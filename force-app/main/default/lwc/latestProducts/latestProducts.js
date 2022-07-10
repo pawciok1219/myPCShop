@@ -28,6 +28,7 @@ export default class LatestProducts extends LightningElement {
                 let record = Object.assign({}, r);
                 record.DisplayUrl = r.Product2.DisplayUrl;
                 record.Family = r.Product2.Family;
+                record.Available = r.Product2.Available__c;
                 record.Id = r.Product2.Id;
                 record.Name = r.Product2.Name;
                 this.productList.push(record);

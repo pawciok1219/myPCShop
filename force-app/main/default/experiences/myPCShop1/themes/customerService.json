@@ -32,7 +32,7 @@
   }, {
     "componentAttributes" : {
       "IsDefaultHeaderHidden" : false,
-      "IsDefaultNotificationsHidden" : true,
+      "IsDefaultNotificationsHidden" : false,
       "fixedPageWidth" : 1453,
       "isPageWidthFixed" : true
     },
@@ -97,6 +97,13 @@
       "regionName" : "navBar",
       "type" : "region"
     }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:shoppingIcon",
+        "id" : "8315a019-c544-4af1-bc3a-3ee92885a7a0",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
       "id" : "225af29d-02d9-4703-b0ad-d13ddce8c058",
       "regionName" : "customRegion",
       "type" : "region"

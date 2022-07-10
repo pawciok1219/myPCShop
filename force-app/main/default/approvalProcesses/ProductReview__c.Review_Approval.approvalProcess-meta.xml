@@ -3,6 +3,9 @@
     <active>true</active>
     <allowRecall>true</allowRecall>
     <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
         <submitter>CEO</submitter>
         <type>role</type>
     </allowedSubmitters>

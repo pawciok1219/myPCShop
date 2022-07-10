@@ -1,6 +1,6 @@
 {
   "appPageId" : "47f9dadf-9d86-42e8-90a8-e6de81fc106b",
-  "componentName" : "siteforce:sldsOneColLayout",
+  "componentName" : "siteforce:sldsTwoCol66Layout",
   "id" : "98a525a7-0d0d-42c2-8af6-bc670c23b6c2",
   "label" : "User Profile",
   "regions" : [ {
@@ -10,29 +10,27 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
-        "caseCreateLabel" : "Create Case",
-        "caseFilterName" : "AllOpenCases",
-        "caseHeaderLabel" : "My Cases",
-        "casesTabLabel" : "Cases",
-        "detailsTabLabel" : "Details",
-        "feedTabLabel" : "Feed",
-        "knowledgeableAboutTitle" : "Knows About",
-        "maxTopics" : 5,
-        "recognitionbuttonLabel" : "Give",
-        "relatedTabLabel" : "Related",
-        "showAllUpdates" : false,
-        "showBadges" : true,
-        "showFullPhotoAsCircle" : false,
-        "showKnowledgeableAbout" : true,
-        "showRelatedList" : true,
-        "showReputationInInfluenceCard" : false,
-        "showStats" : true,
-        "userBadgesTitle" : "Recognition Badges",
-        "userId" : "{!recordId}",
-        "userStatsTitle" : "Influence"
+        "showFullPhotoAsCircle" : true,
+        "showReputation" : false,
+        "userId" : "{!CurrentUser.id}"
       },
-      "componentName" : "forceCommunity:userRecordHome",
-      "id" : "8a927f2c-9b13-421f-99ec-d8a77aaf974a",
+      "componentName" : "forceCommunity:userProfileHeaderDetail",
+      "id" : "60eba3e9-0bcf-42d2-bc29-26ef5ec334af",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "caseCreateLabel" : "Create Case",
+        "casesTabLabel" : "Cases",
+        "feedTabLabel" : "Feed",
+        "filterName" : "AllOpenCases",
+        "headerLabel" : "My Cases",
+        "showAllUpdates" : false,
+        "userId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:userProfileTabs",
+      "id" : "fc4af0e1-a6fc-44ac-9849-e161c2bf4e31",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
@@ -43,6 +41,27 @@
   }, {
     "id" : "aeeb83a4-30f0-4308-861d-d4e68acd5c40",
     "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:orderHistory",
+      "id" : "44942aa6-1af5-4646-b419-08a0bc45e361",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "userId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:userRelatedList",
+      "id" : "3f3bc0f7-b264-4428-adb6-01a748d73d14",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f0622cf5-2e01-4f07-bc20-2afa268f0c13",
+    "regionName" : "sidebar",
     "type" : "region"
   } ],
   "themeLayoutType" : "Inner",

@@ -20,7 +20,7 @@
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
-        <label>For Approval</label>
+        <label>approve_submit</label>
         <locationX>100</locationX>
         <locationY>200</locationY>
         <actionName>submit</actionName>
@@ -162,8 +162,8 @@
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
-    <interviewLabel>Review_Approval_Process-3_InterviewLabel</interviewLabel>
-    <label>Review Approval Process_v3</label>
+    <interviewLabel>Review_Approval_Process-5_InterviewLabel</interviewLabel>
+    <label>Review Approval Process_v5</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>

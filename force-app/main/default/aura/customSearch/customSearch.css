@@ -6,10 +6,11 @@
  .THIS .slds-lookup__search-input {
    left:0;
    height: 45px;
+   margin-left: -40px;
  }
  
  .THIS .buttonSearch {
    position:absolute;
-   right:0;
+   right:40px;
    height:45px;
  }

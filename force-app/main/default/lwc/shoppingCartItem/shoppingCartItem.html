@@ -1,0 +1,69 @@
+<template>
+    <c-confirm-modal title={label.MS_confirmation}
+    message={label.MS_are_you_sure_remove_item}
+    confirm-label={label.MS_yes}
+    cancel-label={label.MS_no}
+    visible={isDialogVisible}
+    original-message='halo'
+    name="confirmModal"
+    onmodalaction={handleClick}>
+    </c-confirm-modal>
+
+    <div class="spinner">
+    <template if:true={isLoading}>
+         <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+         </lightning-spinner>
+    </template>
+    </div>
+    <div class="slds-page-header">
+        <div class="slds-page-header__row">
+          <div class="slds-page-header__col-title">
+            <div class="slds-media">
+              <div class="slds-media__figure">
+                    <img src={displayurl} height="100" width="100"/>
+              </div>
+              <div class="slds-media__body">
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title">
+                    <h1>
+                        <span class="slds-page-header__title slds-truncate"><a href={sfdcBaseURL}>{name}</a>
+                          <lightning-button-icon style="position:absolute;right:161px;margin-top:30px;" onclick={handleClick} name="openConfirmation" 
+                          icon-name="utility:delete" class="slds-m-left_xx-small"></lightning-button-icon></span>
+                    </h1>
+                  </div>
+                </div>
+                <p class="slds-page-header__name-meta">{model} • {producer} • {productfamily}</p>
+                <p>{label.MS_unit_price}: &nbsp; <strong>€{productCache.UnitPrice}</strong></p>
+              </div>
+
+              <div class="slds-form-element" style="margin-top:30px;width:11%;right:47px;position:absolute;">
+
+                <div class="slds-form-element__control">
+                    <button class="slds-button slds-button_icon 
+                            slds-button_icon-small slds-input__button_decrement">
+                        <lightning-icon icon-name="utility:ban"
+                                        size="xx-small"
+                                        onclick={setDecrementCounter}>
+                        </lightning-icon>
+                    </button>
+                    <input type="number" min="1" max="15" id="default1" placeholder={productCache.quantity}
+                      class="slds-input slds-input_counter" />
+                               <button value={productCache.product} class="slds-button slds-button_icon        
+                                   slds-button_icon-small 
+                                   slds-input__button_increment">
+                        <lightning-icon icon-name="utility:new"
+                                        size="xx-small"
+                                        onclick={setIncrementCounter}>
+                        </lightning-icon>
+                    </button>
+                  </div>
+        
+              </div>
+              <span style="display:flex;"><h1 style="display:flex;justify-content:right;align-items:center; font-size:18px;">{label.MS_total_amount}: &nbsp;</h1>
+                    <h1 style="display:flex;justify-content:right;align-items:center; font-size:18px;color:firebrick;">€ {productCache.total}</h1>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+</template>

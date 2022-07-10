@@ -32,14 +32,7 @@
             "seedComponents" : [ ],
             "tabKey" : "1",
             "tabName" : "Review"
-          }, {
-            "UUID" : "c07fdfa6-b320-4906-a9e8-98e15ebc5676",
-            "allowGuestUser" : false,
-            "locked" : false,
-            "seedComponents" : [ ],
-            "tabKey" : "37cc4",
-            "tabName" : "Add Review"
-          } ],
+          }],
           "useOverflowMenu" : false
         }
       },
@@ -58,20 +51,7 @@
         "regionName" : "1",
         "renditionMap" : { },
         "type" : "region"
-      }, {
-        "components" : [ {
-          "componentAttributes" : { },
-          "componentName" : "c:productAddReviewComponent",
-          "id" : "3759dc28-5198-400a-b936-c9751489d679",
-          "renditionMap" : { },
-          "type" : "component"
-        } ],
-        "id" : "c07fdfa6-b320-4906-a9e8-98e15ebc5676",
-        "regionLabel" : "Add Review",
-        "regionName" : "37cc4",
-        "renditionMap" : { },
-        "type" : "region"
-      } ],
+      }],
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"

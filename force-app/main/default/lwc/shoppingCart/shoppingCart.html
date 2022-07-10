@@ -1,0 +1,50 @@
+<template>
+    <c-confirm-modal title={label.MS_confirmation}
+        message={label.MS_are_you_sure_clean_shopping_cart}
+        confirm-label={label.MS_yes}
+        cancel-label={label.MS_no}
+        visible={isDialogVisible}
+        original-message='halo'
+        name="confirmModal"
+        onmodalaction={handleClick}>
+    </c-confirm-modal>
+
+  <div class="spinner">
+    <template if:true={isLoading}>
+         <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+         </lightning-spinner>
+    </template>
+    </div>
+    <template if:true={haveProductsInShoppingCart}>
+    <div style="margin: 0 auto; margin-top:-15px; position:relative;width:1000px;padding:20px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
+    <h1 style="font-size:18px; margin-bottom:10px;">Your order ({numberOfProductsInCache} products in cart)</h1>
+    <div style="padding-bottom: 90px;">
+    <template for:each={productsCacheList} for:item="product">
+        <div class="slds-col" style="margin-left:10px;margin-right:10px;" key={product.product}>
+          <span><c-shopping-cart-item
+            record-id={product.product}
+            product-cache={product}
+            ondecrement={refresh}
+            onincrement={refresh}
+            ondeleteproduct={refreshAfterDelete}>
+          </c-shopping-cart-item>
+        </span>
+        </div>
+    </template>
+    </div>
+    <div style="height:100px;left:0;bottom:0;position:absolute;width:100%;padding:20px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
+            <h1 style="font-size:18px; text-align:center;">{label.MS_total_value}: <span><h1 style="display:inline-block;font-size:18px;color:firebrick;">€ {totalOrderPrice}</h1></span></h1>
+            <div style="display:inline-block; margin-left:36%;margin-top:5px;">
+              <a href={placeOrderUrl}><lightning-button style="text-align:center;" variant="brand" label={label.MS_place_order} class="slds-m-left_x-small"></lightning-button></a>  
+            <lightning-button style="text-align:center;" onclick={handleClick} name="openConfirmation" variant="brand-outline" label={label.MS_clear_shopping_cart} class="slds-m-left_x-small"></lightning-button>   
+            </div>
+        </div>
+    </div>
+  </template>
+  <template if:false={haveProductsInShoppingCart}>
+    <div style="margin: 0 auto; margin-top:-15px; position:relative; height:400px;width:1000px;padding:20px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
+      <img src="https://bagbazaars.com/assets/img/no-product-found.png" style="max-height:250px;margin-left:24%;margin-top:4%;"/>
+    </div>
+  </template>
+
+</template>

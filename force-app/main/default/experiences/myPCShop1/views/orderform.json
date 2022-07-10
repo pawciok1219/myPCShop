@@ -1,0 +1,45 @@
+{
+  "appPageId" : "47f9dadf-9d86-42e8-90a8-e6de81fc106b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "8f37e39b-dcdd-4dbf-8cbb-a158bda3feda",
+  "label" : "orderform",
+  "regions" : [ {
+    "id" : "d4c8c725-463e-4c7a-bff4-f559efbc5f56",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:createOrderForm",
+      "id" : "1ee11088-a9ff-4f92-b7af-a1e19d75d260",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9572b213-79d7-4c99-8e12-349df2d460ef",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "bcfdad38-8631-4401-8e5f-b1113de3814f",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Order Form"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "dae2b122-c909-49e7-9df9-a006b5827a61",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a18d27ee-f3f5-4303-bf8a-ab204f634fe0",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-orderform"
+}

@@ -2,6 +2,10 @@ import { LightningElement, api, track, wire } from 'lwc';
 import getProductImages from '@salesforce/apex/MS_CustomProductPageController.getProductImages';
 import getProductOverallRating from '@salesforce/apex/MS_CustomProductPageController.getProductOverallRating';
 import getProductPrice from '@salesforce/apex/MS_CustomProductPageController.getProductPrice';
+import addProductToCacheShoppingCart from '@salesforce/apex/MS_ShoppingCartController.addProductToCacheShoppingCart';
+import getNumberItemsInCache from '@salesforce/apex/MS_ShoppingCartController.getNumberItemsInCache';
+import { publish, MessageContext } from 'lightning/messageService';
+import NumberOfProductsInCache from '@salesforce/messageChannel/NumberOfProductsInCache__c';
 import { getRecord, getFieldValue } from "lightning/uiRecordApi";
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import NAME_FIELD from '@salesforce/schema/Product2.Name';
@@ -21,6 +25,7 @@ import MS_model_v2 from '@salesforce/label/c.MS_model_v2';
 import MS_description from '@salesforce/label/c.MS_description';
 import MS_per_item from '@salesforce/label/c.MS_per_item';
 import MS_add_to_cart from '@salesforce/label/c.MS_add_to_cart';
+import MS_add_to_cart_item from '@salesforce/label/c.MS_add_to_cart_item';
 
 const fields = [NAME_FIELD,PRODUCTCODE_FIELD,PRODUCTFAMILY_FIELD,MODEL_FIELD,DESCRIPTION_FIELD,PRODUCER_FIELD,AVAILABLE_FIELD];
 
@@ -49,6 +54,10 @@ export default class CustomProductPage extends LightningElement {
     @track isLastPage = false;
     @track currentIndexImage = 0;
     @track price;
+    @track quantityProduct = 1;
+
+    @wire(MessageContext)
+    messageContext;
 
     @wire(getProductImages, {recordId: '$recordId'})
     wiredResulted(result){
@@ -154,6 +163,26 @@ export default class CustomProductPage extends LightningElement {
 
     changeDisplayPhoto(event) {
         this.displayImage = event.target.dataset.value;
+    }
+
+    handleChangeQuantity(event) {
+        this.quantityProduct = event.detail.value;
+    }
+
+    addProductToCache(){
+        addProductToCacheShoppingCart({productId: this.recordId, quantityItem: this.quantityProduct})
+        .then(()=> {
+            getNumberItemsInCache().then((result) => {
+                const payload = {number: result};
+                publish(this.messageContext, NumberOfProductsInCache, payload);
+            });
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    message: this.name + ' ' + MS_add_to_cart_item,
+                    variant: 'success'
+                })
+            );
+        })
     }
 
 }

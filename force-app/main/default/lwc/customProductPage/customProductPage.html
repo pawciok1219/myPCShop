@@ -49,9 +49,11 @@
             style="padding:5px;"
             placeholder="1"
             name="progress"
+            value={quantityProduct}
+            onchange={handleChangeQuantity}
             options={options}>
         </lightning-combobox>
-        <lightning-button label={label.MS_add_to_cart} icon-name="utility:cart" icon-position="left" style="margin-top:24px;"></lightning-button>
+        <lightning-button label={label.MS_add_to_cart} onclick={addProductToCache} icon-name="utility:cart" icon-position="left" style="margin-top:24px;"></lightning-button>
         </div>
         </template>
         <div style="display:block;justify-content:left;margin-top:7px;padding-top:7px;border-top-width: 1px; border-top-style:solid; border-top-color:lightgray;">

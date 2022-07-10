@@ -63,7 +63,7 @@
     "_desktopFontSizeXxLarge" : "1.75rem",
     "_desktopLineHeightText" : "1.5",
     "_desktopSquareIconMedium" : "2rem",
-    "brandNavigationBackgroundColor" : "rgb(128,128,128)",
+    "brandNavigationBackgroundColor" : "rgb(128, 128, 128)",
     "brandNavigationBarBackgroundColor" : "rgba(128,128,128,.75)",
     "brandNavigationColorText" : "#FFFFFF"
   }
