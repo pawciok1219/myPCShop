@@ -18,6 +18,9 @@ import MS_subject_v2 from '@salesforce/label/c.MS_subject_v2';
 import MS_description_v2 from '@salesforce/label/c.MS_description_v2';
 import MS_submit from '@salesforce/label/c.MS_submit';
 import MS_select_product from '@salesforce/label/c.MS_select_product';
+import getOrderForProduct from '@salesforce/apex/MS_CaseFormController.getOrderForProduct';
+import MS_order_number_v2 from '@salesforce/label/c.MS_order_number_v2';
+import MS_select_order from '@salesforce/label/c.MS_select_order';
 
 
 export default class CaseForm extends NavigationMixin(LightningElement) {
@@ -31,7 +34,9 @@ export default class CaseForm extends NavigationMixin(LightningElement) {
         MS_subject_v2,
         MS_description_v2,
         MS_submit,
-        MS_select_product
+        MS_select_product,
+        MS_order_number_v2,
+        MS_select_order
     };
 
     caseSubject = Subject;
@@ -46,6 +51,8 @@ export default class CaseForm extends NavigationMixin(LightningElement) {
     allFields;
     confirm = false;
     haveOrderProducts = false;
+    orderID;
+    orderPickList;
     
     openfileUpload(event) { 
         for(let i=0; i< event.target.files.length; i++){
@@ -145,6 +152,7 @@ export default class CaseForm extends NavigationMixin(LightningElement) {
         fields.OwnerId = Id;
         fields.ProductId = this.productValue;
         fields.Origin = 'Email';
+        fields.OrderID__c = this.orderID;
         if(fields.Reason == 'Delivery problem'){
             fields.Priority = 'High';
         }else{
@@ -169,6 +177,24 @@ export default class CaseForm extends NavigationMixin(LightningElement) {
         } else {
             this.isLoading = false;
         }
+    }
+
+    handleGetProduct(event){
+        this.productValue = event.target.value;
+        this.handleGetOrderNumbers();
+    }
+
+    handleGetOrder(event){
+        this.orderID = event.target.value;
+    }
+
+    handleGetOrderNumbers(){
+        getOrderForProduct({productId:  this.productValue, userId: Id})
+            .then(result => {
+                this.orderPickList = Object.entries(result).map(([value,label]) => ({ value, label }));
+            })
+            .catch(error => {
+            })
     }
 
 }

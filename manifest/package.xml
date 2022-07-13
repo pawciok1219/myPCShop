@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>MS_CaseFormController</members>
 		<members>MS_ContentDistributionLinks</members>
 		<members>MS_ContentDistributionLinksTest</members>
 		<members>MS_CustomProductPageController</members>
@@ -37,11 +38,16 @@
 	</types>
 	<types>
 		<members>MS_ContentDistribution</members>
+		<members>MS_DefaultEntitlement</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
 		<members>*</members>
 		<name>ApprovalProcess</name>
+	</types>
+	<types>
+		<members>Case.Case_Community_Rule</members>
+		<name>AssignmentRule</name>
 	</types>
 	<types>
 		<members>createNewRecordComponent</members>
@@ -68,6 +74,10 @@
 		<name>ContentAsset</name>
 	</types>
 	<types>
+		<members>https_britenet33_dev_ed_livepreview_salesforce_communities_com</members>
+		<name>CorsWhitelistOrigin</name>
+	</types>
+	<types>
 		<members>*</members>
 		<name>CspTrustedSite</name>
 	</types>
@@ -76,6 +86,7 @@
 		<name>CustomApplication</name>
 	</types>
 	<types>
+		<members>Case.OrderID__c</members>
 		<members>Order.PaymentMethod__c</members>
 		<members>Pricebook2.End_Date__c</members>
 		<members>Pricebook2.Start_Date__c</members>
@@ -104,6 +115,8 @@
 		<members>MS_back_to_shopping_cart</members>
 		<members>MS_billing_address</members>
 		<members>MS_cancel</members>
+		<members>MS_case_created</members>
+		<members>MS_case_reason</members>
 		<members>MS_category</members>
 		<members>MS_clear</members>
 		<members>MS_clear_shopping_cart</members>
@@ -113,7 +126,9 @@
 		<members>MS_data_of_order</members>
 		<members>MS_delete</members>
 		<members>MS_description</members>
+		<members>MS_description_v2</members>
 		<members>MS_details</members>
+		<members>MS_dont_have_product</members>
 		<members>MS_easy_online_shopping</members>
 		<members>MS_edit_product</members>
 		<members>MS_edit_review</members>
@@ -144,6 +159,7 @@
 		<members>MS_model</members>
 		<members>MS_model_v2</members>
 		<members>MS_modified_products</members>
+		<members>MS_most_common_problems</members>
 		<members>MS_name</members>
 		<members>MS_new_pricebook</members>
 		<members>MS_new_product</members>
@@ -152,6 +168,7 @@
 		<members>MS_no_reviews_available</members>
 		<members>MS_order_history</members>
 		<members>MS_order_number</members>
+		<members>MS_order_number_v2</members>
 		<members>MS_order_successfully_placed</members>
 		<members>MS_order_summary</members>
 		<members>MS_over_10000_customers</members>
@@ -181,6 +198,7 @@
 		<members>MS_product_successfully_cart</members>
 		<members>MS_product_updated</members>
 		<members>MS_product_updated_success</members>
+		<members>MS_product_v3</members>
 		<members>MS_profile_image</members>
 		<members>MS_quantity</members>
 		<members>MS_rating</members>
@@ -204,7 +222,9 @@
 		<members>MS_search_results</members>
 		<members>MS_select_a_pricebook</members>
 		<members>MS_select_family</members>
+		<members>MS_select_order</members>
 		<members>MS_select_producer</members>
+		<members>MS_select_product</members>
 		<members>MS_shipping</members>
 		<members>MS_shipping_address</members>
 		<members>MS_shipping_billing</members>
@@ -213,8 +233,10 @@
 		<members>MS_specify_how_much_percent</members>
 		<members>MS_startdate</members>
 		<members>MS_subject</members>
+		<members>MS_subject_v2</members>
 		<members>MS_submit</members>
 		<members>MS_success</members>
+		<members>MS_tell_us_we_can_help</members>
 		<members>MS_thank_for_review</members>
 		<members>MS_total_amount</members>
 		<members>MS_total_amount_be_paid</members>
@@ -229,6 +251,8 @@
 	</types>
 	<types>
 		<members>Account</members>
+		<members>Case</members>
+		<members>Knowledge__kav</members>
 		<members>Order</members>
 		<members>OrderItem</members>
 		<members>Pricebook2</members>
@@ -247,12 +271,28 @@
 		<name>CustomTab</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>DataCategoryGroup</name>
+	</types>
+	<types>
 		<members>Contact.Standard_Contact_Duplicate_Rule</members>
 		<name>DuplicateRule</name>
 	</types>
 	<types>
 		<members>unfiled$public/Approval_Template</members>
 		<name>EmailTemplate</name>
+	</types>
+	<types>
+		<members>Chat_Agents</members>
+		<name>EmbeddedServiceConfig</name>
+	</types>
+	<types>
+		<members>Chat_Agents</members>
+		<name>EmbeddedServiceLiveAgent</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>EntitlementProcess</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -273,6 +313,12 @@
 		<name>FlowDefinition</name>
 	</types>
 	<types>
+		<members>Case-Case %28Marketing%29 Layout</members>
+		<members>Case-Case %28Sales%29 Layout</members>
+		<members>Case-Case %28Support%29 Layout</members>
+		<members>Case-Case Layout</members>
+		<members>CaseClose-Close Case Layout</members>
+		<members>CaseMilestone-Case Milestone Layout</members>
 		<members>Order-Order Layout</members>
 		<members>Order-Order Layout Community</members>
 		<members>OrderItem-Order Product Layout</members>
@@ -281,6 +327,7 @@
 		<name>Layout</name>
 	</types>
 	<types>
+		<members>caseForm</members>
 		<members>companiesLogos</members>
 		<members>confirmModal</members>
 		<members>confirmSubmitModal</members>
@@ -288,8 +335,10 @@
 		<members>createOrderForm</members>
 		<members>createProductRecord</members>
 		<members>customProductPage</members>
+		<members>customerProblemsList</members>
 		<members>editProductRecord</members>
 		<members>editProductReview</members>
+		<members>faqList</members>
 		<members>filePreviewAndDownloads</members>
 		<members>filtersForCustomSearch</members>
 		<members>headerLogos</members>
@@ -331,10 +380,32 @@
 		<name>LightningMessageChannel</name>
 	</types>
 	<types>
+		<members>Case.AllClosedCases</members>
+		<members>Case.Delivery_problems_Case</members>
+		<members>Case.MyOpenCases</members>
+		<members>Case.My_All_Cases</members>
+		<members>Case.Other_Case</members>
+		<members>Case.Product_complaint_Case</members>
 		<members>Product2.AllProducts</members>
 		<members>ProductReview__c.All</members>
 		<members>ProductReview__c.Unaccepted_Reviews</members>
 		<name>ListView</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LiveChatAgentConfig</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LiveChatButton</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LiveChatDeployment</name>
+	</types>
+	<types>
+		<members>Resolution Time</members>
+		<name>MilestoneType</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -349,12 +420,19 @@
 		<name>NetworkBranding</name>
 	</types>
 	<types>
+		<members>Knowledge_LSF_Permission_Set</members>
+		<members>Live_Agent_Setup_Flow</members>
+		<members>Omni_Setup_Flow</members>
 		<members>enable_proccess_builder</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
 		<members>*</members>
 		<name>PlatformCachePartition</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>PresenceUserConfig</name>
 	</types>
 	<types>
 		<members>Admin</members>
@@ -372,12 +450,36 @@
 		<name>Profile</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>Queue</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>QueueRoutingConfig</name>
+	</types>
+	<types>
+		<members>Knowledge__kav.FAQ</members>
+		<name>RecordType</name>
+	</types>
+	<types>
 		<members>CEO</members>
 		<name>Role</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>ServiceChannel</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>ServicePresenceStatus</name>
+	</types>
+	<types>
 		<members>GoogleApps</members>
 		<name>Settings</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>Skill</name>
 	</types>
 	<types>
 		<members>myPCShop.Customer_Members</members>
@@ -398,6 +500,12 @@
 		<name>Workflow</name>
 	</types>
 	<types>
+		<members>Case.X2_hour_warning_before_milestones_expires</members>
+		<members>Case.X2_hour_warning_before_milestones_expires_low_medium</members>
+		<name>WorkflowAlert</name>
+	</types>
+	<types>
+		<members>Case.ChangePriorityToHigh</members>
 		<members>ProductReview__c.changeToTrue</members>
 		<name>WorkflowFieldUpdate</name>
 	</types>

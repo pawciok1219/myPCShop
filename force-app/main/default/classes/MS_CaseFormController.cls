@@ -47,6 +47,7 @@ public without sharing class MS_CaseFormController {
            }
       }
 
+
     private static ContentDocumentLink createContentLink(String contentVersionId, String recordId) {
         if (contentVersionId == null || recordId == null) { return null; }
             ContentDocumentLink cdl = new ContentDocumentLink();
@@ -74,6 +75,16 @@ public without sharing class MS_CaseFormController {
     public static List<Knowledge__DataCategorySelection> getQuestions(){
         return [SELECT Id, ParentId, Parent.Title, DataCategoryGroupName,Parent.Summary,Parent.Answer__c 
         FROM Knowledge__DataCategorySelection];
+    }
+
+    @AuraEnabled
+    public static Map<Id, String> getOrderForProduct(Id productId, Id userId){
+        Map<Id, String> mapOfProducts = new Map<Id, String>();
+        List<OrderItem> ordersList = [SELECT OrderId, Order.OrderNumber FROM OrderItem WHERE Product2Id =: productId AND Order.OwnerId =:userId];
+        for(OrderItem tempOrder : ordersList){
+            mapOfProducts.put(tempOrder.OrderId, tempOrder.Order.OrderNumber);
+        }        
+        return mapOfProducts;
     }
 
 }

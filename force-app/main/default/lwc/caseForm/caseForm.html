@@ -32,6 +32,10 @@
         <lightning-combobox id="combo" variant="label-hidden" required name="progress" placeholder={label.MS_select_product} value={value}
             options={productPickList} onchange={handleGetProduct}>
         </lightning-combobox>
+        <label for="ordPickList"><span style="color:red;">*</span> {label.MS_order_number_v2}</label>
+        <lightning-combobox id="ordPickList" variant="label-hidden" required name="progress" placeholder={label.MS_select_order}
+        value={value} options={orderPickList} onchange={handleGetOrder}>
+        </lightning-combobox>
         <label for="Subject"><span style="color:red;">*</span> {label.MS_subject_v2}</label>
         <lightning-input-field id="Subject" variant="label-hidden" field-name={caseSubject} required></lightning-input-field>
         <label for="Description"><span style="color:red;">*</span> {label.MS_description_v2}</label>
