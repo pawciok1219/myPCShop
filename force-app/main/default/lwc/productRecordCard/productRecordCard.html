@@ -20,9 +20,11 @@
                 <p style="font-size: 15px;margin-top:-12px;display: flex; align-items: center; justify-content: center;"><strong><a href={sfdcBaseURL}>{product.Name}</a></strong></p>
                   </br>
                   <strong style="color:firebrick;font-size:18px; font-family: arial; float:bottom;display: flex; align-items: center; justify-content: center;">
-                    € {product.UnitPrice}</strong> 
+                    € {product.UnitPrice}</strong>
+                    <template if:true={userId}>
                     <template if:true={product.Available}>
                     <lightning-button-icon onclick={addProductToCache} class="cart" icon-name="utility:cart" size="large" variant="bare"></lightning-button-icon>
+                    </template>
                     </template>
               </div>
             </div>

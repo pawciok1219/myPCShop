@@ -143,7 +143,7 @@ export default class CreateOrderForm extends NavigationMixin(LightningElement) {
         fields.AccountId = this.accountId.data;
         fields.Pricebook2Id = this.standardPricebook.data;
         fields.OwnerId = this.userId;
-        fields.Status = 'Draft';
+        fields.Status = 'Processing';
         fields.EffectiveDate = this.date;
         fields.ContractId = this.contractId;
 

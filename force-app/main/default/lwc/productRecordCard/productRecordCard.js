@@ -5,8 +5,11 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { publish, MessageContext } from 'lightning/messageService';
 import NumberOfProductsInCache from '@salesforce/messageChannel/NumberOfProductsInCache__c';
 import MS_add_to_cart_item from '@salesforce/label/c.MS_add_to_cart_item';
+import Id from '@salesforce/user/Id';
 
 export default class ProductRecordCard extends LightningElement {
+
+    userId = Id;
     @api product;
     sfdcBaseURL;
     listWithProducts = [];

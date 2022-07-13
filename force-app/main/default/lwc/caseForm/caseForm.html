@@ -1,0 +1,73 @@
+<template>
+
+    <template if:true={isModalOpen}>
+        <c-confirm-submit-modal content="Are you sure you want to submit a support ticket" title="Confirmation" onclosemodal={handleCloseModal}>
+        </c-confirm-submit-modal>
+    </template> 
+
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+        </lightning-spinner>
+    </template>
+
+    <template if:false={haveOrderProducts}>
+        <span style="font-size: 15px;text-align: center;display:flex;justify-content:center;margin-top:30px;font-weight:700;">
+            {label.MS_dont_have_product}</span>
+    </template>
+
+    <template if:true={haveOrderProducts}>
+    <lightning-record-edit-form
+        class="form"
+        object-api-name="Case"
+        onsubmit={handleSubmit}
+        onsuccess={handleSuccess}>
+        <div style="display: flex; justify-content: center; flex-direction: column; margin-bottom: 2%; margin-top:15px;">
+            <span style="font-size: 18px; font-weight: bolder; text-align: center;">{label.MS_contact_customer_support}</span>
+            <span style="font-size: 13px;text-align: center;">{label.MS_tell_us_we_can_help}</span>
+        </div>
+
+        <label for="Reason"><span style="color:red;">*</span> {label.MS_case_reason}</label>
+        <lightning-input-field id="Reason" variant="label-hidden" field-name={caseReason} required></lightning-input-field>
+        <label for="combo"><span style="color:red;">*</span> {label.MS_product_v3}</label>
+        <lightning-combobox id="combo" variant="label-hidden" required name="progress" placeholder={label.MS_select_product} value={value}
+            options={productPickList} onchange={handleGetProduct}>
+        </lightning-combobox>
+        <label for="Subject"><span style="color:red;">*</span> {label.MS_subject_v2}</label>
+        <lightning-input-field id="Subject" variant="label-hidden" field-name={caseSubject} required></lightning-input-field>
+        <label for="Description"><span style="color:red;">*</span> {label.MS_description_v2}</label>
+        <lightning-input-field id="Description" variant="label-hidden" field-name={caseDescription} required></lightning-input-field>
+
+        <lightning-input type="file" multiple 
+            accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf" onchange={openfileUpload}>
+        </lightning-input>
+        
+        <ul class="slds-m-around_medium" style="margin-left:0px;" if:true={uploadedFile.length}>
+            <template for:each={uploadedFile} for:item="file">
+                <div key={file.filename} style="height:auto;padding:4px;border-width: 1px; border-style:solid; 
+                border-color:lightgray; border-radius:5px; margin-bottom:1px; width:30%;" >
+                <li class="slds-p-top_xx-small">
+                    <lightning-icon 
+                        icon-name="doctype:link"
+                        size="small"
+                        class="slds-m-right_x-small">
+                    </lightning-icon>
+                    {file.filename}
+                    <lightning-button-icon 
+                        icon-name="utility:close"    
+                        variant="bare"
+                        style="float:right;padding-right:6px;" 
+                        value={file.filename}
+                        onclick={handleDeleteFile}
+                        class="slds-m-left_xx-small" >
+                    </lightning-button-icon>
+                </li>
+                </div>
+            </template>
+        </ul>
+
+        <div style="display: flex; justify-content: center; margin-top: 2%;">
+            <button class="bt" type="submit">{label.MS_submit}</button>
+        </div>
+    </lightning-record-edit-form>
+</template>
+</template>

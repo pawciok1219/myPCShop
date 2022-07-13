@@ -2,8 +2,6 @@ import { LightningElement, track, wire } from 'lwc';
 import Id from '@salesforce/user/Id';
 import getNumberOfProductInCache from '@salesforce/apex/MS_ShoppingCartController.getNumberOfProductInCache';
 import { refreshApex } from "@salesforce/apex";
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import MS_error from '@salesforce/label/c.MS_error';
 import { subscribe, MessageContext } from 'lightning/messageService';
 import NumberOfProductsInCache from '@salesforce/messageChannel/NumberOfProductsInCache__c';
 
@@ -28,15 +26,6 @@ export default class ShoppingIcon extends LightningElement {
             }else{
                 this.haveProductsInShoppingCart = false;
             }
-        }
-        if(error){ 
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: MS_error,
-                    message: error.body.message,
-                    variant: 'error',
-                }),
-            );
         }
     }
 

@@ -1,0 +1,14 @@
+<template>
+    <div style="margin: 0 auto;margin-top:15px;width:70%;position:relative;padding:20px;border-radius:20px; border-width:1px; border-style:solid; border-color:lightgray;">
+        <h1 style="font-size:22px; margin-bottom:10px; text-align:center;">FAQ</h1>
+
+        <lightning-accordion allow-multiple-sections-open>
+        <template for:each={faqList} for:item="question">
+            <lightning-accordion-section key={question.Id} name={question.Id} label={question.Question}>
+                <p>{question.Answer}</p>
+            </lightning-accordion-section>
+        </template>
+        </lightning-accordion>
+    </div>
+    
+</template>
