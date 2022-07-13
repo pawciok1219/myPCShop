@@ -28,15 +28,6 @@ public without sharing class MS_CustomProductPageController {
         ];
     }
 
-    // @AuraEnabled(cacheable=true)
-    // public static Boolean checkUserHaveProductReview(Id userID, Id productId){
-    //     List<ProductReview__c> userReviews = [SELECT Id, CreatedBy.Id FROM ProductReview__c WHERE CreatedBy.Id = :userID AND Product__c = :productId];
-    //     if(userReviews.size() > 0){
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
     @AuraEnabled(cacheable=true)
     public static List<ProductReview__c> checkUserHaveProductReview(Id userID, Id productId){
         return [SELECT Id, CreatedBy.Id, Accepted__c FROM ProductReview__c WHERE CreatedBy.Id = :userID AND Product__c = :productId];
