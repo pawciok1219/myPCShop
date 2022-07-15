@@ -80,9 +80,11 @@ public without sharing class MS_CaseFormController {
     @AuraEnabled
     public static Map<Id, String> getOrderForProduct(Id productId, Id userId){
         Map<Id, String> mapOfProducts = new Map<Id, String>();
-        List<OrderItem> ordersList = [SELECT OrderId, Order.OrderNumber FROM OrderItem WHERE Product2Id =: productId AND Order.OwnerId =:userId];
+        List<OrderItem> ordersList = [SELECT OrderId, Order.OrderNumber, Order.EffectiveDate FROM OrderItem WHERE Product2Id =: productId AND Order.OwnerId =:userId];
         for(OrderItem tempOrder : ordersList){
-            mapOfProducts.put(tempOrder.OrderId, tempOrder.Order.OrderNumber);
+            Datetime datee = date.valueOf(tempOrder.Order.EffectiveDate);
+            String dateOrder = datee.format('EEEE MMMM d, y');
+            mapOfProducts.put(tempOrder.OrderId,'Number: ' + tempOrder.Order.OrderNumber + '; Date: ' + dateOrder);
         }        
         return mapOfProducts;
     }
