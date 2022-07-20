@@ -1,1 +1,1 @@
-myPCShop - online shop for computer parts created using Salesforce (Lightning Web Components and Apex).
+myPCShop (Salesforce project) - online shop for computer parts created using Lightning Web Components and Apex.
